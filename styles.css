@@ -1,0 +1,45 @@
+/* Variables CSS */
+:root {
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: 180px auto 200px;
+  gap: 0;
+  height: 100vh;
+}
+
+.header,
+.main,
+.footer {
+  display: grid;
+}
+
+.center {
+  justify-self: center;
+  width: var(--center-width);
+}
+
+/* media-queries: */
+:root {
+  /* sm	40rem (640px) */
+  @media (width >= 40rem) {
+    --center-width: 40rem;
+  }
+  /* md	48rem (768px) */
+  @media (width >= 48rem) {
+    --center-width: 48rem;
+  }
+  /* lg	64rem (1024px) */
+  @media (width >= 64rem) {
+    --center-width: 64rem;
+  }
+  /* xl	80rem (1280px) */
+  @media (width >= 80rem) {
+    --center-width: 80rem;
+  }
+  /* 2xl	96rem (1536px) */
+  @media (width >= 96rem) {
+    --center-width: 96rem;
+  }
+}
