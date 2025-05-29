@@ -29,15 +29,15 @@
     background-color: red;
   }
 
-  width: 100%;
-  height: 100%;
+  /* width: 100%; */
+  /* height: 100%; */
 }
 
 /* generic */
 body {
   font-family: "Nunito", sans-serif;
+  color: var(--text-color);
 }
-
 /*  */
 
 /* layout */
@@ -102,11 +102,10 @@ body {
     }
 
     a {
-      color: var(--text-color);
       text-decoration: none;
       font-weight: 500;
       font-size: 1rem;
-      padding: 1.5rem 0.5rem 1.5rem 2rem;
+      padding: 1.7rem 0.5rem 1.8rem 2rem;
       display: inline-block;
       transition: color 0.3s ease;
     }
@@ -165,21 +164,31 @@ body {
 #prime {
   .tagline {
     text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .title {
+    font: bold 38px / 1.4 "Syne", sans-serif;
+    margin-top: 4rem;
+  }
+
+  .subtag {
+    font: bold 22px/1.5 "Nunito", sans-serif;
+    color: #6b7d8d;
   }
 
   img {
     width: 100%;
   }
 }
-
 /*  */
 
 /* products */
 #products {
   display: grid;
   grid-template-columns: var(--products-columns);
-  gap: 16px;
-  margin: 0 100px;
+  gap: 0.5rem;
+  margin: 0 9.5rem;
 
   #filters {
     border-radius: var(--border-radius);
@@ -231,3 +240,4 @@ body {
     text-align: center;
   }
 }
+/*  */
