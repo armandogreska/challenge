@@ -3,11 +3,15 @@
   --primary-color: #622f60;
   --secondary-color: #ff8f50;
   --bg-color: #fbf6f4;
-  --center-width: 1440px;
+  --white-color: #fff;
+  --text-color: #342e34;
+
   --products-columns: 1fr 3fr;
   --results-columns: repeat(3, 1fr);
+  --center-width: 1440px;
+
   --border-radius: 24px;
-  --text-color: #342e34;
+  --box-shadow: 0px 6px 6px 2px rgba(0, 0, 0, 0.1);
 
   /* media-queries: */
   @media (width <= 1440px) {
@@ -31,6 +35,7 @@
 
   /* width: 100%; */
   /* height: 100%; */
+  min-height: 100%;
 }
 
 /* generic */
@@ -43,7 +48,7 @@ body {
 /* layout */
 #full-width {
   display: grid;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: 80px auto 180px;
   gap: 0;
   height: 100vh;
 }
@@ -68,6 +73,7 @@ body {
 
 /* header */
 #header {
+  border-bottom: solid 1px var(--secondary-color);
   .center {
     display: flex;
     justify-content: space-between;
@@ -109,7 +115,9 @@ body {
       display: inline-block;
       transition: color 0.3s ease;
     }
-
+    a:hover {
+      font-weight: 700;
+    }
     li:nth-child(1) {
       background: url("./icons/adventure.svg") 0 center no-repeat;
     }
@@ -150,7 +158,7 @@ body {
       max-height: 100%;
       max-width: 100%;
       object-fit: contain;
-      color: #fff;
+      color: var(--white-color);
       transition: all 0.3s ease;
     }
     a:hover {
@@ -168,12 +176,12 @@ body {
   }
 
   .title {
-    font: bold 38px / 1.4 "Syne", sans-serif;
+    font: 700 38px / 1.4 "Syne", sans-serif;
     margin-top: 4rem;
   }
 
   .subtag {
-    font: bold 22px/1.5 "Nunito", sans-serif;
+    font: 700 22px/1.5 "Nunito", sans-serif;
     color: #6b7d8d;
   }
 
@@ -195,22 +203,102 @@ body {
   }
 
   #results {
-    padding-bottom: 40px;
-    /* height: 100vh; */
+    padding: 1rem 0 1.5rem 0;
+
+    .block > .title {
+      font: 700 22px / 1.4 "Syne", sans-serif;
+      margin-bottom: 0.8rem;
+    }
 
     .list {
       display: grid;
       grid-template-columns: var(--results-columns);
-      gap: 20px;
-      padding-bottom: 40px;
+      gap: 1.4rem;
+      padding-bottom: 1.8rem;
     }
 
     .result-card {
-      background-color: rgba(0, 0, 0, 0.2);
+      box-shadow: var(--box-shadow);
       border-radius: var(--border-radius);
-      height: 300px;
-      align-items: center;
-      justify-content: center;
+      position: relative;
+
+      img {
+        border-radius: var(--border-radius) var(--border-radius) 0 0;
+        width: 100%;
+      }
+      .offer {
+        top: 1rem;
+        right: 1rem;
+        position: absolute;
+        background-color: var(--secondary-color);
+        border-radius: var(--border-radius);
+        font: 800 12px / 1.3 "Nunito", sans-serif;
+        padding: 0.3rem 0.7rem;
+        border-radius: 40px;
+      }
+      .info {
+        padding: 0.6rem 1.2rem 0.7rem 1.2rem;
+      }
+      .destination {
+        color: var(--primary-color);
+        font: 700 14px / 1.4 "Syne", sans-serif;
+      }
+      .duration {
+        font: 500 14px / 1.4 "Syne", sans-serif;
+      }
+      .title {
+        font: 700 18px / 1.5 "Nunito", sans-serif;
+      }
+      .price {
+        align-items: center;
+        background-color: var(--bg-color);
+        border-radius: 0 0 var(--border-radius) var(--border-radius);
+        display: flex;
+        gap: 1rem;
+        padding: 0.8rem 1.1rem;
+      }
+      .left span {
+        display: block;
+      }
+      .since {
+        font: 400 12px / 1.3 "Nunito", sans-serif;
+      }
+      .value {
+        font: 700 22px / 1 "Nunito", sans-serif;
+      }
+      .breakdown:hover {
+        text-decoration: underline;
+      }
+      .breakdown {
+        color: var(--primary-color);
+        font: 500 14px / 1.3 "Nunito", sans-serif;
+        position: relative;
+        padding-right: 12px;
+      }
+
+      .breakdown::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 40%;
+        width: 8px;
+        height: 8px;
+        border-right: 1px solid currentColor;
+        border-bottom: 1px solid currentColor;
+        transform: translateY(-50%) rotate(45deg);
+        transition: transform 0.2s ease;
+      }
+      .reserve {
+        margin-top: 0.7rem;
+      }
+      .reserve a {
+        font: 600 16px / 1.3 "Nunito", sans-serif;
+        border-radius: var(--border-radius);
+        background-color: var(--white-color);
+        border: solid 1px var(--primary-color);
+        color: var(--primary-color);
+        padding: 0.5rem 1.4rem;
+      }
     }
   }
 }
