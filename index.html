@@ -4,26 +4,782 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Waveless</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <header class="header"></header>
-      <nav class="nav">
-        <!-- TODO: nav -->
-      </nav>
-
-      <main class="main">
+    <div class="full-width">
+      <header class="header">
         <div class="center">
-          <!-- TODO: products -->
+          <div class="header__logo"><img src="./icons/logo.svg" alt="waveless" /></div>
+          <nav class="header__nav">
+            <ul>
+              <li><a href="#">Aventura</a></li>
+              <li><a href="#">destinos</a></li>
+              <li><a href="#">Alojamiento</a></li>
+              <li><a href="#">Sobre nosotros</a></li>
+            </ul>
+          </nav>
+          <div class="header__user-actions">
+            <a href="#">Reserva</a>
+          </div>
         </div>
-      </main>
+      </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="content">
+        <div class="center">
+          <div class="prime">
+            <div class="carrousel">
+              <!-- TODO: carrousel -->
+              <img src="./images/carrousel-1.png" alt="carrousel-1" />
+            </div>
+            <div class="tagline">
+              <p class="title">Vive tus propias aventuras</p>
+              <p class="subtag">
+                Para los que les gusta explorar y conocer mundo sin complejos
+              </p>
+            </div>
+          </div>
+          <div class="products">
+            <aside class="filters">
+              <p class="title">Filtrar mi búsqueda</p>
+
+              <div class="block">
+                <p class="filter destinations">Destinos</p>
+                <div class="list">
+                  <ul>
+                    <li>
+                      <label for="destination-1">
+                        <input
+                          type="checkbox"
+                          id="destination-1"
+                          name="destination-1"
+                        />
+                        <span>Marruecos</span>
+                      </label>
+                      <i class="info-icon tooltip top">
+                        <span class="tiptext">Loren ipsum</span>
+                      </i>
+                    </li>
+                  </ul>
+                  <p class="view-all hide">Ver <span></span> más</p>
+                  <p class="view-less hide">Ver menos</p>
+                </div>
+              </div>
+
+              <div class="block">
+                <p class="filter adventure">Aventura</p>
+                <div class="list">
+                  <ul>
+                    <li>
+                      <label for="adventure-1">
+                        <input
+                          type="checkbox"
+                          id="adventure-1"
+                          name="adventure-1"
+                        />
+                        <span>Quads</span>
+                      </label>
+                      <i
+                        class="info-icon tooltip top"
+                        aria-label="Más información"
+                      >
+                        <span class="tiptext">Loren ipsum</span>
+                      </i>
+                    </li>
+                    <li>
+                      <label for="adventure-2">
+                        <input
+                          type="checkbox"
+                          id="adventure-2"
+                          name="adventure-2"
+                        />
+                        <span>Parapente</span>
+                      </label>
+                      <i
+                        class="info-icon tooltip top"
+                        aria-label="Más información"
+                      >
+                        <span class="tiptext">Loren ipsum</span>
+                      </i>
+                    </li>
+
+                    <li>
+                      <label for="adventure-3">
+                        <input
+                          type="checkbox"
+                          id="adventure-3"
+                          name="adventure-3"
+                        />
+                        <span>Rafting</span>
+                      </label>
+                      <i
+                        class="info-icon tooltip top"
+                        aria-label="Más información"
+                      >
+                        <span class="tiptext">Loren ipsum</span>
+                      </i>
+                    </li>
+                    <li>
+                      <label for="adventure-4">
+                        <input
+                          type="checkbox"
+                          id="adventure-4"
+                          name="adventure-4"
+                        />
+                        <span>Explora</span>
+                      </label>
+                      <i
+                        class="info-icon tooltip top"
+                        aria-label="Más información"
+                      >
+                        <span class="tiptext">Loren ipsum</span>
+                      </i>
+                    </li>
+                    <li>
+                      <label for="adventure-5">
+                        <input
+                          type="checkbox"
+                          id="adventure-5"
+                          name="adventure-5"
+                        />
+                        <span>Buceo</span>
+                      </label>
+                      <i
+                        class="info-icon tooltip top"
+                        aria-label="Más información"
+                      >
+                        <span class="tiptext">Loren ipsum</span>
+                      </i>
+                    </li>
+                    <li>
+                      <label for="adventure-6">
+                        <input
+                          type="checkbox"
+                          id="adventure-6"
+                          name="adventure-6"
+                        />
+                        <span>Paracaídas</span>
+                      </label>
+                      <i
+                        class="info-icon tooltip top"
+                        aria-label="Más información"
+                      >
+                        <span class="tiptext">Loren ipsum</span>
+                      </i>
+                    </li>
+                    <li>
+                      <label for="adventure-7">
+                        <input
+                          type="checkbox"
+                          id="adventure-7"
+                          name="adventure-7"
+                        />
+                        <span>Snowboard</span>
+                      </label>
+                      <i
+                        class="info-icon tooltip top"
+                        aria-label="Más información"
+                      >
+                        <span class="tiptext">Loren ipsum</span>
+                      </i>
+                    </li>
+                    <li>
+                      <label for="adventure-8">
+                        <input
+                          type="checkbox"
+                          id="adventure-8"
+                          name="adventure-8"
+                        />
+                        <span>Surf</span>
+                      </label>
+                      <i
+                        class="info-icon tooltip top"
+                        aria-label="Más información"
+                      >
+                        <span class="tiptext">Loren ipsum</span>
+                      </i>
+                    </li>
+                  </ul>
+                  <p class="view-all hide">Ver <span></span> más</p>
+                  <p class="view-less hide">Ver menos</p>
+                </div>
+              </div>
+
+              <div class="block">
+                <p class="filter lodging">Alojamiento</p>
+                <div class="list">
+                  <ul>
+                    <li>
+                      <label>
+                        <input type="checkbox" name="destinations" />
+                        <span>Marruecos</span>
+                      </label>
+                      <i
+                        class="info-icon tooltip top"
+                        aria-label="Más información"
+                      >
+                        <span class="tiptext">Loren ipsum</span>
+                      </i>
+                    </li>
+                    <li>
+                      <label>
+                        <input type="checkbox" name="destinations" />
+                        <span>Marruecos</span>
+                      </label>
+                      <i
+                        class="info-icon tooltip top"
+                        aria-label="Más información"
+                      >
+                        <span class="tiptext">Loren ipsum</span>
+                      </i>
+                    </li>
+                    <li>
+                      <label>
+                        <input type="checkbox" name="destinations" />
+                        <span>Marruecos</span>
+                      </label>
+                      <i
+                        class="info-icon tooltip top"
+                        aria-label="Más información"
+                      >
+                        <span class="tiptext">Loren ipsum</span>
+                      </i>
+                    </li>
+                  </ul>
+                  <p class="view-all hide">Ver <span></span> más</p>
+                  <p class="view-less hide">Ver menos</p>
+                </div>
+              </div>
+
+              <div class="block">
+                <p class="filter price">Precio</p>
+                <div class="list">
+                  <ul>
+                    <li>
+                      <div class="input-text">
+                        <input type="text" placeholder="Mínimo" />
+                      </div>
+                    </li>
+                    <li>
+                      <div class="input-text">
+                        <input type="text" placeholder="Máximo" />
+                      </div>
+                    </li>
+                  </ul>
+                  <p class="view-all hide">Ver <span></span> más</p>
+                  <p class="view-less hide">Ver menos</p>
+                </div>
+              </div>
+            </aside>
+
+            <main class="results">
+              <div class="block">
+                <p class="title">Asia</p>
+                <ul class="list">
+                  <li class="result__card">
+                    <img src="./images/product-1.png" alt="product-1" />
+                    <span class="offer">Quads</span>
+                    <div class="info">
+                      <span class="destination">Marruecos, África</span>
+                      <span class="duration">9 días</span>
+                      <p class="title">Descubre Bangkok con Iberojet</p>
+                    </div>
+                    <div class="price">
+                      <div class="left">
+                        <span class="since">Desde</span>
+                        <span class="value">248.000 €</span>
+                        <a href="#" class="price__breakdown">Ver desglose</a>
+                      </div>
+                      <div class="reserve">
+                        <a href="#">Reservar</a>
+                      </div>
+                    </div>
+                    <div class="break-layer">
+                      <div class="break-layer__header">
+                        <p class="break-layer__title">Desglose de precios</p>
+                        <i class="break-layer__close"></i>
+                      </div>
+                      <div class="break-layer__content">
+                        <p class="break-layer__product">
+                          Marruecos, África<span>9 días</span>
+                        </p>
+                        <ul class="break-layer__data">
+                          <li>
+                            <p class="break-layer__left">
+                              Precio antes de impuestos
+                            </p>
+                            <p class="break-layer__right">1.124,00 €</p>
+                          </li>
+                          <li>
+                            <p class="break-layer__left">Impuestos</p>
+                            <p class="break-layer__right">4,43 €</p>
+                          </li>
+                          <li>
+                            <p class="break-layer__left">Loren ipsum</p>
+                            <p class="break-layer__right">150,42 €</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="break-layer__footer">
+                        <p class="break-layer__text">Precio total</p>
+                        <p class="break-layer__price">2.455,00</p>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="result__card">
+                    <img src="./images/product-1.png" alt="product-1" />
+                    <span class="offer">Quads</span>
+                    <div class="info">
+                      <span class="destination">Marruecos, África</span>
+                      <span class="duration">9 días</span>
+                      <p class="title">Descubre Bangkok con Iberojet</p>
+                    </div>
+                    <div class="price">
+                      <div class="left">
+                        <span class="since">Desde</span>
+                        <span class="value">248.000 €</span>
+                        <a href="#" class="price__breakdown">Ver desglose</a>
+                      </div>
+                      <div class="reserve">
+                        <a href="#">Reservar</a>
+                      </div>
+                    </div>
+                    <div class="break-layer hide">
+                      <div class="break-layer__header">
+                        <p class="break-layer__title">Desglose de precios</p>
+                        <i class="break-layer__close"></i>
+                      </div>
+                      <div class="break-layer__content">
+                        <p class="break-layer__product">
+                          Marruecos, África<span>9 días</span>
+                        </p>
+                        <ul class="break-layer__data">
+                          <li>
+                            <p class="break-layer__left">
+                              Precio antes de impuestos
+                            </p>
+                            <p class="break-layer__right">1.124,00 €</p>
+                          </li>
+                          <li>
+                            <p class="break-layer__left">Impuestos</p>
+                            <p class="break-layer__right">4,43 €</p>
+                          </li>
+                          <li>
+                            <p class="break-layer__left">Loren ipsum</p>
+                            <p class="break-layer__right">150,42 €</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="break-layer__footer">
+                        <p class="break-layer__text">Precio total</p>
+                        <p class="break-layer__price">2.455,00</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="result__card">
+                    <img src="./images/product-1.png" alt="product-1" />
+                    <span class="offer">Quads</span>
+                    <div class="info">
+                      <span class="destination">Marruecos, África</span>
+                      <span class="duration">9 días</span>
+                      <p class="title">Descubre Bangkok con Iberojet</p>
+                    </div>
+                    <div class="price">
+                      <div class="left">
+                        <span class="since">Desde</span>
+                        <span class="value">248.000 €</span>
+                        <a href="#" class="price__breakdown">Ver desglose</a>
+                      </div>
+                      <div class="reserve">
+                        <a href="#">Reservar</a>
+                      </div>
+                    </div>
+                    <div class="break-layer hide">
+                      <div class="break-layer__header">
+                        <p class="break-layer__title">Desglose de precios</p>
+                        <i class="break-layer__close"></i>
+                      </div>
+                      <div class="break-layer__content">
+                        <p class="break-layer__product">
+                          Marruecos, África<span>9 días</span>
+                        </p>
+                        <ul class="break-layer__data">
+                          <li>
+                            <p class="break-layer__left">
+                              Precio antes de impuestos
+                            </p>
+                            <p class="break-layer__right">1.124,00 €</p>
+                          </li>
+                          <li>
+                            <p class="break-layer__left">Impuestos</p>
+                            <p class="break-layer__right">4,43 €</p>
+                          </li>
+                          <li>
+                            <p class="break-layer__left">Loren ipsum</p>
+                            <p class="break-layer__right">150,42 €</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="break-layer__footer">
+                        <p class="break-layer__text">Precio total</p>
+                        <p class="break-layer__price">2.455,00</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="block">
+                <p class="title">Asia</p>
+                <ul class="list">
+                  <li class="result__card">
+                    <img src="./images/product-1.png" alt="product-1" />
+                    <span class="offer">Quads</span>
+                    <div class="info">
+                      <span class="destination">Marruecos, África</span>
+                      <span class="duration">9 días</span>
+                      <p class="title">Descubre Bangkok con Iberojet</p>
+                    </div>
+                    <div class="price">
+                      <div class="left">
+                        <span class="since">Desde</span>
+                        <span class="value">248.000 €</span>
+                        <a href="#" class="price__breakdown">Ver desglose</a>
+                      </div>
+                      <div class="reserve">
+                        <a href="#">Reservar</a>
+                      </div>
+                    </div>
+                    <div class="break-layer hide">
+                      <div class="break-layer__header">
+                        <p class="break-layer__title">Desglose de precios</p>
+                        <i class="break-layer__close"></i>
+                      </div>
+                      <div class="break-layer__content">
+                        <p class="break-layer__product">
+                          Marruecos, África<span>9 días</span>
+                        </p>
+                        <ul class="break-layer__data">
+                          <li>
+                            <p class="break-layer__left">
+                              Precio antes de impuestos
+                            </p>
+                            <p class="break-layer__right">1.124,00 €</p>
+                          </li>
+                          <li>
+                            <p class="break-layer__left">Impuestos</p>
+                            <p class="break-layer__right">4,43 €</p>
+                          </li>
+                          <li>
+                            <p class="break-layer__left">Loren ipsum</p>
+                            <p class="break-layer__right">150,42 €</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="break-layer__footer">
+                        <p class="break-layer__text">Precio total</p>
+                        <p class="break-layer__price">2.455,00</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="result__card">
+                    <img src="./images/product-1.png" alt="product-1" />
+                    <span class="offer">Quads</span>
+                    <div class="info">
+                      <span class="destination">Marruecos, África</span>
+                      <span class="duration">9 días</span>
+                      <p class="title">Descubre Bangkok con Iberojet</p>
+                    </div>
+                    <div class="price">
+                      <div class="left">
+                        <span class="since">Desde</span>
+                        <span class="value">248.000 €</span>
+                        <a href="#" class="price__breakdown">Ver desglose</a>
+                      </div>
+                      <div class="reserve">
+                        <a href="#">Reservar</a>
+                      </div>
+                    </div>
+                    <div class="break-layer hide">
+                      <div class="break-layer__header">
+                        <p class="break-layer__title">Desglose de precios</p>
+                        <i class="break-layer__close"></i>
+                      </div>
+                      <div class="break-layer__content">
+                        <p class="break-layer__product">
+                          Marruecos, África<span>9 días</span>
+                        </p>
+                        <ul class="break-layer__data">
+                          <li>
+                            <p class="break-layer__left">
+                              Precio antes de impuestos
+                            </p>
+                            <p class="break-layer__right">1.124,00 €</p>
+                          </li>
+                          <li>
+                            <p class="break-layer__left">Impuestos</p>
+                            <p class="break-layer__right">4,43 €</p>
+                          </li>
+                          <li>
+                            <p class="break-layer__left">Loren ipsum</p>
+                            <p class="break-layer__right">150,42 €</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="break-layer__footer">
+                        <p class="break-layer__text">Precio total</p>
+                        <p class="break-layer__price">2.455,00</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="result__card">
+                    <img src="./images/product-1.png" alt="product-1" />
+                    <span class="offer">Quads</span>
+                    <div class="info">
+                      <span class="destination">Marruecos, África</span>
+                      <span class="duration">9 días</span>
+                      <p class="title">Descubre Bangkok con Iberojet</p>
+                    </div>
+                    <div class="price">
+                      <div class="left">
+                        <span class="since">Desde</span>
+                        <span class="value">248.000 €</span>
+                        <a href="#" class="price__breakdown">Ver desglose</a>
+                      </div>
+                      <div class="reserve">
+                        <a href="#">Reservar</a>
+                      </div>
+                    </div>
+                    <div class="break-layer hide">
+                      <div class="break-layer__header">
+                        <p class="break-layer__title">Desglose de precios</p>
+                        <i class="break-layer__close"></i>
+                      </div>
+                      <div class="break-layer__content">
+                        <p class="break-layer__product">
+                          Marruecos, África<span>9 días</span>
+                        </p>
+                        <ul class="break-layer__data">
+                          <li>
+                            <p class="break-layer__left">
+                              Precio antes de impuestos
+                            </p>
+                            <p class="break-layer__right">1.124,00 €</p>
+                          </li>
+                          <li>
+                            <p class="break-layer__left">Impuestos</p>
+                            <p class="break-layer__right">4,43 €</p>
+                          </li>
+                          <li>
+                            <p class="break-layer__left">Loren ipsum</p>
+                            <p class="break-layer__right">150,42 €</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="break-layer__footer">
+                        <p class="break-layer__text">Precio total</p>
+                        <p class="break-layer__price">2.455,00</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="result__card">
+                    <img src="./images/product-1.png" alt="product-1" />
+                    <span class="offer">Quads</span>
+                    <div class="info">
+                      <span class="destination">Marruecos, África</span>
+                      <span class="duration">9 días</span>
+                      <p class="title">Descubre Bangkok con Iberojet</p>
+                    </div>
+                    <div class="price">
+                      <div class="left">
+                        <span class="since">Desde</span>
+                        <span class="value">248.000 €</span>
+                        <a href="#" class="price__breakdown">Ver desglose</a>
+                      </div>
+                      <div class="reserve">
+                        <a href="#">Reservar</a>
+                      </div>
+                    </div>
+                    <div class="break-layer hide">
+                      <div class="break-layer__header">
+                        <p class="break-layer__title">Desglose de precios</p>
+                        <i class="break-layer__close"></i>
+                      </div>
+                      <div class="break-layer__content">
+                        <p class="break-layer__product">
+                          Marruecos, África<span>9 días</span>
+                        </p>
+                        <ul class="break-layer__data">
+                          <li>
+                            <p class="break-layer__left">
+                              Precio antes de impuestos
+                            </p>
+                            <p class="break-layer__right">1.124,00 €</p>
+                          </li>
+                          <li>
+                            <p class="break-layer__left">Impuestos</p>
+                            <p class="break-layer__right">4,43 €</p>
+                          </li>
+                          <li>
+                            <p class="break-layer__left">Loren ipsum</p>
+                            <p class="break-layer__right">150,42 €</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="break-layer__footer">
+                        <p class="break-layer__text">Precio total</p>
+                        <p class="break-layer__price">2.455,00</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="result__card">
+                    <img src="./images/product-1.png" alt="product-1" />
+                    <span class="offer">Quads</span>
+                    <div class="info">
+                      <span class="destination">Marruecos, África</span>
+                      <span class="duration">9 días</span>
+                      <p class="title">Descubre Bangkok con Iberojet</p>
+                    </div>
+                    <div class="price">
+                      <div class="left">
+                        <span class="since">Desde</span>
+                        <span class="value">248.000 €</span>
+                        <a href="#" class="price__breakdown">Ver desglose</a>
+                      </div>
+                      <div class="reserve">
+                        <a href="#">Reservar</a>
+                      </div>
+                    </div>
+                    <div class="break-layer hide">
+                      <div class="break-layer__header">
+                        <p class="break-layer__title">Desglose de precios</p>
+                        <i class="break-layer__close"></i>
+                      </div>
+                      <div class="break-layer__content">
+                        <p class="break-layer__product">
+                          Marruecos, África<span>9 días</span>
+                        </p>
+                        <ul class="break-layer__data">
+                          <li>
+                            <p class="break-layer__left">
+                              Precio antes de impuestos
+                            </p>
+                            <p class="break-layer__right">1.124,00 €</p>
+                          </li>
+                          <li>
+                            <p class="break-layer__left">Impuestos</p>
+                            <p class="break-layer__right">4,43 €</p>
+                          </li>
+                          <li>
+                            <p class="break-layer__left">Loren ipsum</p>
+                            <p class="break-layer__right">150,42 €</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="break-layer__footer">
+                        <p class="break-layer__text">Precio total</p>
+                        <p class="break-layer__price">2.455,00</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="result__card">
+                    <img src="./images/product-1.png" alt="product-1" />
+                    <span class="offer">Quads</span>
+                    <div class="info">
+                      <span class="destination">Marruecos, África</span>
+                      <span class="duration">9 días</span>
+                      <p class="title">Descubre Bangkok con Iberojet</p>
+                    </div>
+                    <div class="price">
+                      <div class="left">
+                        <span class="since">Desde</span>
+                        <span class="value">248.000 €</span>
+                        <a href="#" class="price__breakdown">Ver desglose</a>
+                      </div>
+                      <div class="reserve">
+                        <a href="#">Reservar</a>
+                      </div>
+                    </div>
+                    <div class="break-layer hide">
+                      <div class="break-layer__header">
+                        <p class="break-layer__title">Desglose de precios</p>
+                        <i class="break-layer__close"></i>
+                      </div>
+                      <div class="break-layer__content">
+                        <p class="break-layer__product">
+                          Marruecos, África<span>9 días</span>
+                        </p>
+                        <ul class="break-layer__data">
+                          <li>
+                            <p class="break-layer__left">
+                              Precio antes de impuestos
+                            </p>
+                            <p class="break-layer__right">1.124,00 €</p>
+                          </li>
+                          <li>
+                            <p class="break-layer__left">Impuestos</p>
+                            <p class="break-layer__right">4,43 €</p>
+                          </li>
+                          <li>
+                            <p class="break-layer__left">Loren ipsum</p>
+                            <p class="break-layer__right">150,42 €</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="break-layer__footer">
+                        <p class="break-layer__text">Precio total</p>
+                        <p class="break-layer__price">2.455,00</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
 
       <footer class="footer">
-        <!-- TODO: footer -->
+        <div class="corporate">
+          <!-- TODO: logo -->
+          <img src="./icons/logo.svg" alt="waveless" />
+        </div>
+        <div class="rights">
+          @2024 Waveless - Todos los derechos reservados.
+        </div>
       </footer>
     </div>
 
-    <script src="behaviors.js"></script>
+    <script src="./behaviors.js"></script>
   </body>
 </html>

@@ -1,45 +1,647 @@
-/* Variables CSS */
 :root {
+  /* CSS vars */
+  --primary-color: #622f60;
+  --secondary-color: #ff8f50;
+  --third-color: #e0d9e0;
+  --bg-color: #fbf6f4;
+  --white-color: #fff;
+  --text-color: #342e34;
+  --color-input-text: #627fa5;
+
+  --products-columns: 1fr 3fr;
+  --results-columns: repeat(3, 1fr);
+  --center-width: 1440px;
+
+  --border-radius: 24px;
+  --box-shadow: 0px 6px 6px 0 rgba(0, 0, 0, 0.1);
+  --tooltip-w: 180px;
+
+  /* media-queries: */
+  @media (width <= 1440px) {
+    --center-width: 100%;
+    --products-columns: 1fr;
+    --results-columns: repeat(3, 1fr);
+    background-color: blue;
+  }
+  @media (width < 1024px) {
+    --center-width: 100%;
+    --products-columns: 1fr;
+    --results-columns: repeat(2, 1fr);
+    background-color: green;
+  }
+  @media (width < 745px) {
+    --center-width: 100%;
+    --products-columns: 1fr;
+    --results-columns: 1fr;
+    background-color: red;
+  }
+
+  min-height: 100%;
 }
 
-.wrapper {
+/* generic */
+body {
+  font-family: "Nunito", sans-serif;
+  color: var(--text-color);
+}
+.hide {
+  display: none;
+}
+/* /generic */
+
+/* layout */
+.full-width {
   display: grid;
-  grid-template-rows: 180px auto 200px;
+  grid-template-rows: 80px auto 180px;
   gap: 0;
   height: 100vh;
 }
 
 .header,
-.main,
-.footer {
+.content,
+.footer,
+.prime {
   display: grid;
+}
+
+.header,
+.footer {
+  background-color: var(--bg-color);
 }
 
 .center {
   justify-self: center;
   width: var(--center-width);
 }
+/* /layout */
 
-/* media-queries: */
-:root {
-  /* sm	40rem (640px) */
-  @media (width >= 40rem) {
-    --center-width: 40rem;
-  }
-  /* md	48rem (768px) */
-  @media (width >= 48rem) {
-    --center-width: 48rem;
-  }
-  /* lg	64rem (1024px) */
-  @media (width >= 64rem) {
-    --center-width: 64rem;
-  }
-  /* xl	80rem (1280px) */
-  @media (width >= 80rem) {
-    --center-width: 80rem;
-  }
-  /* 2xl	96rem (1536px) */
-  @media (width >= 96rem) {
-    --center-width: 96rem;
+/* header */
+.header {
+  border-bottom: solid 1px var(--secondary-color);
+  .center {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--secondary-color);
+    padding: 0 32px;
+    font: 600 16px/1.5 "Nunito", sans-serif;
   }
 }
+.header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__logo img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* header__navigation */
+.header__nav {
+  ul {
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    position: relative;
+  }
+  a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 1.7rem 0.5rem 1.8rem 2rem;
+    display: inline-block;
+    transition: color 0.3s ease;
+  }
+  a:hover {
+    font-weight: 700;
+  }
+  li:nth-child(1) {
+    background: url("./icons/adventure.svg") 0 center no-repeat;
+  }
+
+  li:nth-child(2) {
+    background: url("./icons/lodging.svg") 0 center no-repeat;
+  }
+
+  li:nth-child(3) {
+    background: url("./icons/destinations.svg") 0 center no-repeat;
+  }
+  a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--secondary-color);
+    transition: width 0.3s ease;
+  }
+  a:hover::after {
+    width: 100%;
+  }
+}
+/* /header__navigation */
+
+/* header__user-actions */
+.header__user-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: 12px 40px;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    color: var(--white-color);
+    transition: all 0.3s ease;
+  }
+  a:hover {
+    background-color: var(--secondary-color);
+  }
+}
+/* /header__user-actions */
+
+/* prime */
+.prime {
+  .tagline {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .title {
+    font: 700 38px / 1.4 "Syne", sans-serif;
+    margin-top: 4rem;
+  }
+
+  .subtag {
+    font: 700 22px/1.5 "Nunito", sans-serif;
+    color: #6b7d8d;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+/* /prime */
+
+/* products */
+.products {
+  display: grid;
+  grid-template-columns: var(--products-columns);
+  margin: 0 9.5rem 2rem 10rem;
+
+  /* filters */
+  .filters {
+    border-radius: var(--border-radius);
+    background-color: var(--bg-color);
+    width: 262px;
+    max-height: max-content;
+    padding-bottom: 1.5rem;
+    margin-top: 3.8rem;
+
+    .title {
+      font: 700 18px / 1.4 "Syne", sans-serif;
+      border-bottom: var(--third-color) solid 1px;
+      text-align: center;
+      padding: 1.7rem;
+    }
+
+    .filter {
+      font: 500 16px / 1.4 "Nunito", sans-serif;
+      padding: 1.5rem 0 0.6rem 3.5rem;
+      position: relative;
+      cursor: pointer;
+    }
+    .filter:hover,
+    .active .filter {
+      color: var(--secondary-color);
+      font-weight: 700;
+    }
+
+    .filter::before {
+      content: "";
+      background: url(./icons/all.svg) no-repeat;
+      position: absolute;
+      top: 1.5rem;
+      left: 1.5rem;
+      height: 1.3rem;
+      width: 1.6rem;
+    }
+    .filter::after {
+      content: "";
+      background: url(./icons/all.svg) no-repeat;
+      position: absolute;
+      top: 1.8rem;
+      right: 1.7rem;
+      height: 0.9rem;
+      width: 0.6rem;
+    }
+
+    /* filter behaviors */
+    .filter.destinations::before,
+    .filter.destinations::before {
+      background-position: -0.1rem -1rem;
+    }
+    .filter.destinations::after,
+    .filter.destinations::after {
+      background-position: -0.3rem 0.1rem;
+    }
+    .filter.destinations:hover::before,
+    .active .filter.destinations::before {
+      background-position: -1.9rem -1rem;
+    }
+    .filter.adventure::before,
+    .filter.adventure::before {
+      background-position: 0rem -2.5rem;
+    }
+    .filter.adventure::after,
+    .filter.adventure::after {
+      background-position: -0.3rem 0.1rem;
+    }
+    .filter.adventure:hover::before,
+    .active .filter.adventure::before {
+      background-position: -1.9rem -2.5rem;
+    }
+    .filter.lodging::before,
+    .filter.lodging::before {
+      background-position: -0.1rem -3.9rem;
+    }
+    .filter.lodging::after,
+    .filter.lodging::after {
+      background-position: -0.3rem 0.1rem;
+    }
+    .filter.lodging:hover::before,
+    .active .filter.lodging::before {
+      background-position: -2rem -3.9rem;
+    }
+    .filter.price::before,
+    .filter.price::before {
+      background-position: -0.1rem -5.9rem;
+    }
+    .filter.price::after,
+    .filter.price::after {
+      background-position: -0.3rem 0.1rem;
+    }
+    .filter.price:hover::before,
+    .active .filter.price::before {
+      background-position: -1.9rem -5.9rem;
+    }
+    .filter:hover::after,
+    .active .filter::after {
+      background-position: -2rem 0.1rem;
+      transform: rotate(90deg);
+    }
+    /*  */
+
+    /* filter lists */
+    .list {
+      height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .active .list {
+      visibility: visible;
+      transition: all 0.3s ease-in-out;
+      height: auto;
+    }
+
+    .list li {
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.4rem 1rem 0.4rem 2.6rem;
+    }
+    .list li.hide {
+      display: none;
+    }
+    .list li:nth-child(1) {
+      margin-top: 1rem;
+    }
+    .list label {
+      cursor: pointer;
+      display: flex;
+      gap: 0.7rem;
+      align-items: center;
+    }
+
+    .list input[type="checkbox"] {
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+      color: #fff;
+      background: url(./icons/check.svg) 0 -2rem no-repeat;
+      background-size: 80%;
+      width: 18px;
+      height: 18px;
+      appearance: none;
+      border: 2px solid var(--primary-color);
+      border-radius: 2px;
+      transition: all 0.3s ease-in-out;
+    }
+    .list input[type="checkbox"]:checked {
+      background-color: var(--secondary-color);
+      background-position: 0.15rem 0.1rem;
+    }
+
+    .list span {
+      font: 700 14px / 1.3 "Nunito", sans-serif;
+    }
+    .input-text {
+      position: relative;
+    }
+    .input-text {
+      border: var(--primary-color) solid 1px;
+      border-radius: var(--border-radius);
+      padding: 0.8rem 1rem;
+      background-color: var(--white-color);
+      margin: -1rem 0 0 -1rem;
+      width: 100%;
+    }
+    .input-text input {
+      border: none;
+      width: 80%;
+      margin-left: 2rem;
+    }
+    .input-text input::focus {
+      border: none;
+    }
+    .input-text::before {
+      content: "";
+      background: url(./icons/all.svg) -60px -92px no-repeat;
+      position: absolute;
+      left: 14px;
+      top: 12px;
+      width: 1.7rem;
+      height: 1.7rem;
+    }
+
+    /*  */
+
+    /* info tooltip */
+    .info-icon {
+      background: url(./icons/info.svg) 0 0 no-repeat;
+      height: 1rem;
+      width: 1rem;
+      margin-top: 0.05rem;
+    }
+    .tooltip {
+      position: relative;
+    }
+    .tooltip .tiptext {
+      visibility: hidden;
+      width: var(--tooltip-w);
+      background-color: #fff;
+      text-align: center;
+      border-radius: 3px;
+      padding: 6px 0;
+      position: absolute;
+      z-index: 100;
+      box-shadow: var(--box-shadow);
+      margin-left: calc((var(--tooltip-w) / 2) * (-1));
+      bottom: 1.6rem;
+      left: 50%;
+    }
+    .tooltip .tiptext::after {
+      content: "";
+      position: absolute;
+      border-width: 5px;
+      border-style: solid;
+      margin-left: -5px;
+      top: 100%;
+      left: 50%;
+      border-color: #fff transparent transparent transparent;
+    }
+    .tooltip:hover .tiptext {
+      visibility: visible;
+    }
+    li:nth-child(1) .tooltip .tiptext {
+      bottom: -2.4rem;
+    }
+    li:nth-child(1) .tooltip .tiptext::after {
+      border-color: transparent transparent #fff transparent;
+      top: -32%;
+    }
+    /*  */
+
+    /* view-all / view-less */
+    .view-all,
+    .view-less {
+      cursor: pointer;
+      color: var(--primary-color);
+      font: 500 14px / 1.3 "Nunito", sans-serif;
+      text-decoration: underline;
+      margin-left: 2.6rem;
+    }
+    /*  */
+  }
+  /*  */
+
+  /* results */
+  .results {
+    padding: 1rem 0 1.5rem 0;
+
+    .block > .title {
+      font: 700 22px / 1.4 "Syne", sans-serif;
+      margin-bottom: 0.8rem;
+    }
+
+    .list {
+      display: grid;
+      grid-template-columns: var(--results-columns);
+      gap: 1.4rem;
+      padding-bottom: 1.8rem;
+    }
+
+    .result__card {
+      box-shadow: var(--box-shadow);
+      border-radius: var(--border-radius);
+      position: relative;
+
+      img {
+        border-radius: var(--border-radius) var(--border-radius) 0 0;
+        width: 100%;
+      }
+      .offer {
+        top: 1rem;
+        right: 1rem;
+        position: absolute;
+        background-color: var(--secondary-color);
+        border-radius: var(--border-radius);
+        font: 800 12px / 1.3 "Nunito", sans-serif;
+        padding: 0.3rem 0.7rem;
+        border-radius: 40px;
+      }
+      .info {
+        padding: 0.6rem 1.2rem 0.7rem 1.2rem;
+      }
+      .destination {
+        color: var(--primary-color);
+        font: 700 14px / 1.4 "Syne", sans-serif;
+      }
+      .duration {
+        font: 500 14px / 1.4 "Syne", sans-serif;
+      }
+      .title {
+        font: 700 18px / 1.5 "Nunito", sans-serif;
+      }
+      .price {
+        align-items: center;
+        background-color: var(--bg-color);
+        border-radius: 0 0 var(--border-radius) var(--border-radius);
+        display: flex;
+        gap: 1rem;
+        padding: 0.8rem 1.1rem;
+      }
+      .left span {
+        display: block;
+      }
+      .since {
+        font: 400 12px / 1.3 "Nunito", sans-serif;
+      }
+      .value {
+        font: 700 22px / 1 "Nunito", sans-serif;
+      }
+      .price__breakdown:hover {
+        text-decoration: underline;
+      }
+      .price__breakdown {
+        color: var(--primary-color);
+        font: 500 14px / 1.3 "Nunito", sans-serif;
+        position: relative;
+        padding-right: 12px;
+      }
+
+      .price__breakdown::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 40%;
+        width: 8px;
+        height: 8px;
+        border-right: 1px solid currentColor;
+        border-bottom: 1px solid currentColor;
+        transform: translateY(-50%) rotate(45deg);
+        transition: transform 0.2s ease;
+      }
+      .reserve {
+        margin-top: 0.7rem;
+      }
+      .reserve a {
+        font: 600 16px / 1.3 "Nunito", sans-serif;
+        border-radius: var(--border-radius);
+        background-color: var(--white-color);
+        border: solid 1px var(--primary-color);
+        color: var(--primary-color);
+        padding: 0.5rem 1.4rem;
+      }
+    }
+
+    /* breackdown layer */
+    .break-layer {
+      position: absolute;
+      top: 367px;
+      left: 0;
+      box-shadow: var(--box-shadow);
+      border: solid 1px black;
+      border-radius: var(--border-radius);
+      width: 403px;
+      overflow: hidden;
+      z-index: 200;
+      background-color: var(--white-color);
+    }
+    .break-layer__header {
+      background-color: var(--bg-color);
+      border-bottom: var(--third-color);
+      padding: 1rem 1.6rem;
+      position: relative;
+    }
+    .break-layer__title {
+      font: 700 18px/1.3 "Nunito", sans-serif;
+    }
+    .break-layer__close {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      background: url(./icons/all.svg) -5px -121px no-repeat;
+      height: 1.2rem;
+      width: 1.3rem;
+      cursor: pointer;
+    }
+    .break-layer__content {
+      padding: 1.5rem 1.4rem 0 1.4rem;
+    }
+    .break-layer__product {
+      font: 700 18px/1.3 "Syne", sans-serif;
+      color: var(--primary-color);
+      margin-bottom: 1.2rem;
+      span {
+        font-weight: 500;
+        color: var(--text-color);
+        margin-left: 0.5rem;
+      }
+    }
+    .break-layer__data li {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.9rem;
+    }
+    .break-layer__left {
+      font: 500 16px/1.3 "Nunito", sans-serif;
+    }
+    .break-layer__right {
+      font: 700 18px/1.3 "Nunito", sans-serif;
+      text-align: right;
+    }
+    .break-layer__footer {
+      display: flex;
+      justify-content: space-between;
+      background-color: var(--bg-color);
+      padding: 1.3rem 1.6rem 1rem;
+      border-top: 1px solid var(--third-color);
+    }
+    .break-layer__text {
+      font: 700 18px/1.3 "Nunito", sans-serif;
+    }
+    .break-layer__price {
+      font: 700 22px/1.3 "Nunito", sans-serif;
+    }
+    /*  */
+  }
+  /*  */
+}
+/* /products */
+
+/* footer */
+.footer {
+  .corporate,
+  .rights {
+    display: grid;
+    place-items: center;
+  }
+
+  .corporate {
+    display: grid;
+    place-items: center;
+    height: 100px;
+
+    .center {
+      display: grid;
+      place-items: center;
+    }
+  }
+
+  .rights {
+    background-color: var(--third-color);
+    text-align: center;
+  }
+}
+/* /footer */
