@@ -21,7 +21,9 @@
     <div class="full-width">
       <header class="header">
         <div class="center">
-          <div class="header__logo"><img src="./icons/logo.svg" alt="waveless" /></div>
+          <div class="header__logo">
+            <img src="./icons/logo.svg" alt="waveless" />
+          </div>
           <nav class="header__nav">
             <ul>
               <li><a href="#">Aventura</a></li>
@@ -35,46 +37,29 @@
           </div>
         </div>
       </header>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       <div class="content">
         <div class="center">
           <div class="prime">
-            <div class="carrousel">
+            <div class="prime__carrousel">
               <!-- TODO: carrousel -->
               <img src="./images/carrousel-1.png" alt="carrousel-1" />
             </div>
-            <div class="tagline">
-              <p class="title">Vive tus propias aventuras</p>
-              <p class="subtag">
+            <div class="prime__tagline">
+              <p class="prime__title">Vive tus propias aventuras</p>
+              <p class="prime__subtag">
                 Para los que les gusta explorar y conocer mundo sin complejos
               </p>
             </div>
           </div>
           <div class="products">
             <aside class="filters">
-              <p class="title">Filtrar mi búsqueda</p>
+              <p class="filters__title">Filtrar mi búsqueda</p>
 
-              <div class="block">
-                <p class="filter destinations">Destinos</p>
-                <div class="list">
+              <div class="filters__block">
+                <p class="filters__item filters__item--destinations">
+                  Destinos
+                </p>
+                <div class="filters__list">
                   <ul>
                     <li>
                       <label for="destination-1">
@@ -85,19 +70,36 @@
                         />
                         <span>Marruecos</span>
                       </label>
-                      <i class="info-icon tooltip top">
-                        <span class="tiptext">Loren ipsum</span>
+                      <i
+                        class="filters__info-icon filters__tooltip filters__top"
+                      >
+                        <span class="filters__tiptext">Loren ipsum</span>
+                      </i>
+                    </li>
+                    <li>
+                      <label for="destination-1">
+                        <input
+                          type="checkbox"
+                          id="destination-1"
+                          name="destination-1"
+                        />
+                        <span>Marruecos</span>
+                      </label>
+                      <i
+                        class="filters__info-icon filters__tooltip filters__top"
+                      >
+                        <span class="filters__tiptext">Loren ipsum</span>
                       </i>
                     </li>
                   </ul>
-                  <p class="view-all hide">Ver <span></span> más</p>
-                  <p class="view-less hide">Ver menos</p>
+                  <p class="filters__view-all hide">Ver <span></span> más</p>
+                  <p class="filters__view-less hide">Ver menos</p>
                 </div>
               </div>
 
-              <div class="block">
-                <p class="filter adventure">Aventura</p>
-                <div class="list">
+              <div class="filters__block">
+                <p class="filters__item filters__item--adventure">Aventura</p>
+                <div class="filters__list">
                   <ul>
                     <li>
                       <label for="adventure-1">
@@ -109,10 +111,10 @@
                         <span>Quads</span>
                       </label>
                       <i
-                        class="info-icon tooltip top"
+                        class="filters__info-icon filters__tooltip top"
                         aria-label="Más información"
                       >
-                        <span class="tiptext">Loren ipsum</span>
+                        <span class="filters__tiptext">Loren ipsum</span>
                       </i>
                     </li>
                     <li>
@@ -125,10 +127,10 @@
                         <span>Parapente</span>
                       </label>
                       <i
-                        class="info-icon tooltip top"
+                        class="filters__info-icon filters__tooltip top"
                         aria-label="Más información"
                       >
-                        <span class="tiptext">Loren ipsum</span>
+                        <span class="filters__tiptext">Loren ipsum</span>
                       </i>
                     </li>
 
@@ -142,10 +144,10 @@
                         <span>Rafting</span>
                       </label>
                       <i
-                        class="info-icon tooltip top"
+                        class="filters__info-icon filters__tooltip top"
                         aria-label="Más información"
                       >
-                        <span class="tiptext">Loren ipsum</span>
+                        <span class="filters__tiptext">Loren ipsum</span>
                       </i>
                     </li>
                     <li>
@@ -158,10 +160,10 @@
                         <span>Explora</span>
                       </label>
                       <i
-                        class="info-icon tooltip top"
+                        class="filters__info-icon filters__tooltip top"
                         aria-label="Más información"
                       >
-                        <span class="tiptext">Loren ipsum</span>
+                        <span class="filters__tiptext">Loren ipsum</span>
                       </i>
                     </li>
                     <li>
@@ -174,10 +176,10 @@
                         <span>Buceo</span>
                       </label>
                       <i
-                        class="info-icon tooltip top"
+                        class="filters__info-icon filters__tooltip top"
                         aria-label="Más información"
                       >
-                        <span class="tiptext">Loren ipsum</span>
+                        <span class="filters__tiptext">Loren ipsum</span>
                       </i>
                     </li>
                     <li>
@@ -190,10 +192,10 @@
                         <span>Paracaídas</span>
                       </label>
                       <i
-                        class="info-icon tooltip top"
+                        class="filters__info-icon filters__tooltip top"
                         aria-label="Más información"
                       >
-                        <span class="tiptext">Loren ipsum</span>
+                        <span class="filters__tiptext">Loren ipsum</span>
                       </i>
                     </li>
                     <li>
@@ -206,10 +208,10 @@
                         <span>Snowboard</span>
                       </label>
                       <i
-                        class="info-icon tooltip top"
+                        class="filters__info-icon filters__tooltip top"
                         aria-label="Más información"
                       >
-                        <span class="tiptext">Loren ipsum</span>
+                        <span class="filters__tiptext">Loren ipsum</span>
                       </i>
                     </li>
                     <li>
@@ -222,21 +224,21 @@
                         <span>Surf</span>
                       </label>
                       <i
-                        class="info-icon tooltip top"
+                        class="filters__info-icon filters__tooltip top"
                         aria-label="Más información"
                       >
-                        <span class="tiptext">Loren ipsum</span>
+                        <span class="filters__tiptext">Loren ipsum</span>
                       </i>
                     </li>
                   </ul>
-                  <p class="view-all hide">Ver <span></span> más</p>
-                  <p class="view-less hide">Ver menos</p>
+                  <p class="filters__view-all hide">Ver <span></span> más</p>
+                  <p class="filters__view-less hide">Ver menos</p>
                 </div>
               </div>
 
-              <div class="block">
-                <p class="filter lodging">Alojamiento</p>
-                <div class="list">
+              <div class="filters__block">
+                <p class="filters__item filters__item--lodging">Alojamiento</p>
+                <div class="filters__list">
                   <ul>
                     <li>
                       <label>
@@ -244,10 +246,10 @@
                         <span>Marruecos</span>
                       </label>
                       <i
-                        class="info-icon tooltip top"
+                        class="filters__info-icon filters__tooltip top"
                         aria-label="Más información"
                       >
-                        <span class="tiptext">Loren ipsum</span>
+                        <span class="filters__tiptext">Loren ipsum</span>
                       </i>
                     </li>
                     <li>
@@ -256,10 +258,10 @@
                         <span>Marruecos</span>
                       </label>
                       <i
-                        class="info-icon tooltip top"
+                        class="filters__info-icon filters__tooltip top"
                         aria-label="Más información"
                       >
-                        <span class="tiptext">Loren ipsum</span>
+                        <span class="filters__tiptext">Loren ipsum</span>
                       </i>
                     </li>
                     <li>
@@ -268,35 +270,35 @@
                         <span>Marruecos</span>
                       </label>
                       <i
-                        class="info-icon tooltip top"
+                        class="filters__info-icon filters__tooltip top"
                         aria-label="Más información"
                       >
-                        <span class="tiptext">Loren ipsum</span>
+                        <span class="filters__tiptext">Loren ipsum</span>
                       </i>
                     </li>
                   </ul>
-                  <p class="view-all hide">Ver <span></span> más</p>
-                  <p class="view-less hide">Ver menos</p>
+                  <p class="filters__view-all hide">Ver <span></span> más</p>
+                  <p class="filters__view-less hide">Ver menos</p>
                 </div>
               </div>
 
-              <div class="block">
-                <p class="filter price">Precio</p>
-                <div class="list">
+              <div class="filters__block">
+                <p class="filters__item filters__item--price">Precio</p>
+                <div class="filters__list">
                   <ul>
                     <li>
-                      <div class="input-text">
+                      <div class="filters__input-text">
                         <input type="text" placeholder="Mínimo" />
                       </div>
                     </li>
                     <li>
-                      <div class="input-text">
+                      <div class="filters__input-text">
                         <input type="text" placeholder="Máximo" />
                       </div>
                     </li>
                   </ul>
-                  <p class="view-all hide">Ver <span></span> más</p>
-                  <p class="view-less hide">Ver menos</p>
+                  <p class="filters__view-all hide">Ver <span></span> más</p>
+                  <p class="filters__view-less hide">Ver menos</p>
                 </div>
               </div>
             </aside>
@@ -770,11 +772,11 @@
       </div>
 
       <footer class="footer">
-        <div class="corporate">
+        <div class="footer__corporate">
           <!-- TODO: logo -->
           <img src="./icons/logo.svg" alt="waveless" />
         </div>
-        <div class="rights">
+        <div class="footer__rights">
           @2024 Waveless - Todos los derechos reservados.
         </div>
       </footer>
