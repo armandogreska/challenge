@@ -1,0 +1,40 @@
+:root {
+  /* CSS vars */
+  --primary-color: #622f60;
+  --secondary-color: #ff8f50;
+  --third-color: #e0d9e0;
+  --bg-color: #fbf6f4;
+  --white-color: #fff;
+  --text-color: #342e34;
+  --color-input-text: #627fa5;
+
+  --products-columns: 1fr 3fr;
+  --results-columns: repeat(3, 1fr);
+  --center-width: 1440px;
+
+  --border-radius: 24px;
+  --box-shadow: 0px 6px 6px 0 rgba(0, 0, 0, 0.1);
+  --tooltip-w: 180px;
+
+  /* media-queries: */
+  @media (width <= 1440px) {
+    --center-width: 100%;
+    --products-columns: 1fr;
+    --results-columns: repeat(3, 1fr);
+    background-color: blue;
+  }
+  @media (width < 1024px) {
+    --center-width: 100%;
+    --products-columns: 1fr;
+    --results-columns: repeat(2, 1fr);
+    background-color: green;
+  }
+  @media (width < 745px) {
+    --center-width: 100%;
+    --products-columns: 1fr;
+    --results-columns: 1fr;
+    background-color: red;
+  }
+
+  min-height: 100%;
+}
