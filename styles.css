@@ -94,7 +94,7 @@ body {
   object-fit: contain;
 }
 
-/* header__navigation */
+/* header: header__navigation */
 .header__nav {
   ul {
     display: flex;
@@ -141,9 +141,9 @@ body {
     width: 100%;
   }
 }
-/* /header__navigation */
+/* /header: header__navigation */
 
-/* header__user-actions */
+/* header: header__user-actions */
 .header__user-actions {
   display: flex;
   align-items: center;
@@ -163,7 +163,7 @@ body {
     background-color: var(--secondary-color);
   }
 }
-/* /header__user-actions */
+/* /header: header__user-actions */
 
 /* prime */
 .prime__tagline {
@@ -188,427 +188,420 @@ body {
   display: grid;
   grid-template-columns: var(--products-columns);
   margin: 0 9.5rem 2rem 10rem;
+}
 
-  /* filters */
-  .filters {
+/* products: filters */
+.filters {
+  border-radius: var(--border-radius);
+  background-color: var(--bg-color);
+  width: 262px;
+  max-height: max-content;
+  padding-bottom: 1.5rem;
+  margin-top: 3.8rem;
+}
+.filters__title {
+  font: 700 18px / 1.4 "Syne", sans-serif;
+  border-bottom: var(--third-color) solid 1px;
+  text-align: center;
+  padding: 1.7rem;
+}
+
+.filters__item {
+  font: 500 16px / 1.4 "Nunito", sans-serif;
+  padding: 1.5rem 0 0.6rem 3.5rem;
+  position: relative;
+  cursor: pointer;
+}
+.filters__item:hover,
+.active .filters__item {
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+.filters__item::before {
+  content: "";
+  background: url(./icons/all.svg) no-repeat;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  height: 1.3rem;
+  width: 1.6rem;
+}
+.filters__item::after {
+  content: "";
+  background: url(./icons/all.svg) no-repeat;
+  position: absolute;
+  top: 1.8rem;
+  right: 1.7rem;
+  height: 0.9rem;
+  width: 0.6rem;
+}
+
+/* products: filters: filter behaviors */
+.filters__item--destinations::before,
+.filters__item--destinations::before {
+  background-position: -0.1rem -1rem;
+}
+.filters__item--destinations::after,
+.filters__item--destinations::after {
+  background-position: -0.3rem 0.1rem;
+}
+.filters__item--destinations:hover::before,
+.active .filters__item--destinations::before {
+  background-position: -1.9rem -1rem;
+}
+.filters__item--adventure::before,
+.filters__item--adventure::before {
+  background-position: 0rem -2.5rem;
+}
+.filters__item--adventure::after,
+.filters__item--adventure::after {
+  background-position: -0.3rem 0.1rem;
+}
+.filters__item--adventure:hover::before,
+.active .filters__item--adventure::before {
+  background-position: -1.9rem -2.5rem;
+}
+.filters__item--lodging::before,
+.filters__item--lodging::before {
+  background-position: -0.1rem -3.9rem;
+}
+.filters__item--lodging::after,
+.filters__item--lodging::after {
+  background-position: -0.3rem 0.1rem;
+}
+.filters__item--lodging:hover::before,
+.active .filters__item--lodging::before {
+  background-position: -2rem -3.9rem;
+}
+.filters__item--price::before,
+.filters__item--price::before {
+  background-position: -0.1rem -5.9rem;
+}
+.filters__item--price::after,
+.filters__item--price::after {
+  background-position: -0.3rem 0.1rem;
+}
+.filters__item--price:hover::before,
+.active .filters__item--price::before {
+  background-position: -1.9rem -5.9rem;
+}
+.filters__item:hover::after,
+.active .filters__item::after {
+  background-position: -2rem 0.1rem;
+  transform: rotate(90deg);
+}
+/* /products: filters: filter behaviors */
+
+/* products: filters: lists */
+.filters__list {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.active .filters__list {
+  visibility: visible;
+  transition: all 0.3s ease-in-out;
+  height: auto;
+}
+.filters__list li {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 1rem 0.4rem 2.6rem;
+}
+.filters__list li.hide {
+  display: none;
+}
+.filters__list li:nth-child(1) {
+  margin-top: 1rem;
+}
+.filters__list label {
+  cursor: pointer;
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+}
+
+.filters__list input[type="checkbox"] {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  color: #fff;
+  background: url(./icons/check.svg) 0 -2rem no-repeat;
+  background-size: 80%;
+  width: 18px;
+  height: 18px;
+  appearance: none;
+  border: 2px solid var(--primary-color);
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+.filters__list input[type="checkbox"]:checked {
+  background-color: var(--secondary-color);
+  background-position: 0.15rem 0.1rem;
+}
+
+.filters__list span {
+  font: 700 14px / 1.3 "Nunito", sans-serif;
+}
+.filters__input-text {
+  position: relative;
+}
+.filters__input-text {
+  border: var(--primary-color) solid 1px;
+  border-radius: var(--border-radius);
+  padding: 0.8rem 1rem;
+  background-color: var(--white-color);
+  margin: -1rem 0 0 -1rem;
+  width: 100%;
+}
+.filters__input-text input {
+  border: none;
+  width: 80%;
+  margin-left: 2rem;
+}
+.filters__input-text input::focus {
+  border: none;
+}
+.filters__input-text::before {
+  content: "";
+  background: url(./icons/all.svg) -60px -92px no-repeat;
+  position: absolute;
+  left: 14px;
+  top: 12px;
+  width: 1.7rem;
+  height: 1.7rem;
+}
+/* /products: filters: lists */
+
+/* products: filters: info tooltip */
+.filters__info-icon {
+  background: url(./icons/info.svg) 0 0 no-repeat;
+  height: 1rem;
+  width: 1rem;
+  margin-top: 0.05rem;
+}
+.filters__tooltip {
+  position: relative;
+}
+.filters__tooltip .filters__tiptext {
+  visibility: hidden;
+  width: var(--tooltip-w);
+  background-color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  padding: 6px 0;
+  position: absolute;
+  z-index: 100;
+  box-shadow: var(--box-shadow);
+  margin-left: calc((var(--tooltip-w) / 2) * (-1));
+  bottom: 1.6rem;
+  left: 50%;
+}
+.filters__tooltip .filters__tiptext::after {
+  content: "";
+  position: absolute;
+  border-width: 5px;
+  border-style: solid;
+  margin-left: -5px;
+  top: 100%;
+  left: 50%;
+  border-color: #fff transparent transparent transparent;
+}
+.filters__tooltip:hover .filters__tiptext {
+  visibility: visible;
+}
+li:nth-child(1) .filters__tooltip .filters__tiptext {
+  bottom: -2.4rem;
+}
+li:nth-child(1) .filters__tooltip .filters__tiptext::after {
+  border-color: transparent transparent #fff transparent;
+  top: -32%;
+}
+/* /products: filters: info tooltip */
+
+/* products: filters: view-all / view-less */
+.filters__view-all,
+.filters__view-less {
+  cursor: pointer;
+  color: var(--primary-color);
+  font: 500 14px / 1.3 "Nunito", sans-serif;
+  text-decoration: underline;
+  margin-left: 2.6rem;
+}
+/* /products: filters: view-all / view-less */
+/* /products: filters */
+
+/* products: results */
+.results {
+  padding: 1rem 0 1.5rem 0;
+  .results__block .results__title {
+    font: 700 22px / 1.4 "Syne", sans-serif;
+    margin-bottom: 0.8rem;
+  }
+  .results__list {
+    display: grid;
+    grid-template-columns: var(--results-columns);
+    gap: 1.4rem;
+    padding-bottom: 1.8rem;
+  }
+  .result__card {
+    box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
-    background-color: var(--bg-color);
-    width: 262px;
-    max-height: max-content;
-    padding-bottom: 1.5rem;
-    margin-top: 3.8rem;
+    position: relative;
 
-    .filters__title {
-      font: 700 18px / 1.4 "Syne", sans-serif;
-      border-bottom: var(--third-color) solid 1px;
-      text-align: center;
-      padding: 1.7rem;
-    }
-
-    .filters__item {
-      font: 500 16px / 1.4 "Nunito", sans-serif;
-      padding: 1.5rem 0 0.6rem 3.5rem;
-      position: relative;
-      cursor: pointer;
-    }
-    .filters__item:hover,
-    .active .filters__item {
-      color: var(--secondary-color);
-      font-weight: 700;
-    }
-
-    .filters__item::before {
-      content: "";
-      background: url(./icons/all.svg) no-repeat;
-      position: absolute;
-      top: 1.5rem;
-      left: 1.5rem;
-      height: 1.3rem;
-      width: 1.6rem;
-    }
-    .filters__item::after {
-      content: "";
-      background: url(./icons/all.svg) no-repeat;
-      position: absolute;
-      top: 1.8rem;
-      right: 1.7rem;
-      height: 0.9rem;
-      width: 0.6rem;
-    }
-
-    /* filter behaviors */
-    .filters__item--destinations::before,
-    .filters__item--destinations::before {
-      background-position: -0.1rem -1rem;
-    }
-    .filters__item--destinations::after,
-    .filters__item--destinations::after {
-      background-position: -0.3rem 0.1rem;
-    }
-    .filters__item--destinations:hover::before,
-    .active .filters__item--destinations::before {
-      background-position: -1.9rem -1rem;
-    }
-    .filters__item--adventure::before,
-    .filters__item--adventure::before {
-      background-position: 0rem -2.5rem;
-    }
-    .filters__item--adventure::after,
-    .filters__item--adventure::after {
-      background-position: -0.3rem 0.1rem;
-    }
-    .filters__item--adventure:hover::before,
-    .active .filters__item--adventure::before {
-      background-position: -1.9rem -2.5rem;
-    }
-    .filters__item--lodging::before,
-    .filters__item--lodging::before {
-      background-position: -0.1rem -3.9rem;
-    }
-    .filters__item--lodging::after,
-    .filters__item--lodging::after {
-      background-position: -0.3rem 0.1rem;
-    }
-    .filters__item--lodging:hover::before,
-    .active .filters__item--lodging::before {
-      background-position: -2rem -3.9rem;
-    }
-    .filters__item--price::before,
-    .filters__item--price::before {
-      background-position: -0.1rem -5.9rem;
-    }
-    .filters__item--price::after,
-    .filters__item--price::after {
-      background-position: -0.3rem 0.1rem;
-    }
-    .filters__item--price:hover::before,
-    .active .filters__item--price::before {
-      background-position: -1.9rem -5.9rem;
-    }
-    .filters__item:hover::after,
-    .active .filters__item::after {
-      background-position: -2rem 0.1rem;
-      transform: rotate(90deg);
-    }
-    /* /filter behaviors */
-
-    /* filter lists */
-    .filters__list {
-      height: 0;
-      overflow: hidden;
-      transition: all 0.3s ease-in-out;
-    }
-
-    .active .filters__list {
-      visibility: visible;
-      transition: all 0.3s ease-in-out;
-      height: auto;
-    }
-
-    .filters__list li {
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.4rem 1rem 0.4rem 2.6rem;
-    }
-    .filters__list li.hide {
-      display: none;
-    }
-    .filters__list li:nth-child(1) {
-      margin-top: 1rem;
-    }
-    .filters__list label {
-      cursor: pointer;
-      display: flex;
-      gap: 0.7rem;
-      align-items: center;
-    }
-
-    .filters__list input[type="checkbox"] {
-      display: inline-flex;
-      align-items: center;
-      cursor: pointer;
-      color: #fff;
-      background: url(./icons/check.svg) 0 -2rem no-repeat;
-      background-size: 80%;
-      width: 18px;
-      height: 18px;
-      appearance: none;
-      border: 2px solid var(--primary-color);
-      border-radius: 2px;
-      transition: all 0.3s ease-in-out;
-    }
-    .filters__list input[type="checkbox"]:checked {
-      background-color: var(--secondary-color);
-      background-position: 0.15rem 0.1rem;
-    }
-
-    .filters__list span {
-      font: 700 14px / 1.3 "Nunito", sans-serif;
-    }
-    .filters__input-text {
-      position: relative;
-    }
-    .filters__input-text {
-      border: var(--primary-color) solid 1px;
-      border-radius: var(--border-radius);
-      padding: 0.8rem 1rem;
-      background-color: var(--white-color);
-      margin: -1rem 0 0 -1rem;
+    img {
+      border-radius: var(--border-radius) var(--border-radius) 0 0;
       width: 100%;
     }
-    .filters__input-text input {
-      border: none;
-      width: 80%;
-      margin-left: 2rem;
-    }
-    .filters__input-text input::focus {
-      border: none;
-    }
-    .filters__input-text::before {
-      content: "";
-      background: url(./icons/all.svg) -60px -92px no-repeat;
+    .result__offer {
+      top: 1rem;
+      right: 1rem;
       position: absolute;
-      left: 14px;
-      top: 12px;
-      width: 1.7rem;
-      height: 1.7rem;
+      background-color: var(--secondary-color);
+      border-radius: var(--border-radius);
+      font: 800 12px / 1.3 "Nunito", sans-serif;
+      padding: 0.3rem 0.7rem;
+      border-radius: 40px;
     }
-    /* /filter lists */
-
-    /* info tooltip */
-    .filters__info-icon {
-      background: url(./icons/info.svg) 0 0 no-repeat;
-      height: 1rem;
-      width: 1rem;
-      margin-top: 0.05rem;
+    .result__info {
+      padding: 0.6rem 1.2rem 0.7rem 1.2rem;
     }
-    .filters__tooltip {
-      position: relative;
+    .result__destination {
+      color: var(--primary-color);
+      font: 700 14px / 1.4 "Syne", sans-serif;
     }
-    .filters__tooltip .filters__tiptext {
-      visibility: hidden;
-      width: var(--tooltip-w);
-      background-color: #fff;
-      text-align: center;
-      border-radius: 3px;
-      padding: 6px 0;
-      position: absolute;
-      z-index: 100;
-      box-shadow: var(--box-shadow);
-      margin-left: calc((var(--tooltip-w) / 2) * (-1));
-      bottom: 1.6rem;
-      left: 50%;
+    .result__duration {
+      font: 500 14px / 1.4 "Syne", sans-serif;
     }
-    .filters__tooltip .filters__tiptext::after {
-      content: "";
-      position: absolute;
-      border-width: 5px;
-      border-style: solid;
-      margin-left: -5px;
-      top: 100%;
-      left: 50%;
-      border-color: #fff transparent transparent transparent;
+    .result__title {
+      font: 700 18px / 1.5 "Nunito", sans-serif;
     }
-    .filters__tooltip:hover .filters__tiptext {
-      visibility: visible;
+    .result__price {
+      align-items: center;
+      background-color: var(--bg-color);
+      border-radius: 0 0 var(--border-radius) var(--border-radius);
+      display: flex;
+      gap: 1rem;
+      padding: 0.8rem 1.1rem;
     }
-    li:nth-child(1) .filters__tooltip .filters__tiptext {
-      bottom: -2.4rem;
+    .result__left span {
+      display: block;
     }
-    li:nth-child(1) .filters__tooltip .filters__tiptext::after {
-      border-color: transparent transparent #fff transparent;
-      top: -32%;
+    .result__since {
+      font: 400 12px / 1.3 "Nunito", sans-serif;
     }
-    /*  */
-
-    /* view-all / view-less */
-    .filters__view-all,
-    .filters__view-less {
-      cursor: pointer;
+    .result__value {
+      font: 700 22px / 1 "Nunito", sans-serif;
+    }
+    .price__breakdown:hover {
+      text-decoration: underline;
+    }
+    .price__breakdown {
       color: var(--primary-color);
       font: 500 14px / 1.3 "Nunito", sans-serif;
-      text-decoration: underline;
-      margin-left: 2.6rem;
-    }
-    /*  */
-  }
-  /*  */
-
-  /* results */
-  .results {
-    padding: 1rem 0 1.5rem 0;
-
-    .block > .title {
-      font: 700 22px / 1.4 "Syne", sans-serif;
-      margin-bottom: 0.8rem;
-    }
-
-    .list {
-      display: grid;
-      grid-template-columns: var(--results-columns);
-      gap: 1.4rem;
-      padding-bottom: 1.8rem;
-    }
-
-    .result__card {
-      box-shadow: var(--box-shadow);
-      border-radius: var(--border-radius);
       position: relative;
-
-      img {
-        border-radius: var(--border-radius) var(--border-radius) 0 0;
-        width: 100%;
-      }
-      .offer {
-        top: 1rem;
-        right: 1rem;
-        position: absolute;
-        background-color: var(--secondary-color);
-        border-radius: var(--border-radius);
-        font: 800 12px / 1.3 "Nunito", sans-serif;
-        padding: 0.3rem 0.7rem;
-        border-radius: 40px;
-      }
-      .info {
-        padding: 0.6rem 1.2rem 0.7rem 1.2rem;
-      }
-      .destination {
-        color: var(--primary-color);
-        font: 700 14px / 1.4 "Syne", sans-serif;
-      }
-      .duration {
-        font: 500 14px / 1.4 "Syne", sans-serif;
-      }
-      .title {
-        font: 700 18px / 1.5 "Nunito", sans-serif;
-      }
-      .price {
-        align-items: center;
-        background-color: var(--bg-color);
-        border-radius: 0 0 var(--border-radius) var(--border-radius);
-        display: flex;
-        gap: 1rem;
-        padding: 0.8rem 1.1rem;
-      }
-      .left span {
-        display: block;
-      }
-      .since {
-        font: 400 12px / 1.3 "Nunito", sans-serif;
-      }
-      .value {
-        font: 700 22px / 1 "Nunito", sans-serif;
-      }
-      .price__breakdown:hover {
-        text-decoration: underline;
-      }
-      .price__breakdown {
-        color: var(--primary-color);
-        font: 500 14px / 1.3 "Nunito", sans-serif;
-        position: relative;
-        padding-right: 12px;
-      }
-
-      .price__breakdown::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        top: 40%;
-        width: 8px;
-        height: 8px;
-        border-right: 1px solid currentColor;
-        border-bottom: 1px solid currentColor;
-        transform: translateY(-50%) rotate(45deg);
-        transition: transform 0.2s ease;
-      }
-      .reserve {
-        margin-top: 0.7rem;
-      }
-      .reserve a {
-        font: 600 16px / 1.3 "Nunito", sans-serif;
-        border-radius: var(--border-radius);
-        background-color: var(--white-color);
-        border: solid 1px var(--primary-color);
-        color: var(--primary-color);
-        padding: 0.5rem 1.4rem;
-      }
+      padding-right: 12px;
     }
-
-    /* breackdown layer */
-    .break-layer {
+    .price__breakdown::after {
+      content: "";
       position: absolute;
-      top: 367px;
-      left: 0;
-      box-shadow: var(--box-shadow);
-      border: solid 1px black;
+      right: 0;
+      top: 40%;
+      width: 8px;
+      height: 8px;
+      border-right: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
+      transform: translateY(-50%) rotate(45deg);
+      transition: transform 0.2s ease;
+    }
+    .result__reserve {
+      margin-top: 0.7rem;
+    }
+    .result__reserve a {
+      font: 600 16px / 1.3 "Nunito", sans-serif;
       border-radius: var(--border-radius);
-      width: 403px;
-      overflow: hidden;
-      z-index: 200;
       background-color: var(--white-color);
-    }
-    .break-layer__header {
-      background-color: var(--bg-color);
-      border-bottom: var(--third-color);
-      padding: 1rem 1.6rem;
-      position: relative;
-    }
-    .break-layer__title {
-      font: 700 18px/1.3 "Nunito", sans-serif;
-    }
-    .break-layer__close {
-      position: absolute;
-      right: 1rem;
-      top: 1rem;
-      background: url(./icons/all.svg) -5px -121px no-repeat;
-      height: 1.2rem;
-      width: 1.3rem;
-      cursor: pointer;
-    }
-    .break-layer__content {
-      padding: 1.5rem 1.4rem 0 1.4rem;
-    }
-    .break-layer__product {
-      font: 700 18px/1.3 "Syne", sans-serif;
+      border: solid 1px var(--primary-color);
       color: var(--primary-color);
-      margin-bottom: 1.2rem;
-      span {
-        font-weight: 500;
-        color: var(--text-color);
-        margin-left: 0.5rem;
-      }
+      padding: 0.5rem 1.4rem;
     }
-    .break-layer__data li {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 0.9rem;
-    }
-    .break-layer__left {
-      font: 500 16px/1.3 "Nunito", sans-serif;
-    }
-    .break-layer__right {
-      font: 700 18px/1.3 "Nunito", sans-serif;
-      text-align: right;
-    }
-    .break-layer__footer {
-      display: flex;
-      justify-content: space-between;
-      background-color: var(--bg-color);
-      padding: 1.3rem 1.6rem 1rem;
-      border-top: 1px solid var(--third-color);
-    }
-    .break-layer__text {
-      font: 700 18px/1.3 "Nunito", sans-serif;
-    }
-    .break-layer__price {
-      font: 700 22px/1.3 "Nunito", sans-serif;
-    }
-    /*  */
   }
-  /*  */
+
+  /* products: results: breackdown layer */
+  .break-layer {
+    position: absolute;
+    top: 367px;
+    left: 0;
+    box-shadow: var(--box-shadow);
+    border: solid 1px black;
+    border-radius: var(--border-radius);
+    width: 403px;
+    overflow: hidden;
+    z-index: 200;
+    background-color: var(--white-color);
+  }
+  .break-layer__header {
+    background-color: var(--bg-color);
+    border-bottom: var(--third-color);
+    padding: 1rem 1.6rem;
+    position: relative;
+  }
+  .break-layer__title {
+    font: 700 18px/1.3 "Nunito", sans-serif;
+  }
+  .break-layer__close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    background: url(./icons/all.svg) -5px -121px no-repeat;
+    height: 1.2rem;
+    width: 1.3rem;
+    cursor: pointer;
+  }
+  .break-layer__content {
+    padding: 1.5rem 1.4rem 0 1.4rem;
+  }
+  .break-layer__product {
+    font: 700 18px/1.3 "Syne", sans-serif;
+    color: var(--primary-color);
+    margin-bottom: 1.2rem;
+    span {
+      font-weight: 500;
+      color: var(--text-color);
+      margin-left: 0.5rem;
+    }
+  }
+  .break-layer__data li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.9rem;
+  }
+  .break-layer__left {
+    font: 500 16px/1.3 "Nunito", sans-serif;
+  }
+  .break-layer__right {
+    font: 700 18px/1.3 "Nunito", sans-serif;
+    text-align: right;
+  }
+  .break-layer__footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg-color);
+    padding: 1.3rem 1.6rem 1rem;
+    border-top: 1px solid var(--third-color);
+  }
+  .break-layer__text {
+    font: 700 18px/1.3 "Nunito", sans-serif;
+  }
+  .break-layer__price {
+    font: 700 22px/1.3 "Nunito", sans-serif;
+  }
+  /* /products: results: breackdown layer */
 }
+/* /products: results */
 /* /products */
 
 /* footer */
@@ -617,21 +610,17 @@ body {
   display: grid;
   place-items: center;
 }
-
 .footer__corporate {
   display: grid;
   place-items: center;
   height: 100px;
-
   .center {
     display: grid;
     place-items: center;
   }
 }
-
 .footer__rights {
   background-color: var(--third-color);
   text-align: center;
 }
-
 /* /footer */
