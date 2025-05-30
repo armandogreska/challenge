@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div id="full-width">
-      <header id="header">
+    <div class="full-width">
+      <header class="header">
         <div class="center">
           <div class="logo"><img src="./icons/logo.svg" alt="waveless" /></div>
-          <nav id="nav">
+          <nav class="nav">
             <ul>
               <li><a href="#">Aventura</a></li>
               <li><a href="#">destinos</a></li>
@@ -30,15 +30,15 @@
               <li><a href="#">Sobre nosotros</a></li>
             </ul>
           </nav>
-          <div id="user-actions">
+          <div class="user-actions">
             <a href="#">Reserva</a>
           </div>
         </div>
       </header>
-      <div id="content">
+      <div class="content">
         <div class="center">
-          <div id="prime">
-            <div id="carrousel">
+          <div class="prime">
+            <div class="carrousel">
               <!-- TODO: carrousel -->
               <img src="./images/carrousel-1.png" alt="carrousel-1" />
             </div>
@@ -49,8 +49,8 @@
               </p>
             </div>
           </div>
-          <div id="products">
-            <aside id="filters">
+          <div class="products">
+            <aside class="filters">
               <p class="title">Filtrar mi búsqueda</p>
 
               <div class="block">
@@ -58,8 +58,11 @@
                 <ul class="list">
                   <li>
                     <label for="destination-1">
-                      <input type="checkbox" id="destination-1
-                      name="destination-1" />
+                      <input
+                        type="checkbox"
+                        id="destination-1"
+                        name="destination-1"
+                      />
                       <span>Marruecos</span>
                     </label>
                     <i class="info-icon tooltip top">
@@ -200,6 +203,7 @@
                     </i>
                   </li>
                 </ul>
+                <p class="view-all"></p>
               </div>
 
               <div class="block">
@@ -239,7 +243,7 @@
               </div>
             </aside>
 
-            <main id="results">
+            <main class="results">
               <div class="block">
                 <p class="title">Asia</p>
                 <ul class="list">
@@ -427,12 +431,14 @@
         </div>
       </div>
 
-      <footer id="footer">
-        <div id="corporate">
+      <footer class="footer">
+        <div class="corporate">
           <!-- TODO: logo -->
           <img src="./icons/logo.svg" alt="waveless" />
         </div>
-        <div id="rights">@2024 Waveless - Todos los derechos reservados.</div>
+        <div class="rights">
+          @2024 Waveless - Todos los derechos reservados.
+        </div>
       </footer>
     </div>
 

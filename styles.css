@@ -47,22 +47,22 @@ body {
 /*  */
 
 /* layout */
-#full-width {
+.full-width {
   display: grid;
   grid-template-rows: 80px auto 180px;
   gap: 0;
   height: 100vh;
 }
 
-#header,
-#content,
-#footer,
-#prime {
+.header,
+.content,
+.footer,
+.prime {
   display: grid;
 }
 
-#header,
-#footer {
+.header,
+.footer {
   background-color: var(--bg-color);
 }
 
@@ -73,7 +73,7 @@ body {
 /*  */
 
 /* header */
-#header {
+.header {
   border-bottom: solid 1px var(--secondary-color);
   .center {
     display: flex;
@@ -95,7 +95,7 @@ body {
     object-fit: contain;
   }
 
-  #nav {
+  .nav {
     ul {
       display: flex;
       gap: 2rem;
@@ -146,7 +146,7 @@ body {
     }
   }
 
-  #user-actions {
+  .user-actions {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -169,7 +169,7 @@ body {
 /*  */
 
 /* prime */
-#prime {
+.prime {
   .tagline {
     text-align: center;
     margin-bottom: 3rem;
@@ -192,12 +192,12 @@ body {
 /*  */
 
 /* products */
-#products {
+.products {
   display: grid;
   grid-template-columns: var(--products-columns);
   margin: 0 9.5rem 0 10rem;
 
-  #filters {
+  .filters {
     border-radius: var(--border-radius);
     background-color: var(--bg-color);
     margin-top: 3.8rem;
@@ -392,7 +392,7 @@ body {
     }
   }
 
-  #results {
+  .results {
     padding: 1rem 0 1.5rem 0;
 
     .block > .title {
@@ -495,14 +495,14 @@ body {
 /*  */
 
 /* footer */
-#footer {
-  #corporate,
-  #rights {
+.footer {
+  .corporate,
+  .rights {
     display: grid;
     place-items: center;
   }
 
-  #corporate {
+  .corporate {
     display: grid;
     place-items: center;
     height: 128px;
@@ -513,7 +513,7 @@ body {
     }
   }
 
-  #rights {
+  .rights {
     background-color: #e0d9e0;
     text-align: center;
   }
