@@ -6,6 +6,7 @@
   --bg-color: #fbf6f4;
   --white-color: #fff;
   --text-color: #342e34;
+  --color-input-text: #627fa5;
 
   --products-columns: 1fr 3fr;
   --results-columns: repeat(3, 1fr);
@@ -46,7 +47,7 @@ body {
 .hide {
   display: none;
 }
-/*  */
+/* /generic */
 
 /* layout */
 .full-width {
@@ -72,7 +73,7 @@ body {
   justify-self: center;
   width: var(--center-width);
 }
-/*  */
+/* /layout */
 
 /* header */
 .header {
@@ -84,93 +85,88 @@ body {
     padding: 0 32px;
     font: 600 16px/1.5 "Nunito", sans-serif;
   }
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__logo img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
 
-  .logo {
+/* header__navigation */
+.header__nav {
+  ul {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    position: relative;
+  }
+  a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 1.7rem 0.5rem 1.8rem 2rem;
+    display: inline-block;
+    transition: color 0.3s ease;
+  }
+  a:hover {
+    font-weight: 700;
+  }
+  li:nth-child(1) {
+    background: url("./icons/adventure.svg") 0 center no-repeat;
   }
 
-  .logo img {
+  li:nth-child(2) {
+    background: url("./icons/lodging.svg") 0 center no-repeat;
+  }
+
+  li:nth-child(3) {
+    background: url("./icons/destinations.svg") 0 center no-repeat;
+  }
+  a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--secondary-color);
+    transition: width 0.3s ease;
+  }
+  a:hover::after {
+    width: 100%;
+  }
+}
+/* /header__navigation */
+
+/* header__user-actions */
+.header__user-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: 12px 40px;
     max-height: 100%;
     max-width: 100%;
     object-fit: contain;
+    color: var(--white-color);
+    transition: all 0.3s ease;
   }
-
-  /* navigation */
-  .nav {
-    ul {
-      display: flex;
-      gap: 2rem;
-      margin: 0;
-      padding: 0;
-    }
-
-    li {
-      position: relative;
-    }
-
-    a {
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 1rem;
-      padding: 1.7rem 0.5rem 1.8rem 2rem;
-      display: inline-block;
-      transition: color 0.3s ease;
-    }
-    a:hover {
-      font-weight: 700;
-    }
-    li:nth-child(1) {
-      background: url("./icons/adventure.svg") 0 center no-repeat;
-    }
-
-    li:nth-child(2) {
-      background: url("./icons/lodging.svg") 0 center no-repeat;
-    }
-
-    li:nth-child(3) {
-      background: url("./icons/destinations.svg") 0 center no-repeat;
-    }
-
-    a::after {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 2px;
-      bottom: 0;
-      left: 0;
-      background-color: var(--secondary-color);
-      transition: width 0.3s ease;
-    }
-
-    a:hover::after {
-      width: 100%;
-    }
-    /*  */
-  }
-
-  .user-actions {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    a {
-      background-color: var(--primary-color);
-      border-radius: var(--border-radius);
-      padding: 12px 40px;
-      max-height: 100%;
-      max-width: 100%;
-      object-fit: contain;
-      color: var(--white-color);
-      transition: all 0.3s ease;
-    }
-    a:hover {
-      background-color: var(--secondary-color);
-    }
+  a:hover {
+    background-color: var(--secondary-color);
   }
 }
-/*  */
+/* /header__user-actions */
 
 /* prime */
 .prime {
@@ -193,7 +189,7 @@ body {
     width: 100%;
   }
 }
-/*  */
+/* /prime */
 
 /* products */
 .products {
@@ -359,6 +355,35 @@ body {
     .list span {
       font: 700 14px / 1.3 "Nunito", sans-serif;
     }
+    .input-text {
+      position: relative;
+    }
+    .input-text {
+      border: var(--primary-color) solid 1px;
+      border-radius: var(--border-radius);
+      padding: 0.8rem 1rem;
+      background-color: var(--white-color);
+      margin: -1rem 0 0 -1rem;
+      width: 100%;
+    }
+    .input-text input {
+      border: none;
+      width: 80%;
+      margin-left: 2rem;
+    }
+    .input-text input::focus {
+      border: none;
+    }
+    .input-text::before {
+      content: "";
+      background: url(./icons/all.svg) -60px -92px no-repeat;
+      position: absolute;
+      left: 14px;
+      top: 12px;
+      width: 1.7rem;
+      height: 1.7rem;
+    }
+
     /*  */
 
     /* info tooltip */
@@ -593,7 +618,7 @@ body {
   }
   /*  */
 }
-/*  */
+/* /products */
 
 /* footer */
 .footer {
@@ -606,7 +631,7 @@ body {
   .corporate {
     display: grid;
     place-items: center;
-    height: 128px;
+    height: 100px;
 
     .center {
       display: grid;
@@ -619,4 +644,4 @@ body {
     text-align: center;
   }
 }
-/*  */
+/* /footer */
