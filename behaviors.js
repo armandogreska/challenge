@@ -1,6 +1,7 @@
 // filtros:
 document.addEventListener("DOMContentLoaded", function () {
   filters();
+  breakdown();
 });
 
 // Filters:
@@ -43,5 +44,25 @@ function filters() {
         hiddenItems.forEach((item) => item.classList.add("hide"));
       });
     }
+  });
+}
+
+// breakdown layer
+function breakdown() {
+  const cards = document.querySelectorAll(".result__card");
+
+  cards.forEach((card) => {
+    const breakdownBtn = card.querySelector(".price__breakdown");
+    const breakdownLayer = card.querySelector(".break-layer");
+    const close = breakdownLayer.querySelector(".break-layer__close");
+
+    breakdownBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      document
+        .querySelectorAll(".break-layer")
+        .forEach((e) => e.classList.add("hide"));
+      breakdownLayer.classList.remove("hide");
+    });
+    close.addEventListener("click", () => breakdownLayer.classList.add("hide"));
   });
 }
