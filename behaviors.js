@@ -7,11 +7,11 @@ document.addEventListener("DOMContentLoaded", function () {
 // Filters:
 function filters() {
   const filters = document.querySelector(".filters");
-  const blocks = filters.querySelectorAll(".block");
+  const blocks = filters.querySelectorAll(".filters__block");
 
   // accordion:
   blocks.forEach((block) => {
-    const filter = block.querySelector(".filter");
+    const filter = block.querySelector(".filters__item");
     filter.addEventListener("click", () => {
       block.classList.toggle("active");
     });
@@ -19,9 +19,9 @@ function filters() {
 
   // view all / view less:
   blocks.forEach((block) => {
-    const viewAll = block.querySelector(".view-all");
-    const viewLess = block.querySelector(".view-less");
-    const listItems = block.querySelectorAll(".list li");
+    const viewAll = block.querySelector(".filters__view-all");
+    const viewLess = block.querySelector(".filters__view-less");
+    const listItems = block.querySelectorAll(".filters__list li");
     const maxVisibleItems = 5;
     const hiddenItems = Array.from(listItems).slice(maxVisibleItems);
 
