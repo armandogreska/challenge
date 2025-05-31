@@ -1,0 +1,16 @@
+/* products: results */
+.results {
+  padding: 1rem 0 1.5rem 0;
+  position: relative;
+}
+.results__block .results__title {
+  font: 700 1.375rem/1.4 "Syne", sans-serif;
+  margin-bottom: 0.8rem;
+}
+.results__list {
+  display: grid;
+  grid-template-columns: var(--results-columns);
+  gap: 1.4rem;
+  padding-bottom: 1.8rem;
+}
+/* /products: results */

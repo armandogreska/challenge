@@ -75,7 +75,7 @@
   right: 0;
 }
 .carousel__arrow {
-  background: url(../icons/sprite.svg) -60px 3px no-repeat;
+  background: url(../../icons/sprite.svg) -60px 3px no-repeat;
   height: 1.2rem;
   width: 1rem;
   display: block;
@@ -104,4 +104,13 @@
   background-color: var(--secondary-color);
   transform: scale(1.2);
 }
+
+/* media queries */
+@media (width < 1024px) {
+  .carousel__info {
+    transform: translate(-50%, -50%) scale(0.6);
+  }
+}
+/* /media queries */
+
 /* /carousel */
