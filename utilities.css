@@ -61,23 +61,30 @@
   }
 
   /* navigation */
-  .header__nav ul{
+  .header__nav ul {
     position: absolute;
     top: 0;
     right: 0;
     background-color: var(--bg-color);
-    padding-bottom: 5rem;
+    padding: 0.5rem 0 5rem 0;
     z-index: 900;
     box-shadow: var(--box-shadow);
     display: block;
+    border-bottom: 1px solid var(--third-color);
     li::before {
       left: 1rem;
       top: 1.2rem;
+    }
+    li:last-child {
+      border-bottom: solid 1px var(--third-color);
     }
   }
   .header__nav-item {
     width: 20rem;
     padding: 1.4rem 1rem 1.4rem 3rem;
+  }
+  .header__nav-item::before {
+    left: 20%;
   }
   .header__nav-show,
   .header__nav-close {
@@ -85,7 +92,7 @@
     height: 1.7rem;
     width: 1.7rem;
     position: absolute;
-    top: 1rem;
+    top: 1.7rem;
     right: 1rem;
     cursor: pointer;
     z-index: 900;
@@ -96,7 +103,7 @@
   .header__user-actions {
     position: absolute;
     z-index: 900;
-    top: 18rem;
+    top: 18.8rem;
     right: 9rem;
   }
   .header__nav ul,
@@ -106,8 +113,41 @@
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s;
   }
-
   /* /navigation */
 }
 @media (width < 745px) {
+  .content {
+    position: inherit;
+  }
+  /* filters */
+  .filters {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 900;
+  }
+  /* /filters */
+
+  /* products */
+  .products {
+    margin: 0 1rem 2rem 1rem;
+  }
+  /* /products */
+
+  /* products: results: breackdown layer */
+  .break-layer {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    height: 100%;
+  }
+  .break-layer__footer {
+    background-color: white;
+  }
+  /* /products: results: breackdown layer */
 }

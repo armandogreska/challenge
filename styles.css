@@ -8,6 +8,7 @@
     padding: 0 32px;
     font: 600 16px/1.5 "Nunito", sans-serif;
     height: 5rem;
+    position: relative;
   }
 }
 .header__logo {
@@ -153,6 +154,7 @@
   max-height: max-content;
   padding-bottom: 1.5rem;
   margin-top: 3.8rem;
+  overflow-y: auto;
 }
 .filters__title {
   font: 700 18px / 1.4 "Syne", sans-serif;
@@ -160,7 +162,6 @@
   text-align: center;
   padding: 1.7rem;
 }
-
 .filters__item {
   font: 500 16px / 1.4 "Nunito", sans-serif;
   padding: 1.5rem 0 0.6rem 3.5rem;
@@ -172,7 +173,6 @@
   color: var(--secondary-color);
   font-weight: 700;
 }
-
 .filters__item::before {
   content: "";
   background: url(./icons/all.svg) no-repeat;
@@ -506,78 +506,78 @@ li:nth-child(1) .filters__tooltip .filters__tiptext::after {
     color: var(--primary-color);
     padding: 0.5rem 1.4rem;
   }
-
-  /* products: results: breackdown layer */
-  .break-layer {
-    position: absolute;
-    top: 367px;
-    left: 0;
-    box-shadow: var(--box-shadow);
-    border: solid 1px black;
-    border-radius: var(--border-radius);
-    width: 403px;
-    overflow: hidden;
-    z-index: 200;
-    background-color: var(--white-color);
-  }
-  .break-layer__header {
-    background-color: var(--bg-color);
-    border-bottom: var(--third-color);
-    padding: 1rem 1.6rem;
-    position: relative;
-  }
-  .break-layer__title {
-    font: 700 18px/1.3 "Nunito", sans-serif;
-  }
-  .break-layer__close {
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-    background: url(./icons/all.svg) -5px -121px no-repeat;
-    height: 1.2rem;
-    width: 1.3rem;
-    cursor: pointer;
-  }
-  .break-layer__content {
-    padding: 1.5rem 1.4rem 0 1.4rem;
-  }
-  .break-layer__product {
-    font: 700 18px/1.3 "Syne", sans-serif;
-    color: var(--primary-color);
-    margin-bottom: 1.2rem;
-    span {
-      font-weight: 500;
-      color: var(--text-color);
-      margin-left: 0.5rem;
-    }
-  }
-  .break-layer__data li {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.9rem;
-  }
-  .break-layer__left {
-    font: 500 16px/1.3 "Nunito", sans-serif;
-  }
-  .break-layer__right {
-    font: 700 18px/1.3 "Nunito", sans-serif;
-    text-align: right;
-  }
-  .break-layer__footer {
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--bg-color);
-    padding: 1.3rem 1.6rem 1rem;
-    border-top: 1px solid var(--third-color);
-  }
-  .break-layer__text {
-    font: 700 18px/1.3 "Nunito", sans-serif;
-  }
-  .break-layer__price {
-    font: 700 22px/1.3 "Nunito", sans-serif;
-  }
-  /* /products: results: breackdown layer */
 }
+
+/* products: results: breackdown layer */
+.break-layer {
+  position: absolute;
+  top: 367px;
+  left: 0;
+  box-shadow: var(--box-shadow);
+  border: solid 1px black;
+  border-radius: var(--border-radius);
+  width: 403px;
+  overflow: hidden;
+  z-index: 200;
+  background-color: var(--white-color);
+}
+.break-layer__header {
+  background-color: var(--bg-color);
+  border-bottom: var(--third-color);
+  padding: 1rem 1.6rem;
+  position: relative;
+}
+.break-layer__title {
+  font: 700 18px/1.3 "Nunito", sans-serif;
+}
+.break-layer__close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background: url(./icons/all.svg) -5px -121px no-repeat;
+  height: 1.2rem;
+  width: 1.3rem;
+  cursor: pointer;
+}
+.break-layer__content {
+  padding: 1.5rem 1.4rem 0 1.4rem;
+}
+.break-layer__product {
+  font: 700 18px/1.3 "Syne", sans-serif;
+  color: var(--primary-color);
+  margin-bottom: 1.2rem;
+  span {
+    font-weight: 500;
+    color: var(--text-color);
+    margin-left: 0.5rem;
+  }
+}
+.break-layer__data li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.9rem;
+}
+.break-layer__left {
+  font: 500 16px/1.3 "Nunito", sans-serif;
+}
+.break-layer__right {
+  font: 700 18px/1.3 "Nunito", sans-serif;
+  text-align: right;
+}
+.break-layer__footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--bg-color);
+  padding: 1.3rem 1.6rem 1rem;
+  border-top: 1px solid var(--third-color);
+}
+.break-layer__text {
+  font: 700 18px/1.3 "Nunito", sans-serif;
+}
+.break-layer__price {
+  font: 700 22px/1.3 "Nunito", sans-serif;
+}
+/* /products: results: breackdown layer */
 /* /products: results */
 /* /products */
 

@@ -117,10 +117,12 @@ function breakdown() {
 // Show/hidde animation:
 function show(target, show) {
   if (show) {
+    target.classList.remove("hide");
     target.style.opacity = "1";
     target.style.visibility = "visible";
   } else {
     target.style.opacity = "0";
     target.style.visibility = "hidden";
+    setTimeout(() => target.classList.add("hide"), 0.5);
   }
 }
