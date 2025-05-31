@@ -1,0 +1,107 @@
+/* carousel */
+.carousel .center {
+  position: relative;
+  overflow: hidden;
+}
+.carousel__frame {
+  display: flex;
+  transition: transform 0.5s ease;
+  border-radius: var(--card-radius);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.carousel__slide {
+  min-width: 100%;
+  position: relative;
+}
+.carousel__slide img {
+  width: 100%;
+  display: block;
+  height: auto;
+  max-height: 25rem;
+  object-fit: cover;
+  min-height: 15rem;
+}
+
+.carousel__info {
+  color: #fff;
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  button {
+    color: #4e250e;
+    background-color: var(--secondary-color);
+    padding: 0.7rem 2.6rem;
+    border-radius: var(--border-radius);
+    display: block;
+    margin: auto auto 1rem auto;
+  }
+}
+.carousel__title {
+  font: 700 1.875rem / 1.4 "Syne", sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.carousel__copy {
+  font: 500 1.25rem / 1.4 "Nunito", sans-serif;
+  margin-bottom: 2.5rem;
+}
+
+.carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #cdbccc;
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel__btn:hover {
+  transition: var(--transition);
+  opacity: 1;
+}
+.carousel__btn--prev {
+  left: 0;
+}
+.carousel__btn--next {
+  right: 0;
+}
+.carousel__arrow {
+  background: url(../icons/sprite.svg) -60px 3px no-repeat;
+  height: 1.2rem;
+  width: 1rem;
+  display: block;
+}
+.carousel__arrow-left {
+  transform: rotateY(180deg);
+}
+.carousel__dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+.carousel__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: var(--transition);
+  border: solid 1px #fff;
+}
+.carousel__dot.active {
+  background-color: var(--secondary-color);
+  transform: scale(1.2);
+}
+/* /carousel */
