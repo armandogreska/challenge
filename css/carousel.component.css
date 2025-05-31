@@ -17,8 +17,9 @@
   width: 100%;
   display: block;
   height: auto;
-  max-height: 400px;
+  max-height: 25rem;
   object-fit: cover;
+  min-height: 15rem;
 }
 
 .carousel__info {

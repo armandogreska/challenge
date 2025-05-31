@@ -428,6 +428,7 @@ li:nth-child(1) .filters__tooltip .filters__tiptext::after {
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
   position: relative;
+  container: result__card / inline-size;
 
   img {
     border-radius: var(--border-radius) var(--border-radius) 0 0;

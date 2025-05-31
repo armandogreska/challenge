@@ -1,3 +1,4 @@
+/* media queries */
 @media (width <= 1440px) {
   .content {
     position: relative;
@@ -114,6 +115,13 @@
     transition: var(--transition);
   }
   /* /navigation */
+
+  /* carousel */
+  .carousel__info {
+    transform: translate(-50%, -50%) scale(0.6);
+  }
+
+  /* /carousel */
 }
 @media (width < 745px) {
   .content {
@@ -151,3 +159,12 @@
   }
   /* /products: results: breackdown layer */
 }
+/* container queries */
+
+/* container queries */
+@container result__card (max-width: 260px) {
+  .result__value {
+    min-width: 105px;
+  }
+}
+/* /container queries */
