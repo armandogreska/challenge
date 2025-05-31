@@ -1,36 +1,3 @@
-/* generic */
-body {
-  font-family: "Nunito", sans-serif;
-  color: var(--text-color);
-}
-.hide {
-  display: none;
-}
-/* /generic */
-
-/* layout */
-.full-width {
-  display: grid;
-  grid-template-rows: 80px auto 180px;
-  gap: 0;
-  height: 100vh;
-}
-.header,
-.content,
-.footer,
-.prime {
-  display: grid;
-}
-.header,
-.footer {
-  background-color: var(--bg-color);
-}
-.center {
-  justify-self: center;
-  width: var(--center-width);
-}
-/* /layout */
-
 /* header */
 .header {
   border-bottom: solid 1px var(--secondary-color);
@@ -40,6 +7,8 @@ body {
     border-bottom: 1px solid var(--secondary-color);
     padding: 0 32px;
     font: 600 16px/1.5 "Nunito", sans-serif;
+    height: 5rem;
+    position: relative;
   }
 }
 .header__logo {
@@ -64,41 +33,69 @@ body {
   li {
     position: relative;
   }
-  a {
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1rem;
-    padding: 1.7rem 0.5rem 1.8rem 2rem;
-    display: inline-block;
-    transition: color 0.3s ease;
-  }
-  a:hover {
-    font-weight: 700;
-  }
-  li:nth-child(1) {
-    background: url("./icons/adventure.svg") 0 center no-repeat;
-  }
-
-  li:nth-child(2) {
-    background: url("./icons/lodging.svg") 0 center no-repeat;
-  }
-
-  li:nth-child(3) {
-    background: url("./icons/destinations.svg") 0 center no-repeat;
-  }
-  a::after {
+  li::before {
     content: "";
+    background: url(./icons/all.svg) 0px -36px no-repeat;
+    height: 1.7rem;
+    width: 1.7rem;
     position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
+    top: 24px;
     left: 0;
-    background-color: var(--secondary-color);
-    transition: width 0.3s ease;
   }
-  a:hover::after {
-    width: 100%;
+  li:nth-child(2)::before {
+    background-position: 0px -13px;
   }
+  li:nth-child(3)::before {
+    background-position: 0px -60px;
+  }
+  li:nth-child(4)::before {
+    display: none;
+  }
+}
+.header__nav-item {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 1.7rem 0.5rem 1.8rem 2rem;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+.header__nav-item:hover,
+.header__nav-item--active {
+  font-weight: 700;
+}
+.header__nav-item::before,
+.header__nav-item::before {
+  content: "";
+  position: absolute;
+  border-width: 5px;
+  border-style: solid;
+  margin-left: -5px;
+  bottom: 3px;
+  left: 50%;
+  border-color: transparent transparent var(--secondary-color) transparent;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+.header__nav-item:hover::before,
+.header__nav-item--active::before {
+  opacity: 1;
+  visibility: visible;
+}
+.header__nav-item::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--secondary-color);
+  transition: width 0.3s ease;
+}
+.header__nav-item:hover::after,
+.header__nav-item--active::after {
+  width: 100%;
 }
 /* /header: header__navigation */
 
@@ -124,23 +121,23 @@ body {
 }
 /* /header: header__user-actions */
 
-/* prime */
-.prime__tagline {
+/* tagline */
+.tagline {
   text-align: center;
   margin-bottom: 3rem;
 }
-.prime__title {
+.tagline__title {
   font: 700 38px / 1.4 "Syne", sans-serif;
   margin-top: 4rem;
 }
-.prime__subtag {
+.tagline__subtag {
   font: 700 22px/1.5 "Nunito", sans-serif;
   color: #6b7d8d;
 }
-.prime img {
+.tagline img {
   width: 100%;
 }
-/* /prime */
+/* /tagline */
 
 /* products */
 .products {
@@ -157,6 +154,7 @@ body {
   max-height: max-content;
   padding-bottom: 1.5rem;
   margin-top: 3.8rem;
+  overflow-y: auto;
 }
 .filters__title {
   font: 700 18px / 1.4 "Syne", sans-serif;
@@ -164,7 +162,6 @@ body {
   text-align: center;
   padding: 1.7rem;
 }
-
 .filters__item {
   font: 500 16px / 1.4 "Nunito", sans-serif;
   padding: 1.5rem 0 0.6rem 3.5rem;
@@ -176,7 +173,6 @@ body {
   color: var(--secondary-color);
   font-weight: 700;
 }
-
 .filters__item::before {
   content: "";
   background: url(./icons/all.svg) no-repeat;
@@ -194,6 +190,27 @@ body {
   right: 1.7rem;
   height: 0.9rem;
   width: 0.6rem;
+}
+.show-filters {
+  position: absolute;
+  top: -2.8rem;
+  left: 0;
+  font: 600 20px / 1.3 "Nunito", sans-serif;
+  border-radius: var(--border-radius);
+  background-color: var(--bg-color);
+  border: solid 1px var(--third-color);
+  padding: 0.3rem 1.2rem 0.3rem 2.6rem;
+  cursor: pointer;
+  visibility: hidden;
+}
+.show-filters::before {
+  content: "";
+  height: 1.1rem;
+  width: 1.5rem;
+  top: 9px;
+  left: 14px;
+  background: url(./icons/all.svg) -4px -147px no-repeat;
+  position: absolute;
 }
 
 /* products: filters: filter behaviors */
@@ -396,190 +413,190 @@ li:nth-child(1) .filters__tooltip .filters__tiptext::after {
 /* products: results */
 .results {
   padding: 1rem 0 1.5rem 0;
-  .results__block .results__title {
-    font: 700 22px / 1.4 "Syne", sans-serif;
-    margin-bottom: 0.8rem;
-  }
-  .results__list {
-    display: grid;
-    grid-template-columns: var(--results-columns);
-    gap: 1.4rem;
-    padding-bottom: 1.8rem;
-  }
-  .result__card {
-    box-shadow: var(--box-shadow);
-    border-radius: var(--border-radius);
-    position: relative;
-
-    img {
-      border-radius: var(--border-radius) var(--border-radius) 0 0;
-      width: 100%;
-    }
-    .result__offer {
-      top: 1rem;
-      right: 1rem;
-      position: absolute;
-      background-color: var(--secondary-color);
-      border-radius: var(--border-radius);
-      font: 800 12px / 1.3 "Nunito", sans-serif;
-      padding: 0.3rem 0.7rem;
-      border-radius: 40px;
-    }
-    .result__info {
-      padding: 0.6rem 1.2rem 0.7rem 1.2rem;
-    }
-    .result__destination {
-      color: var(--primary-color);
-      font: 700 14px / 1.4 "Syne", sans-serif;
-    }
-    .result__duration {
-      font: 500 14px / 1.4 "Syne", sans-serif;
-    }
-    .result__title {
-      font: 700 18px / 1.5 "Nunito", sans-serif;
-    }
-    .result__price {
-      align-items: center;
-      background-color: var(--bg-color);
-      border-radius: 0 0 var(--border-radius) var(--border-radius);
-      display: flex;
-      gap: 1rem;
-      padding: 0.8rem 1.1rem;
-    }
-    .result__left span {
-      display: block;
-    }
-    .result__since {
-      font: 400 12px / 1.3 "Nunito", sans-serif;
-    }
-    .result__value {
-      font: 700 22px / 1 "Nunito", sans-serif;
-    }
-    .price__breakdown:hover {
-      text-decoration: underline;
-    }
-    .price__breakdown {
-      color: var(--primary-color);
-      font: 500 14px / 1.3 "Nunito", sans-serif;
-      position: relative;
-      padding-right: 12px;
-    }
-    .price__breakdown::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      top: 40%;
-      width: 8px;
-      height: 8px;
-      border-right: 1px solid currentColor;
-      border-bottom: 1px solid currentColor;
-      transform: translateY(-50%) rotate(45deg);
-      transition: transform 0.2s ease;
-    }
-    .result__reserve {
-      margin-top: 0.7rem;
-    }
-    .result__reserve a {
-      font: 600 16px / 1.3 "Nunito", sans-serif;
-      border-radius: var(--border-radius);
-      background-color: var(--white-color);
-      border: solid 1px var(--primary-color);
-      color: var(--primary-color);
-      padding: 0.5rem 1.4rem;
-    }
-  }
-
-  /* products: results: breackdown layer */
-  .break-layer {
-    position: absolute;
-    top: 367px;
-    left: 0;
-    box-shadow: var(--box-shadow);
-    border: solid 1px black;
-    border-radius: var(--border-radius);
-    width: 403px;
-    overflow: hidden;
-    z-index: 200;
-    background-color: var(--white-color);
-  }
-  .break-layer__header {
-    background-color: var(--bg-color);
-    border-bottom: var(--third-color);
-    padding: 1rem 1.6rem;
-    position: relative;
-  }
-  .break-layer__title {
-    font: 700 18px/1.3 "Nunito", sans-serif;
-  }
-  .break-layer__close {
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-    background: url(./icons/all.svg) -5px -121px no-repeat;
-    height: 1.2rem;
-    width: 1.3rem;
-    cursor: pointer;
-  }
-  .break-layer__content {
-    padding: 1.5rem 1.4rem 0 1.4rem;
-  }
-  .break-layer__product {
-    font: 700 18px/1.3 "Syne", sans-serif;
-    color: var(--primary-color);
-    margin-bottom: 1.2rem;
-    span {
-      font-weight: 500;
-      color: var(--text-color);
-      margin-left: 0.5rem;
-    }
-  }
-  .break-layer__data li {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.9rem;
-  }
-  .break-layer__left {
-    font: 500 16px/1.3 "Nunito", sans-serif;
-  }
-  .break-layer__right {
-    font: 700 18px/1.3 "Nunito", sans-serif;
-    text-align: right;
-  }
-  .break-layer__footer {
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--bg-color);
-    padding: 1.3rem 1.6rem 1rem;
-    border-top: 1px solid var(--third-color);
-  }
-  .break-layer__text {
-    font: 700 18px/1.3 "Nunito", sans-serif;
-  }
-  .break-layer__price {
-    font: 700 22px/1.3 "Nunito", sans-serif;
-  }
-  /* /products: results: breackdown layer */
+  position: relative;
 }
+.results__block .results__title {
+  font: 700 22px / 1.4 "Syne", sans-serif;
+  margin-bottom: 0.8rem;
+}
+.results__list {
+  display: grid;
+  grid-template-columns: var(--results-columns);
+  gap: 1.4rem;
+  padding-bottom: 1.8rem;
+}
+.result__card {
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  position: relative;
+
+  img {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    width: 100%;
+  }
+  .result__offer {
+    top: 1rem;
+    right: 1rem;
+    position: absolute;
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    font: 800 12px / 1.3 "Nunito", sans-serif;
+    padding: 0.3rem 0.7rem;
+    border-radius: 40px;
+  }
+  .result__info {
+    padding: 0.6rem 1.2rem 0.7rem 1.2rem;
+  }
+  .result__destination {
+    color: var(--primary-color);
+    font: 700 14px / 1.4 "Syne", sans-serif;
+  }
+  .result__duration {
+    font: 500 14px / 1.4 "Syne", sans-serif;
+  }
+  .result__title {
+    font: 700 18px / 1.5 "Nunito", sans-serif;
+  }
+  .result__price {
+    align-items: center;
+    background-color: var(--bg-color);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    display: flex;
+    gap: 1rem;
+    padding: 0.8rem 1.1rem;
+  }
+  .result__left span {
+    display: block;
+  }
+  .result__since {
+    font: 400 12px / 1.3 "Nunito", sans-serif;
+  }
+  .result__value {
+    font: 700 22px / 1 "Nunito", sans-serif;
+  }
+  .price__breakdown:hover {
+    text-decoration: underline;
+  }
+  .price__breakdown {
+    color: var(--primary-color);
+    font: 500 14px / 1.3 "Nunito", sans-serif;
+    position: relative;
+    padding-right: 12px;
+  }
+  .price__breakdown::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 40%;
+    width: 8px;
+    height: 8px;
+    border-right: 1px solid currentColor;
+    border-bottom: 1px solid currentColor;
+    transform: translateY(-50%) rotate(45deg);
+    transition: transform 0.2s ease;
+  }
+  .result__reserve {
+    margin-top: 0.7rem;
+  }
+  .result__reserve button {
+    font: 600 16px / 1.3 "Nunito", sans-serif;
+    border-radius: var(--border-radius);
+    background-color: var(--white-color);
+    border: solid 1px var(--primary-color);
+    color: var(--primary-color);
+    padding: 0.5rem 1.4rem;
+  }
+}
+
+/* products: results: breackdown layer */
+.break-layer {
+  position: absolute;
+  top: 367px;
+  left: 0;
+  box-shadow: var(--box-shadow);
+  border: solid 1px black;
+  border-radius: var(--border-radius);
+  width: 403px;
+  overflow: hidden;
+  z-index: 200;
+  background-color: var(--white-color);
+}
+.break-layer__header {
+  background-color: var(--bg-color);
+  border-bottom: var(--third-color);
+  padding: 1rem 1.6rem;
+  position: relative;
+}
+.break-layer__title {
+  font: 700 18px/1.3 "Nunito", sans-serif;
+}
+.break-layer__close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background: url(./icons/all.svg) -5px -121px no-repeat;
+  height: 1.2rem;
+  width: 1.3rem;
+  cursor: pointer;
+}
+.break-layer__content {
+  padding: 1.5rem 1.4rem 0 1.4rem;
+}
+.break-layer__product {
+  font: 700 18px/1.3 "Syne", sans-serif;
+  color: var(--primary-color);
+  margin-bottom: 1.2rem;
+  span {
+    font-weight: 500;
+    color: var(--text-color);
+    margin-left: 0.5rem;
+  }
+}
+.break-layer__data li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.9rem;
+}
+.break-layer__left {
+  font: 500 16px/1.3 "Nunito", sans-serif;
+}
+.break-layer__right {
+  font: 700 18px/1.3 "Nunito", sans-serif;
+  text-align: right;
+}
+.break-layer__footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--bg-color);
+  padding: 1.3rem 1.6rem 1rem;
+  border-top: 1px solid var(--third-color);
+}
+.break-layer__text {
+  font: 700 18px/1.3 "Nunito", sans-serif;
+}
+.break-layer__price {
+  font: 700 22px/1.3 "Nunito", sans-serif;
+}
+/* /products: results: breackdown layer */
 /* /products: results */
 /* /products */
 
 /* footer */
-.footer__corporate,
-.footer__rights {
-  display: grid;
-  place-items: center;
+.footer {
+  border-top: 1px solid var(--third-color);
+}
+.footer .center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 .footer__corporate {
-  display: grid;
-  place-items: center;
-  height: 100px;
-  .center {
-    display: grid;
-    place-items: center;
-  }
+  height: 120px;
 }
 .footer__rights {
   background-color: var(--third-color);
-  text-align: center;
+  height: 52px;
 }
 /* /footer */

@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="settings.css" />
     <link rel="stylesheet" href="generic.css" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="utilities.css" />
   </head>
   <body>
     <div class="full-width">
@@ -27,284 +28,299 @@
           </div>
           <nav class="header__nav">
             <ul>
-              <li><a href="#">Aventura</a></li>
-              <li><a href="#">destinos</a></li>
-              <li><a href="#">Alojamiento</a></li>
-              <li><a href="#">Sobre nosotros</a></li>
+              <li><a class="header__nav-item header__nav-item--active" href="#">Aventura</a></li>
+              <li><a class="header__nav-item" href="#">destinos</a></li>
+              <li><a class="header__nav-item" href="#">Alojamiento</a></li>
+              <li><a class="header__nav-item" href="#">Sobre nosotros</a></li>
             </ul>
+            <i class="header__nav-show"></i>
+            <i class="header__nav-close"></i>
           </nav>
           <div class="header__user-actions">
             <a href="#">Reserva</a>
           </div>
         </div>
       </header>
-      <div class="content">
+
+      <div class="carrousel">
         <div class="center">
-          <div class="prime">
-            <div class="prime__carrousel">
-              <!-- TODO: carrousel -->
-              <img src="./images/carrousel-1.png" alt="carrousel-1" />
-            </div>
-            <div class="prime__tagline">
-              <p class="prime__title">Vive tus propias aventuras</p>
-              <p class="prime__subtag">
-                Para los que les gusta explorar y conocer mundo sin complejos
-              </p>
-            </div>
+          <!-- TODO: carrousel -->
+          <img src="./images/carrousel-1.png" alt="carrousel-1" />
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="tagline">
+          <div class="center">
+            <p class="tagline__title">Vive tus propias aventuras</p>
+            <p class="tagline__subtag">
+              Para los que les gusta explorar y conocer mundo sin complejos
+            </p>
           </div>
+        </div>
+        <div class="center">
           <div class="products">
             <aside class="filters">
               <p class="filters__title">Filtrar mi búsqueda</p>
+              <i class="filters__close"></i>
 
-              <div class="filters__block">
-                <p class="filters__item filters__item--destinations">
-                  Destinos
-                </p>
-                <div class="filters__list">
-                  <ul>
-                    <li>
-                      <label for="destination-1">
-                        <input
-                          type="checkbox"
-                          id="destination-1"
-                          name="destination-1"
-                        />
-                        <span>Marruecos</span>
-                      </label>
-                      <i
-                        class="filters__info-icon filters__tooltip filters__top"
-                      >
-                        <span class="filters__tiptext">Loren ipsum</span>
-                      </i>
-                    </li>
-                    <li>
-                      <label for="destination-1">
-                        <input
-                          type="checkbox"
-                          id="destination-1"
-                          name="destination-1"
-                        />
-                        <span>Marruecos</span>
-                      </label>
-                      <i
-                        class="filters__info-icon filters__tooltip filters__top"
-                      >
-                        <span class="filters__tiptext">Loren ipsum</span>
-                      </i>
-                    </li>
-                  </ul>
-                  <p class="filters__view-all hide">Ver <span></span> más</p>
-                  <p class="filters__view-less hide">Ver menos</p>
+
+
+              
+                <div class="filters__block">
+                  <p class="filters__item filters__item--destinations">
+                    Destinos
+                  </p>
+                  <div class="filters__list">
+                    <ul>
+                      <li>
+                        <label for="destination-1">
+                          <input
+                            type="checkbox"
+                            id="destination-1"
+                            name="destination-1"
+                          />
+                          <span>Marruecos</span>
+                        </label>
+                        <i
+                          class="filters__info-icon filters__tooltip filters__top"
+                        >
+                          <span class="filters__tiptext">Loren ipsum</span>
+                        </i>
+                      </li>
+                      <li>
+                        <label for="destination-2">
+                          <input
+                            type="checkbox"
+                            id="destination-2"
+                            name="destination-2"
+                          />
+                          <span>Marruecos</span>
+                        </label>
+                        <i
+                          class="filters__info-icon filters__tooltip filters__top"
+                        >
+                          <span class="filters__tiptext">Loren ipsum</span>
+                        </i>
+                      </li>
+                    </ul>
+                    <p class="filters__view-all hide">Ver <span></span> más</p>
+                    <p class="filters__view-less hide">Ver menos</p>
+                  </div>
                 </div>
-              </div>
 
-              <div class="filters__block">
-                <p class="filters__item filters__item--adventure">Aventura</p>
-                <div class="filters__list">
-                  <ul>
-                    <li>
-                      <label for="adventure-1">
-                        <input
-                          type="checkbox"
-                          id="adventure-1"
-                          name="adventure-1"
-                        />
-                        <span>Quads</span>
-                      </label>
-                      <i
-                        class="filters__info-icon filters__tooltip top"
-                        aria-label="Más información"
-                      >
-                        <span class="filters__tiptext">Loren ipsum</span>
-                      </i>
-                    </li>
-                    <li>
-                      <label for="adventure-2">
-                        <input
-                          type="checkbox"
-                          id="adventure-2"
-                          name="adventure-2"
-                        />
-                        <span>Parapente</span>
-                      </label>
-                      <i
-                        class="filters__info-icon filters__tooltip top"
-                        aria-label="Más información"
-                      >
-                        <span class="filters__tiptext">Loren ipsum</span>
-                      </i>
-                    </li>
+                <div class="filters__block">
+                  <p class="filters__item filters__item--adventure">Aventura</p>
+                  <div class="filters__list">
+                    <ul>
+                      <li>
+                        <label for="adventure-1">
+                          <input
+                            type="checkbox"
+                            id="adventure-1"
+                            name="adventure-1"
+                          />
+                          <span>Quads</span>
+                        </label>
+                        <i
+                          class="filters__info-icon filters__tooltip top"
+                          aria-label="Más información"
+                        >
+                          <span class="filters__tiptext">Loren ipsum</span>
+                        </i>
+                      </li>
+                      <li>
+                        <label for="adventure-2">
+                          <input
+                            type="checkbox"
+                            id="adventure-2"
+                            name="adventure-2"
+                          />
+                          <span>Parapente</span>
+                        </label>
+                        <i
+                          class="filters__info-icon filters__tooltip top"
+                          aria-label="Más información"
+                        >
+                          <span class="filters__tiptext">Loren ipsum</span>
+                        </i>
+                      </li>
 
-                    <li>
-                      <label for="adventure-3">
-                        <input
-                          type="checkbox"
-                          id="adventure-3"
-                          name="adventure-3"
-                        />
-                        <span>Rafting</span>
-                      </label>
-                      <i
-                        class="filters__info-icon filters__tooltip top"
-                        aria-label="Más información"
-                      >
-                        <span class="filters__tiptext">Loren ipsum</span>
-                      </i>
-                    </li>
-                    <li>
-                      <label for="adventure-4">
-                        <input
-                          type="checkbox"
-                          id="adventure-4"
-                          name="adventure-4"
-                        />
-                        <span>Explora</span>
-                      </label>
-                      <i
-                        class="filters__info-icon filters__tooltip top"
-                        aria-label="Más información"
-                      >
-                        <span class="filters__tiptext">Loren ipsum</span>
-                      </i>
-                    </li>
-                    <li>
-                      <label for="adventure-5">
-                        <input
-                          type="checkbox"
-                          id="adventure-5"
-                          name="adventure-5"
-                        />
-                        <span>Buceo</span>
-                      </label>
-                      <i
-                        class="filters__info-icon filters__tooltip top"
-                        aria-label="Más información"
-                      >
-                        <span class="filters__tiptext">Loren ipsum</span>
-                      </i>
-                    </li>
-                    <li>
-                      <label for="adventure-6">
-                        <input
-                          type="checkbox"
-                          id="adventure-6"
-                          name="adventure-6"
-                        />
-                        <span>Paracaídas</span>
-                      </label>
-                      <i
-                        class="filters__info-icon filters__tooltip top"
-                        aria-label="Más información"
-                      >
-                        <span class="filters__tiptext">Loren ipsum</span>
-                      </i>
-                    </li>
-                    <li>
-                      <label for="adventure-7">
-                        <input
-                          type="checkbox"
-                          id="adventure-7"
-                          name="adventure-7"
-                        />
-                        <span>Snowboard</span>
-                      </label>
-                      <i
-                        class="filters__info-icon filters__tooltip top"
-                        aria-label="Más información"
-                      >
-                        <span class="filters__tiptext">Loren ipsum</span>
-                      </i>
-                    </li>
-                    <li>
-                      <label for="adventure-8">
-                        <input
-                          type="checkbox"
-                          id="adventure-8"
-                          name="adventure-8"
-                        />
-                        <span>Surf</span>
-                      </label>
-                      <i
-                        class="filters__info-icon filters__tooltip top"
-                        aria-label="Más información"
-                      >
-                        <span class="filters__tiptext">Loren ipsum</span>
-                      </i>
-                    </li>
-                  </ul>
-                  <p class="filters__view-all hide">Ver <span></span> más</p>
-                  <p class="filters__view-less hide">Ver menos</p>
+                      <li>
+                        <label for="adventure-3">
+                          <input
+                            type="checkbox"
+                            id="adventure-3"
+                            name="adventure-3"
+                          />
+                          <span>Rafting</span>
+                        </label>
+                        <i
+                          class="filters__info-icon filters__tooltip top"
+                          aria-label="Más información"
+                        >
+                          <span class="filters__tiptext">Loren ipsum</span>
+                        </i>
+                      </li>
+                      <li>
+                        <label for="adventure-4">
+                          <input
+                            type="checkbox"
+                            id="adventure-4"
+                            name="adventure-4"
+                          />
+                          <span>Explora</span>
+                        </label>
+                        <i
+                          class="filters__info-icon filters__tooltip top"
+                          aria-label="Más información"
+                        >
+                          <span class="filters__tiptext">Loren ipsum</span>
+                        </i>
+                      </li>
+                      <li>
+                        <label for="adventure-5">
+                          <input
+                            type="checkbox"
+                            id="adventure-5"
+                            name="adventure-5"
+                          />
+                          <span>Buceo</span>
+                        </label>
+                        <i
+                          class="filters__info-icon filters__tooltip top"
+                          aria-label="Más información"
+                        >
+                          <span class="filters__tiptext">Loren ipsum</span>
+                        </i>
+                      </li>
+                      <li>
+                        <label for="adventure-6">
+                          <input
+                            type="checkbox"
+                            id="adventure-6"
+                            name="adventure-6"
+                          />
+                          <span>Paracaídas</span>
+                        </label>
+                        <i
+                          class="filters__info-icon filters__tooltip top"
+                          aria-label="Más información"
+                        >
+                          <span class="filters__tiptext">Loren ipsum</span>
+                        </i>
+                      </li>
+                      <li>
+                        <label for="adventure-7">
+                          <input
+                            type="checkbox"
+                            id="adventure-7"
+                            name="adventure-7"
+                          />
+                          <span>Snowboard</span>
+                        </label>
+                        <i
+                          class="filters__info-icon filters__tooltip top"
+                          aria-label="Más información"
+                        >
+                          <span class="filters__tiptext">Loren ipsum</span>
+                        </i>
+                      </li>
+                      <li>
+                        <label for="adventure-8">
+                          <input
+                            type="checkbox"
+                            id="adventure-8"
+                            name="adventure-8"
+                          />
+                          <span>Surf</span>
+                        </label>
+                        <i
+                          class="filters__info-icon filters__tooltip top"
+                          aria-label="Más información"
+                        >
+                          <span class="filters__tiptext">Loren ipsum</span>
+                        </i>
+                      </li>
+                    </ul>
+                    <p class="filters__view-all hide">Ver <span></span> más</p>
+                    <p class="filters__view-less hide">Ver menos</p>
+                  </div>
                 </div>
-              </div>
 
-              <div class="filters__block">
-                <p class="filters__item filters__item--lodging">Alojamiento</p>
-                <div class="filters__list">
-                  <ul>
-                    <li>
-                      <label>
-                        <input type="checkbox" name="destinations" />
-                        <span>Marruecos</span>
-                      </label>
-                      <i
-                        class="filters__info-icon filters__tooltip top"
-                        aria-label="Más información"
-                      >
-                        <span class="filters__tiptext">Loren ipsum</span>
-                      </i>
-                    </li>
-                    <li>
-                      <label>
-                        <input type="checkbox" name="destinations" />
-                        <span>Marruecos</span>
-                      </label>
-                      <i
-                        class="filters__info-icon filters__tooltip top"
-                        aria-label="Más información"
-                      >
-                        <span class="filters__tiptext">Loren ipsum</span>
-                      </i>
-                    </li>
-                    <li>
-                      <label>
-                        <input type="checkbox" name="destinations" />
-                        <span>Marruecos</span>
-                      </label>
-                      <i
-                        class="filters__info-icon filters__tooltip top"
-                        aria-label="Más información"
-                      >
-                        <span class="filters__tiptext">Loren ipsum</span>
-                      </i>
-                    </li>
-                  </ul>
-                  <p class="filters__view-all hide">Ver <span></span> más</p>
-                  <p class="filters__view-less hide">Ver menos</p>
+                <div class="filters__block">
+                  <p class="filters__item filters__item--lodging">Alojamiento</p>
+                  <div class="filters__list">
+                    <ul>
+                      <li>
+                        <label>
+                          <input type="checkbox" name="destinations" />
+                          <span>Marruecos</span>
+                        </label>
+                        <i
+                          class="filters__info-icon filters__tooltip top"
+                          aria-label="Más información"
+                        >
+                          <span class="filters__tiptext">Loren ipsum</span>
+                        </i>
+                      </li>
+                      <li>
+                        <label>
+                          <input type="checkbox" name="destinations" />
+                          <span>Marruecos</span>
+                        </label>
+                        <i
+                          class="filters__info-icon filters__tooltip top"
+                          aria-label="Más información"
+                        >
+                          <span class="filters__tiptext">Loren ipsum</span>
+                        </i>
+                      </li>
+                      <li>
+                        <label>
+                          <input type="checkbox" name="destinations" />
+                          <span>Marruecos</span>
+                        </label>
+                        <i
+                          class="filters__info-icon filters__tooltip top"
+                          aria-label="Más información"
+                        >
+                          <span class="filters__tiptext">Loren ipsum</span>
+                        </i>
+                      </li>
+                    </ul>
+                    <p class="filters__view-all hide">Ver <span></span> más</p>
+                    <p class="filters__view-less hide">Ver menos</p>
+                  </div>
                 </div>
-              </div>
 
-              <div class="filters__block">
-                <p class="filters__item filters__item--price">Precio</p>
-                <div class="filters__list">
-                  <ul>
-                    <li>
-                      <div class="filters__input-text">
-                        <input type="text" placeholder="Mínimo" />
-                      </div>
-                    </li>
-                    <li>
-                      <div class="filters__input-text">
-                        <input type="text" placeholder="Máximo" />
-                      </div>
-                    </li>
-                  </ul>
-                  <p class="filters__view-all hide">Ver <span></span> más</p>
-                  <p class="filters__view-less hide">Ver menos</p>
+                <div class="filters__block">
+                  <p class="filters__item filters__item--price">Precio</p>
+                  <div class="filters__list">
+                    <ul>
+                      <li>
+                        <div class="filters__input-text">
+                          <input type="text" placeholder="Mínimo" />
+                        </div>
+                      </li>
+                      <li>
+                        <div class="filters__input-text">
+                          <input type="text" placeholder="Máximo" />
+                        </div>
+                      </li>
+                    </ul>
+                    <p class="filters__view-all hide">Ver <span></span> más</p>
+                    <p class="filters__view-less hide">Ver menos</p>
+                  </div>
                 </div>
-              </div>
+
+              
+
+
+
             </aside>
-
             <main class="results">
+              <button class="show-filters">Ver filtros</button>
               <div class="results__block">
                 <p class="results__title">Asia</p>
                 <ul class="results__list">
@@ -323,10 +339,10 @@
                         <a href="#" class="price__breakdown">Ver desglose</a>
                       </div>
                       <div class="result__reserve">
-                        <a href="#">Reservar</a>
+                        <button>Reservar</button>
                       </div>
                     </div>
-                    <div class="break-layer">
+                    <div class="break-layer hide">
                       <div class="break-layer__header">
                         <p class="break-layer__title">Desglose de precios</p>
                         <i class="break-layer__close"></i>
@@ -360,7 +376,7 @@
                   </li>
 
                   <li class="result__card">
-                    <img src="./images/product-1.png" alt="product-1" />
+                    <img src="./images/product-2.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
                       <span class="result__destination">Marruecos, África</span>
@@ -374,7 +390,7 @@
                         <a href="#" class="price__breakdown">Ver desglose</a>
                       </div>
                       <div class="result__reserve">
-                        <a href="#">Reservar</a>
+                        <button>Reservar</button>
                       </div>
                     </div>
                     <div class="break-layer hide">
@@ -410,7 +426,7 @@
                     </div>
                   </li>
                   <li class="result__card">
-                    <img src="./images/product-1.png" alt="product-1" />
+                    <img src="./images/product-3.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
                       <span class="result__destination">Marruecos, África</span>
@@ -424,7 +440,7 @@
                         <a href="#" class="price__breakdown">Ver desglose</a>
                       </div>
                       <div class="result__reserve">
-                        <a href="#">Reservar</a>
+                        <button>Reservar</button>
                       </div>
                     </div>
                     <div class="break-layer hide">
@@ -461,7 +477,6 @@
                   </li>
                 </ul>
               </div>
-
               <div class="results__block">
                 <p class="results__title">Asia</p>
                 <ul class="results__list">
@@ -480,7 +495,107 @@
                         <a href="#" class="price__breakdown">Ver desglose</a>
                       </div>
                       <div class="result__reserve">
-                        <a href="#">Reservar</a>
+                        <button>Reservar</button>
+                      </div>
+                    </div>
+                    <div class="break-layer hide">
+                      <div class="break-layer__header">
+                        <p class="break-layer__title">Desglose de precios</p>
+                        <i class="break-layer__close"></i>
+                      </div>
+                      <div class="break-layer__content">
+                        <p class="break-layer__product">
+                          Marruecos, África<span>9 días</span>
+                        </p>
+                        <ul class="break-layer__data">
+                          <li>
+                            <p class="break-layer__left">
+                              Precio antes de impuestos
+                            </p>
+                            <p class="break-layer__right">1.124,00 €</p>
+                          </li>
+                          <li>
+                            <p class="break-layer__left">Impuestos</p>
+                            <p class="break-layer__right">4,43 €</p>
+                          </li>
+                          <li>
+                            <p class="break-layer__left">Loren ipsum</p>
+                            <p class="break-layer__right">150,42 €</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="break-layer__footer">
+                        <p class="break-layer__text">Precio total</p>
+                        <p class="break-layer__price">2.455,00</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="result__card">
+                    <img src="./images/product-2.png" alt="product-1" />
+                    <span class="result__offer">Quads</span>
+                    <div class="result__info">
+                      <span class="result__destination">Marruecos, África</span>
+                      <span class="result__duration">9 días</span>
+                      <p class="result__title">Descubre Bangkok con Iberojet</p>
+                    </div>
+                    <div class="result__price">
+                      <div class="result__left">
+                        <span class="result__since">Desde</span>
+                        <span class="result__value">248.000 €</span>
+                        <a href="#" class="price__breakdown">Ver desglose</a>
+                      </div>
+                      <div class="result__reserve">
+                        <button>Reservar</button>
+                      </div>
+                    </div>
+                    <div class="break-layer hide">
+                      <div class="break-layer__header">
+                        <p class="break-layer__title">Desglose de precios</p>
+                        <i class="break-layer__close"></i>
+                      </div>
+                      <div class="break-layer__content">
+                        <p class="break-layer__product">
+                          Marruecos, África<span>9 días</span>
+                        </p>
+                        <ul class="break-layer__data">
+                          <li>
+                            <p class="break-layer__left">
+                              Precio antes de impuestos
+                            </p>
+                            <p class="break-layer__right">1.124,00 €</p>
+                          </li>
+                          <li>
+                            <p class="break-layer__left">Impuestos</p>
+                            <p class="break-layer__right">4,43 €</p>
+                          </li>
+                          <li>
+                            <p class="break-layer__left">Loren ipsum</p>
+                            <p class="break-layer__right">150,42 €</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="break-layer__footer">
+                        <p class="break-layer__text">Precio total</p>
+                        <p class="break-layer__price">2.455,00</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="result__card">
+                    <img src="./images/product-3.png" alt="product-1" />
+                    <span class="result__offer">Quads</span>
+                    <div class="result__info">
+                      <span class="result__destination">Marruecos, África</span>
+                      <span class="result__duration">9 días</span>
+                      <p class="result__title">Descubre Bangkok con Iberojet</p>
+                    </div>
+                    <div class="result__price">
+                      <div class="result__left">
+                        <span class="result__since">Desde</span>
+                        <span class="result__value">248.000 €</span>
+                        <a href="#" class="price__breakdown">Ver desglose</a>
+                      </div>
+                      <div class="result__reserve">
+                        <button>Reservar</button>
                       </div>
                     </div>
                     <div class="break-layer hide">
@@ -530,7 +645,7 @@
                         <a href="#" class="price__breakdown">Ver desglose</a>
                       </div>
                       <div class="result__reserve">
-                        <a href="#">Reservar</a>
+                        <button>Reservar</button>
                       </div>
                     </div>
                     <div class="break-layer hide">
@@ -566,7 +681,7 @@
                     </div>
                   </li>
                   <li class="result__card">
-                    <img src="./images/product-1.png" alt="product-1" />
+                    <img src="./images/product-2.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
                       <span class="result__destination">Marruecos, África</span>
@@ -580,7 +695,7 @@
                         <a href="#" class="price__breakdown">Ver desglose</a>
                       </div>
                       <div class="result__reserve">
-                        <a href="#">Reservar</a>
+                        <button>Reservar</button>
                       </div>
                     </div>
                     <div class="break-layer hide">
@@ -616,7 +731,7 @@
                     </div>
                   </li>
                   <li class="result__card">
-                    <img src="./images/product-1.png" alt="product-1" />
+                    <img src="./images/product-3.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
                       <span class="result__destination">Marruecos, África</span>
@@ -630,107 +745,7 @@
                         <a href="#" class="price__breakdown">Ver desglose</a>
                       </div>
                       <div class="result__reserve">
-                        <a href="#">Reservar</a>
-                      </div>
-                    </div>
-                    <div class="break-layer hide">
-                      <div class="break-layer__header">
-                        <p class="break-layer__title">Desglose de precios</p>
-                        <i class="break-layer__close"></i>
-                      </div>
-                      <div class="break-layer__content">
-                        <p class="break-layer__product">
-                          Marruecos, África<span>9 días</span>
-                        </p>
-                        <ul class="break-layer__data">
-                          <li>
-                            <p class="break-layer__left">
-                              Precio antes de impuestos
-                            </p>
-                            <p class="break-layer__right">1.124,00 €</p>
-                          </li>
-                          <li>
-                            <p class="break-layer__left">Impuestos</p>
-                            <p class="break-layer__right">4,43 €</p>
-                          </li>
-                          <li>
-                            <p class="break-layer__left">Loren ipsum</p>
-                            <p class="break-layer__right">150,42 €</p>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="break-layer__footer">
-                        <p class="break-layer__text">Precio total</p>
-                        <p class="break-layer__price">2.455,00</p>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="result__card">
-                    <img src="./images/product-1.png" alt="product-1" />
-                    <span class="result__offer">Quads</span>
-                    <div class="result__info">
-                      <span class="result__destination">Marruecos, África</span>
-                      <span class="result__duration">9 días</span>
-                      <p class="result__title">Descubre Bangkok con Iberojet</p>
-                    </div>
-                    <div class="result__price">
-                      <div class="result__left">
-                        <span class="result__since">Desde</span>
-                        <span class="result__value">248.000 €</span>
-                        <a href="#" class="price__breakdown">Ver desglose</a>
-                      </div>
-                      <div class="result__reserve">
-                        <a href="#">Reservar</a>
-                      </div>
-                    </div>
-                    <div class="break-layer hide">
-                      <div class="break-layer__header">
-                        <p class="break-layer__title">Desglose de precios</p>
-                        <i class="break-layer__close"></i>
-                      </div>
-                      <div class="break-layer__content">
-                        <p class="break-layer__product">
-                          Marruecos, África<span>9 días</span>
-                        </p>
-                        <ul class="break-layer__data">
-                          <li>
-                            <p class="break-layer__left">
-                              Precio antes de impuestos
-                            </p>
-                            <p class="break-layer__right">1.124,00 €</p>
-                          </li>
-                          <li>
-                            <p class="break-layer__left">Impuestos</p>
-                            <p class="break-layer__right">4,43 €</p>
-                          </li>
-                          <li>
-                            <p class="break-layer__left">Loren ipsum</p>
-                            <p class="break-layer__right">150,42 €</p>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="break-layer__footer">
-                        <p class="break-layer__text">Precio total</p>
-                        <p class="break-layer__price">2.455,00</p>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="result__card">
-                    <img src="./images/product-1.png" alt="product-1" />
-                    <span class="result__offer">Quads</span>
-                    <div class="result__info">
-                      <span class="result__destination">Marruecos, África</span>
-                      <span class="result__duration">9 días</span>
-                      <p class="result__title">Descubre Bangkok con Iberojet</p>
-                    </div>
-                    <div class="result__price">
-                      <div class="result__left">
-                        <span class="result__since">Desde</span>
-                        <span class="result__value">248.000 €</span>
-                        <a href="#" class="price__breakdown">Ver desglose</a>
-                      </div>
-                      <div class="result__reserve">
-                        <a href="#">Reservar</a>
+                        <button>Reservar</button>
                       </div>
                     </div>
                     <div class="break-layer hide">
@@ -774,11 +789,14 @@
 
       <footer class="footer">
         <div class="footer__corporate">
-          <!-- TODO: logo -->
-          <img src="./icons/logo.svg" alt="waveless" />
+          <div class="center">
+            <img src="./icons/logo.svg" alt="waveless" />
+          </div>
         </div>
         <div class="footer__rights">
-          @2024 Waveless - Todos los derechos reservados.
+          <div class="center">
+            @2024 Waveless - Todos los derechos reservados.
+          </div>
         </div>
       </footer>
     </div>
