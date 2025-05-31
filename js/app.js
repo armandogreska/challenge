@@ -1,4 +1,12 @@
+import { Carousel } from "./carousel.js";
+
 document.addEventListener("DOMContentLoaded", function () {
+  // inicialize carousel:
+  const carouselElement = document.querySelector(".carousel__frame");
+  if (carouselElement) {
+    new Carousel(carouselElement);
+  }
+  
   navigation();
   filters();
   breakdown();
