@@ -7,6 +7,7 @@
     border-bottom: 1px solid var(--secondary-color);
     padding: 0 32px;
     font: 600 16px/1.5 "Nunito", sans-serif;
+    height: 5rem;
   }
 }
 .header__logo {
@@ -31,41 +32,69 @@
   li {
     position: relative;
   }
-  a {
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1rem;
-    padding: 1.7rem 0.5rem 1.8rem 2rem;
-    display: inline-block;
-    transition: color 0.3s ease;
-  }
-  a:hover {
-    font-weight: 700;
-  }
-  li:nth-child(1) {
-    background: url("./icons/adventure.svg") 0 center no-repeat;
-  }
-
-  li:nth-child(2) {
-    background: url("./icons/lodging.svg") 0 center no-repeat;
-  }
-
-  li:nth-child(3) {
-    background: url("./icons/destinations.svg") 0 center no-repeat;
-  }
-  a::after {
+  li::before {
     content: "";
+    background: url(./icons/all.svg) 0px -36px no-repeat;
+    height: 1.7rem;
+    width: 1.7rem;
     position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
+    top: 24px;
     left: 0;
-    background-color: var(--secondary-color);
-    transition: width 0.3s ease;
   }
-  a:hover::after {
-    width: 100%;
+  li:nth-child(2)::before {
+    background-position: 0px -13px;
   }
+  li:nth-child(3)::before {
+    background-position: 0px -60px;
+  }
+  li:nth-child(4)::before {
+    display: none;
+  }
+}
+.header__nav-item {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 1.7rem 0.5rem 1.8rem 2rem;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+.header__nav-item:hover,
+.header__nav-item--active {
+  font-weight: 700;
+}
+.header__nav-item::before,
+.header__nav-item::before {
+  content: "";
+  position: absolute;
+  border-width: 5px;
+  border-style: solid;
+  margin-left: -5px;
+  bottom: 3px;
+  left: 50%;
+  border-color: transparent transparent var(--secondary-color) transparent;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+.header__nav-item:hover::before,
+.header__nav-item--active::before {
+  opacity: 1;
+  visibility: visible;
+}
+.header__nav-item::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--secondary-color);
+  transition: width 0.3s ease;
+}
+.header__nav-item:hover::after,
+.header__nav-item--active::after {
+  width: 100%;
 }
 /* /header: header__navigation */
 

@@ -1,7 +1,40 @@
 document.addEventListener("DOMContentLoaded", function () {
+  navigation();
   filters();
   breakdown();
 });
+
+// Navigation:
+function navigation() {
+  const nav = document.querySelector(".header__nav ul");
+  const navItems = document.querySelectorAll(".header__nav-item");
+  const navShow = document.querySelector(".header__nav-show");
+  const navClose = document.querySelector(".header__nav-close");
+  const userActions = document.querySelector(".header__user-actions");
+
+  navItems.forEach((nav) => {
+    nav.addEventListener("click", (e) => {
+      navItems.forEach((e) => {
+        e.classList.remove("header__nav-item--active");
+      });
+      e.target.classList.add("header__nav-item--active");
+    });
+  });
+
+  // tablet / movile only:
+  navShow.addEventListener("click", (e) => {
+    show(nav, true);
+    show(navClose, true);
+    show(userActions, true);
+    show(e.target, false);
+  });
+  navClose.addEventListener("click", (e) => {
+    show(nav, false);
+    show(navShow, true);
+    show(userActions, false);
+    show(e.target, false);
+  });
+}
 
 // Filters:
 function filters() {
@@ -18,7 +51,7 @@ function filters() {
     });
   });
 
-  // View all / view less:
+  // (tablet / movile only) View all / view less:
   blocks.forEach((block) => {
     const viewAll = block.querySelector(".filters__view-all");
     const viewLess = block.querySelector(".filters__view-less");

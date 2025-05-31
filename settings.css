@@ -22,19 +22,16 @@
     --center-width: 100%;
     --products-columns: 1fr;
     --results-columns: repeat(3, 1fr);
-    background-color: rgba(255, 0, 0, 0.5);
   }
   @media (width < 1024px) {
     --center-width: 100%;
     --products-columns: 1fr;
     --results-columns: repeat(2, 1fr);
-    background-color: rgba(0, 0, 255, 0.2);
   }
   @media (width < 745px) {
     --center-width: 100%;
     --products-columns: 1fr;
     --results-columns: 1fr;
-    background-color: rgba(0, 255, 0, 0.2);
   }
 
   min-height: 100%;
