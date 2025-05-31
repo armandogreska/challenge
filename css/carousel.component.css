@@ -40,12 +40,12 @@
   }
 }
 .carousel__title {
-  font: 700 1.875rem / 1.4 "Syne", sans-serif;
+  font: 700 1.875rem/1.4 "Syne", sans-serif;
   margin-bottom: 0.5rem;
 }
 
 .carousel__copy {
-  font: 500 1.25rem / 1.4 "Nunito", sans-serif;
+  font: 500 1.25rem/1.4 "Nunito", sans-serif;
   margin-bottom: 2.5rem;
 }
 

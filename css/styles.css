@@ -6,7 +6,7 @@
     justify-content: space-between;
     border-bottom: 1px solid var(--secondary-color);
     padding: 0 32px;
-    font: 600 16px/1.5 "Nunito", sans-serif;
+    font: 600 1rem/1.5 "Nunito", sans-serif;
     height: 5rem;
     position: relative;
   }
@@ -126,11 +126,11 @@
   margin-bottom: 3rem;
 }
 .tagline__title {
-  font: 700 2.375rem / 1.4 "Syne", sans-serif;
+  font: 700 2.375rem/1.4 "Syne", sans-serif;
   margin-top: 4rem;
 }
 .tagline__subtag {
-  font: 700 22px/1.5 "Nunito", sans-serif;
+  font: 700 1.375rem/1.5 "Nunito", sans-serif;
   color: #6b7d8d;
 }
 .tagline img {
@@ -156,13 +156,13 @@
   overflow-y: auto;
 }
 .filters__title {
-  font: 700 1.125rem / 1.4 "Syne", sans-serif;
+  font: 700 1.125rem/1.4 "Syne", sans-serif;
   border-bottom: var(--third-color) solid 1px;
   text-align: center;
   padding: 1.7rem;
 }
 .filters__item {
-  font: 500 1rem / 1.4 "Nunito", sans-serif;
+  font: 500 1rem/1.4 "Nunito", sans-serif;
   padding: 1.5rem 0 0.6rem 3.5rem;
   position: relative;
   cursor: pointer;
@@ -194,7 +194,7 @@
   position: absolute;
   top: -2.8rem;
   left: 0;
-  font: 600 1.25rem / 1.3 "Nunito", sans-serif;
+  font: 600 1.25rem/1.3 "Nunito", sans-serif;
   border-radius: var(--border-radius);
   background-color: var(--bg-color);
   border: solid 1px var(--third-color);
@@ -319,7 +319,7 @@
 }
 
 .filters__list span {
-  font: 700 0.875rem / 1.3 "Nunito", sans-serif;
+  font: 700 0.875rem/1.3 "Nunito", sans-serif;
 }
 .filters__input-text {
   position: relative;
@@ -402,7 +402,7 @@ li:nth-child(1) .filters__tooltip .filters__tiptext::after {
 .filters__view-less {
   cursor: pointer;
   color: var(--primary-color);
-  font: 500 0.875rem / 1.3 "Nunito", sans-serif;
+  font: 500 0.875rem/1.3 "Nunito", sans-serif;
   text-decoration: underline;
   margin-left: 2.6rem;
 }
@@ -415,7 +415,7 @@ li:nth-child(1) .filters__tooltip .filters__tiptext::after {
   position: relative;
 }
 .results__block .results__title {
-  font: 700 1.375rem / 1.4 "Syne", sans-serif;
+  font: 700 1.375rem/1.4 "Syne", sans-serif;
   margin-bottom: 0.8rem;
 }
 .results__list {
@@ -532,7 +532,7 @@ li:nth-child(1) .filters__tooltip .filters__tiptext::after {
   position: relative;
 }
 .break-layer__title {
-  font: 700 18px/1.3 "Nunito", sans-serif;
+  font: 700 1.125rem/1.3 "Nunito", sans-serif;
 }
 .break-layer__close {
   position: absolute;
@@ -547,7 +547,7 @@ li:nth-child(1) .filters__tooltip .filters__tiptext::after {
   padding: 1.5rem 1.4rem 0 1.4rem;
 }
 .break-layer__product {
-  font: 700 18px/1.3 "Syne", sans-serif;
+  font: 700 1.125rem/1.3 "Syne", sans-serif;
   color: var(--primary-color);
   margin-bottom: 1.2rem;
   span {
@@ -562,10 +562,10 @@ li:nth-child(1) .filters__tooltip .filters__tiptext::after {
   margin-bottom: 0.9rem;
 }
 .break-layer__left {
-  font: 500 16px/1.3 "Nunito", sans-serif;
+  font: 500 1rem/1.3 "Nunito", sans-serif;
 }
 .break-layer__right {
-  font: 700 18px/1.3 "Nunito", sans-serif;
+  font: 700 1.125rem/1.3 "Nunito", sans-serif;
   text-align: right;
 }
 .break-layer__footer {
@@ -576,10 +576,10 @@ li:nth-child(1) .filters__tooltip .filters__tiptext::after {
   border-top: 1px solid var(--third-color);
 }
 .break-layer__text {
-  font: 700 18px/1.3 "Nunito", sans-serif;
+  font: 700 1.125rem/1.3 "Nunito", sans-serif;
 }
 .break-layer__price {
-  font: 700 22px/1.3 "Nunito", sans-serif;
+  font: 700 1.375rem/1.3 "Nunito", sans-serif;
 }
 /* /products: results: breackdown layer */
 /* /products: results */
