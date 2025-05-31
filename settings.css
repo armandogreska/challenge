@@ -13,28 +13,62 @@
   --center-width: 1440px;
 
   --border-radius: 24px;
-  --box-shadow: 0px 6px 6px 0 rgba(0, 0, 0, 0.1);
+  --box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.25);
+  --box-shadow-hover: 0px 4px 4px 0 rgba(0, 0, 0, 0.5);
   --tooltip-w: 180px;
 
-  /* media-queries: */
+  /* Vars media-queries: */
   @media (width <= 1440px) {
     --center-width: 100%;
     --products-columns: 1fr;
     --results-columns: repeat(3, 1fr);
-    background-color: blue;
+    background-color: rgba(255, 0, 0, 0.5);
   }
   @media (width < 1024px) {
     --center-width: 100%;
     --products-columns: 1fr;
     --results-columns: repeat(2, 1fr);
-    background-color: green;
+    background-color: rgba(0, 0, 255, 0.2);
   }
   @media (width < 745px) {
     --center-width: 100%;
     --products-columns: 1fr;
     --results-columns: 1fr;
-    background-color: red;
+    background-color: rgba(0, 255, 0, 0.2);
   }
 
   min-height: 100%;
 }
+
+/* generic */
+body {
+  font-family: "Nunito", sans-serif;
+  color: var(--text-color);
+}
+.hide {
+  display: none;
+}
+/* /generic */
+
+/* layout */
+.full-width {
+  display: grid;
+  grid-template-rows: 80px auto auto 180px;
+  gap: 0;
+  height: 100vh;
+}
+.header,
+.content,
+.footer,
+.prime {
+  display: grid;
+}
+.header,
+.footer {
+  background-color: var(--bg-color);
+}
+.center {
+  justify-self: center;
+  width: var(--center-width);
+}
+/* /layout */

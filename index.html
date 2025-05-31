@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="settings.css" />
     <link rel="stylesheet" href="generic.css" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="utilities.css" />
   </head>
   <body>
     <div class="full-width">
@@ -38,23 +39,28 @@
           </div>
         </div>
       </header>
-      <div class="content">
+
+      <div class="carrousel">
         <div class="center">
-          <div class="prime">
-            <div class="prime__carrousel">
-              <!-- TODO: carrousel -->
-              <img src="./images/carrousel-1.png" alt="carrousel-1" />
-            </div>
-            <div class="prime__tagline">
-              <p class="prime__title">Vive tus propias aventuras</p>
-              <p class="prime__subtag">
-                Para los que les gusta explorar y conocer mundo sin complejos
-              </p>
-            </div>
+          <!-- TODO: carrousel -->
+          <img src="./images/carrousel-1.png" alt="carrousel-1" />
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="tagline">
+          <div class="center">
+            <p class="tagline__title">Vive tus propias aventuras</p>
+            <p class="tagline__subtag">
+              Para los que les gusta explorar y conocer mundo sin complejos
+            </p>
           </div>
+        </div>
+        <div class="center">
           <div class="products">
             <aside class="filters">
               <p class="filters__title">Filtrar mi búsqueda</p>
+              <i class="filters__close"></i>
 
               <div class="filters__block">
                 <p class="filters__item filters__item--destinations">
@@ -303,8 +309,8 @@
                 </div>
               </div>
             </aside>
-
             <main class="results">
+              <button class="show-filters">Ver filtros</button>
               <div class="results__block">
                 <p class="results__title">Asia</p>
                 <ul class="results__list">
@@ -323,7 +329,7 @@
                         <a href="#" class="price__breakdown">Ver desglose</a>
                       </div>
                       <div class="result__reserve">
-                        <a href="#">Reservar</a>
+                        <button>Reservar</button>
                       </div>
                     </div>
                     <div class="break-layer">
@@ -374,7 +380,7 @@
                         <a href="#" class="price__breakdown">Ver desglose</a>
                       </div>
                       <div class="result__reserve">
-                        <a href="#">Reservar</a>
+                        <button>Reservar</button>
                       </div>
                     </div>
                     <div class="break-layer hide">
@@ -424,7 +430,7 @@
                         <a href="#" class="price__breakdown">Ver desglose</a>
                       </div>
                       <div class="result__reserve">
-                        <a href="#">Reservar</a>
+                        <button>Reservar</button>
                       </div>
                     </div>
                     <div class="break-layer hide">
@@ -461,7 +467,6 @@
                   </li>
                 </ul>
               </div>
-
               <div class="results__block">
                 <p class="results__title">Asia</p>
                 <ul class="results__list">
@@ -480,7 +485,7 @@
                         <a href="#" class="price__breakdown">Ver desglose</a>
                       </div>
                       <div class="result__reserve">
-                        <a href="#">Reservar</a>
+                        <button>Reservar</button>
                       </div>
                     </div>
                     <div class="break-layer hide">
@@ -530,7 +535,7 @@
                         <a href="#" class="price__breakdown">Ver desglose</a>
                       </div>
                       <div class="result__reserve">
-                        <a href="#">Reservar</a>
+                        <button>Reservar</button>
                       </div>
                     </div>
                     <div class="break-layer hide">
@@ -580,7 +585,7 @@
                         <a href="#" class="price__breakdown">Ver desglose</a>
                       </div>
                       <div class="result__reserve">
-                        <a href="#">Reservar</a>
+                        <button>Reservar</button>
                       </div>
                     </div>
                     <div class="break-layer hide">
@@ -630,7 +635,7 @@
                         <a href="#" class="price__breakdown">Ver desglose</a>
                       </div>
                       <div class="result__reserve">
-                        <a href="#">Reservar</a>
+                        <button>Reservar</button>
                       </div>
                     </div>
                     <div class="break-layer hide">
@@ -680,7 +685,7 @@
                         <a href="#" class="price__breakdown">Ver desglose</a>
                       </div>
                       <div class="result__reserve">
-                        <a href="#">Reservar</a>
+                        <button>Reservar</button>
                       </div>
                     </div>
                     <div class="break-layer hide">
@@ -730,7 +735,7 @@
                         <a href="#" class="price__breakdown">Ver desglose</a>
                       </div>
                       <div class="result__reserve">
-                        <a href="#">Reservar</a>
+                        <button>Reservar</button>
                       </div>
                     </div>
                     <div class="break-layer hide">
@@ -774,11 +779,14 @@
 
       <footer class="footer">
         <div class="footer__corporate">
-          <!-- TODO: logo -->
-          <img src="./icons/logo.svg" alt="waveless" />
+          <div class="center">
+            <img src="./icons/logo.svg" alt="waveless" />
+          </div>
         </div>
         <div class="footer__rights">
-          @2024 Waveless - Todos los derechos reservados.
+          <div class="center">
+            @2024 Waveless - Todos los derechos reservados.
+          </div>
         </div>
       </footer>
     </div>

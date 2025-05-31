@@ -1,4 +1,3 @@
-// filtros:
 document.addEventListener("DOMContentLoaded", function () {
   filters();
   breakdown();
@@ -8,8 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
 function filters() {
   const filters = document.querySelector(".filters");
   const blocks = filters.querySelectorAll(".filters__block");
+  const close = filters.querySelector(".filters__close");
+  const showFilters = document.querySelector(".show-filters");
 
-  // accordion:
+  // Accordion:
   blocks.forEach((block) => {
     const filter = block.querySelector(".filters__item");
     filter.addEventListener("click", () => {
@@ -17,7 +18,7 @@ function filters() {
     });
   });
 
-  // view all / view less:
+  // View all / view less:
   blocks.forEach((block) => {
     const viewAll = block.querySelector(".filters__view-all");
     const viewLess = block.querySelector(".filters__view-less");
@@ -45,9 +46,21 @@ function filters() {
       });
     }
   });
+
+  // Close filters:
+  close.addEventListener("click", () => {
+    show(filters, false);
+    show(showFilters, true);
+  });
+
+  // Show filters:
+  showFilters.addEventListener("click", (e) => {
+    show(filters, true);
+    show(showFilters, false);
+  });
 }
 
-// breakdown layer
+// Breakdown layer
 function breakdown() {
   const cards = document.querySelectorAll(".result__card");
 
@@ -58,11 +71,23 @@ function breakdown() {
 
     breakdownBtn.addEventListener("click", (e) => {
       e.preventDefault();
-      document
-        .querySelectorAll(".break-layer")
-        .forEach((e) => e.classList.add("hide"));
+      document.querySelectorAll(".break-layer").forEach((e) => {
+        e.classList.add("hide");
+      });
       breakdownLayer.classList.remove("hide");
     });
     close.addEventListener("click", () => breakdownLayer.classList.add("hide"));
   });
+}
+
+// Methods:
+// Show/hidde animation:
+function show(target, show) {
+  if (show) {
+    target.style.opacity = "1";
+    target.style.visibility = "visible";
+  } else {
+    target.style.opacity = "0";
+    target.style.visibility = "hidden";
+  }
 }
