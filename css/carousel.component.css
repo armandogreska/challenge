@@ -11,6 +11,7 @@
 }
 .carousel__slide {
   min-width: 100%;
+  position: relative;
 }
 .carousel__slide img {
   width: 100%;
@@ -19,6 +20,34 @@
   max-height: 400px;
   object-fit: cover;
 }
+
+.carousel__info {
+  color: #fff;
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  button {
+    color: #4e250e;
+    background-color: var(--secondary-color);
+    padding: 0.7rem 2.6rem;
+    border-radius: var(--border-radius);
+    display: block;
+    margin: auto auto 1rem auto;
+  }
+}
+.carousel__title {
+  font: 700 30px / 1.4 "Syne", sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.carousel__copy {
+  font: 500 20px / 1.4 "Nunito", sans-serif;
+  margin-bottom: 2.5rem;
+}
+
 .carousel__btn {
   position: absolute;
   top: 50%;
