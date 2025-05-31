@@ -74,7 +74,7 @@
   right: 0;
 }
 .carousel__arrow {
-  background: url(../icons/all.svg) -60px 3px no-repeat;
+  background: url(../icons/sprite.svg) -60px 3px no-repeat;
   height: 1.2rem;
   width: 1rem;
   display: block;
@@ -94,13 +94,13 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: var(--bg-color);
+  background-color: rgba(255, 255, 255, 0.2);
   cursor: pointer;
   transition: var(--transition);
-  opacity: 0.5;
+  border: solid 1px #fff;
 }
 .carousel__dot.active {
-  opacity: 0.8;
+  background-color: var(--secondary-color);
   transform: scale(1.2);
 }
 /* /carousel */
