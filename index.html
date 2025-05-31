@@ -35,20 +35,17 @@
     <link rel="stylesheet" href="./css/components/filters.component.css" />
     <link rel="stylesheet" href="./css/components/results.component.css" />
     <link rel="stylesheet" href="./css/components/result-card.component.css" />
-    <link
-      rel="stylesheet"
-      href="./css/components/breackdown-layer.component.css"
-    />
+    <link rel="stylesheet" href="./css/components/break-layer.component.css" />
     <link rel="stylesheet" href="./css/components/footer.component.css" />
     <link rel="stylesheet" href="./css/components/carousel.component.css" />
     <link rel="canonical" href="https://www.waveless.com" />
   </head>
   <body>
     <div class="full-width">
-      <header class="header">
+      <header class="header" data-component="header">
         <div class="center">
           <h1 class="header__logo">Waveless</h1>
-          <nav class="header__nav">
+          <nav class="header__nav" data-component="navigation">
             <ul>
               <li>
                 <a class="header__nav-item header__nav-item--active" href="#"
@@ -62,13 +59,13 @@
             <i class="header__nav-show"></i>
             <i class="header__nav-close"></i>
           </nav>
-          <div class="header__user-actions">
+          <div class="header__user-actions" data-component="user-actions">
             <a href="#">Reserva</a>
           </div>
         </div>
       </header>
 
-      <section class="carousel">
+      <section class="carousel" data-component="carousel">
         <div class="center">
           <div class="carousel__frame">
             <div class="carousel__slide active">
@@ -137,7 +134,7 @@
       </section>
 
       <section class="content">
-        <div class="tagline">
+        <div class="tagline" data-component="tagline">
           <div class="center">
             <h2 class="tagline__title">Vive tus propias aventuras</h2>
             <p class="tagline__subtag">
@@ -147,8 +144,8 @@
         </div>
 
         <div class="center">
-          <div class="products">
-            <aside class="filters">
+          <div class="products" data-component="products">
+            <aside class="filters" data-component="filters">
               <p class="filters__title">Filtrar mi búsqueda</p>
               <i class="filters__close"></i>
 
@@ -395,12 +392,12 @@
                 </div>
               </div>
             </aside>
-            <main class="results">
+            <main class="results" data-component="results">
               <button class="show-filters">Ver filtros</button>
               <div class="results__block">
                 <p class="results__title">Asia</p>
                 <div class="results__list">
-                  <article class="result__card">
+                  <article class="result__card" data-component="result-card">
                     <img src="./images/product-1.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
@@ -420,7 +417,7 @@
                         <button>Reservar</button>
                       </div>
                     </div>
-                    <div class="break-layer hide">
+                    <div class="break-layer hide" data-component="break-layer">
                       <div class="break-layer__header">
                         <p class="break-layer__title">Desglose de precios</p>
                         <i class="break-layer__close"></i>
@@ -452,7 +449,7 @@
                       </div>
                     </div>
                   </article>
-                  <article class="result__card">
+                  <article class="result__card" data-component="result-card">
                     <img src="./images/product-2.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
@@ -472,7 +469,7 @@
                         <button>Reservar</button>
                       </div>
                     </div>
-                    <div class="break-layer hide">
+                    <div class="break-layer hide" data-component="break-layer">
                       <div class="break-layer__header">
                         <p class="break-layer__title">Desglose de precios</p>
                         <i class="break-layer__close"></i>
@@ -504,7 +501,7 @@
                       </div>
                     </div>
                   </article>
-                  <article class="result__card">
+                  <article class="result__card" data-component="result-card">
                     <img src="./images/product-3.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
@@ -524,7 +521,7 @@
                         <button>Reservar</button>
                       </div>
                     </div>
-                    <div class="break-layer hide">
+                    <div class="break-layer hide" data-component="break-layer">
                       <div class="break-layer__header">
                         <p class="break-layer__title">Desglose de precios</p>
                         <i class="break-layer__close"></i>
@@ -561,7 +558,7 @@
               <div class="results__block">
                 <p class="results__title">Asia</p>
                 <ul class="results__list">
-                  <article class="result__card">
+                  <article class="result__card" data-component="result-card">
                     <img src="./images/product-1.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
@@ -581,7 +578,7 @@
                         <button>Reservar</button>
                       </div>
                     </div>
-                    <div class="break-layer hide">
+                    <div class="break-layer hide" data-component="break-layer">
                       <div class="break-layer__header">
                         <p class="break-layer__title">Desglose de precios</p>
                         <i class="break-layer__close"></i>
@@ -613,7 +610,7 @@
                       </div>
                     </div>
                   </article>
-                  <article class="result__card">
+                  <article class="result__card" data-component="result-card">
                     <img src="./images/product-2.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
@@ -633,7 +630,7 @@
                         <button>Reservar</button>
                       </div>
                     </div>
-                    <div class="break-layer hide">
+                    <div class="break-layer hide" data-component="break-layer">
                       <div class="break-layer__header">
                         <p class="break-layer__title">Desglose de precios</p>
                         <i class="break-layer__close"></i>
@@ -665,7 +662,7 @@
                       </div>
                     </div>
                   </article>
-                  <article class="result__card">
+                  <article class="result__card" data-component="result-card">
                     <img src="./images/product-3.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
@@ -685,7 +682,7 @@
                         <button>Reservar</button>
                       </div>
                     </div>
-                    <div class="break-layer hide">
+                    <div class="break-layer hide" data-component="break-layer">
                       <div class="break-layer__header">
                         <p class="break-layer__title">Desglose de precios</p>
                         <i class="break-layer__close"></i>
@@ -717,7 +714,7 @@
                       </div>
                     </div>
                   </article>
-                  <article class="result__card">
+                  <article class="result__card" data-component="result-card">
                     <img src="./images/product-1.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
@@ -737,7 +734,7 @@
                         <button>Reservar</button>
                       </div>
                     </div>
-                    <div class="break-layer hide">
+                    <div class="break-layer hide" data-component="break-layer">
                       <div class="break-layer__header">
                         <p class="break-layer__title">Desglose de precios</p>
                         <i class="break-layer__close"></i>
@@ -769,7 +766,7 @@
                       </div>
                     </div>
                   </article>
-                  <article class="result__card">
+                  <article class="result__card" data-component="result-card">
                     <img src="./images/product-2.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
@@ -789,7 +786,7 @@
                         <button>Reservar</button>
                       </div>
                     </div>
-                    <div class="break-layer hide">
+                    <div class="break-layer hide" data-component="break-layer">
                       <div class="break-layer__header">
                         <p class="break-layer__title">Desglose de precios</p>
                         <i class="break-layer__close"></i>
@@ -821,7 +818,7 @@
                       </div>
                     </div>
                   </article>
-                  <article class="result__card">
+                  <article class="result__card" data-component="result-card">
                     <img src="./images/product-3.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
@@ -841,7 +838,7 @@
                         <button>Reservar</button>
                       </div>
                     </div>
-                    <div class="break-layer hide">
+                    <div class="break-layer hide" data-component="break-layer">
                       <div class="break-layer__header">
                         <p class="break-layer__title">Desglose de precios</p>
                         <i class="break-layer__close"></i>
@@ -880,7 +877,7 @@
         </div>
       </section>
 
-      <footer class="footer">
+      <footer class="footer" data-component="footer">
         <div class="footer__corporate">
           <div class="center">
             <img src="./icons/logo.svg" alt="waveless" />
