@@ -14,10 +14,11 @@
       href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="settings.css" />
-    <link rel="stylesheet" href="generic.css" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="utilities.css" />
+    <link rel="stylesheet" href="./css/settings.css" />
+    <link rel="stylesheet" href="./css/generic.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/carousel.component.css" />
+    <link rel="stylesheet" href="./css/utilities.css" />
   </head>
   <body>
     <div class="full-width">
@@ -28,7 +29,11 @@
           </div>
           <nav class="header__nav">
             <ul>
-              <li><a class="header__nav-item header__nav-item--active" href="#">Aventura</a></li>
+              <li>
+                <a class="header__nav-item header__nav-item--active" href="#"
+                  >Aventura</a
+                >
+              </li>
               <li><a class="header__nav-item" href="#">destinos</a></li>
               <li><a class="header__nav-item" href="#">Alojamiento</a></li>
               <li><a class="header__nav-item" href="#">Sobre nosotros</a></li>
@@ -42,10 +47,50 @@
         </div>
       </header>
 
-      <div class="carrousel">
+      <div class="carousel">
         <div class="center">
-          <!-- TODO: carrousel -->
-          <img src="./images/carrousel-1.png" alt="carrousel-1" />
+          <div class="carousel__frame">
+            <div class="carousel__slide active">
+              <img
+                src="./images/carrousel-1.png"
+                alt="Ofertas de viaje"
+                loading="lazy"
+              />
+            </div>
+            <div class="carousel__slide">
+              <img
+                src="./images/carrousel-2.png"
+                alt="Destinos exóticos"
+                loading="lazy"
+              />
+            </div>
+            <div class="carousel__slide">
+              <img
+                src="./images/carrousel-3.png"
+                alt="Vacaciones inolvidables"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <button
+            class="carousel__btn carousel__btn--prev"
+            id="prevBtn"
+            aria-label="Slide anterior"
+          >
+            <i class="carousel__arrow carousel__arrow-left"></i>
+          </button>
+          <button
+            class="carousel__btn carousel__btn--next"
+            id="nextBtn"
+            aria-label="Slide siguiente"
+          >
+            <i class="carousel__arrow carousel__arrow-right"></i>
+          </button>
+          <div class="carousel__dots" id="carouselDots">
+            <span class="carousel__dot active" aria-label="Slide 1"></span>
+            <span class="carousel__dot" aria-label="Slide 2"></span>
+            <span class="carousel__dot" aria-label="Slide 3"></span>
+          </div>
         </div>
       </div>
 
@@ -64,260 +109,252 @@
               <p class="filters__title">Filtrar mi búsqueda</p>
               <i class="filters__close"></i>
 
-
-
-              
-                <div class="filters__block">
-                  <p class="filters__item filters__item--destinations">
-                    Destinos
-                  </p>
-                  <div class="filters__list">
-                    <ul>
-                      <li>
-                        <label for="destination-1">
-                          <input
-                            type="checkbox"
-                            id="destination-1"
-                            name="destination-1"
-                          />
-                          <span>Marruecos</span>
-                        </label>
-                        <i
-                          class="filters__info-icon filters__tooltip filters__top"
-                        >
-                          <span class="filters__tiptext">Loren ipsum</span>
-                        </i>
-                      </li>
-                      <li>
-                        <label for="destination-2">
-                          <input
-                            type="checkbox"
-                            id="destination-2"
-                            name="destination-2"
-                          />
-                          <span>Marruecos</span>
-                        </label>
-                        <i
-                          class="filters__info-icon filters__tooltip filters__top"
-                        >
-                          <span class="filters__tiptext">Loren ipsum</span>
-                        </i>
-                      </li>
-                    </ul>
-                    <p class="filters__view-all hide">Ver <span></span> más</p>
-                    <p class="filters__view-less hide">Ver menos</p>
-                  </div>
+              <div class="filters__block">
+                <p class="filters__item filters__item--destinations">
+                  Destinos
+                </p>
+                <div class="filters__list">
+                  <ul>
+                    <li>
+                      <label for="destination-1">
+                        <input
+                          type="checkbox"
+                          id="destination-1"
+                          name="destination-1"
+                        />
+                        <span>Marruecos</span>
+                      </label>
+                      <i
+                        class="filters__info-icon filters__tooltip filters__top"
+                      >
+                        <span class="filters__tiptext">Loren ipsum</span>
+                      </i>
+                    </li>
+                    <li>
+                      <label for="destination-2">
+                        <input
+                          type="checkbox"
+                          id="destination-2"
+                          name="destination-2"
+                        />
+                        <span>Marruecos</span>
+                      </label>
+                      <i
+                        class="filters__info-icon filters__tooltip filters__top"
+                      >
+                        <span class="filters__tiptext">Loren ipsum</span>
+                      </i>
+                    </li>
+                  </ul>
+                  <p class="filters__view-all hide">Ver <span></span> más</p>
+                  <p class="filters__view-less hide">Ver menos</p>
                 </div>
+              </div>
 
-                <div class="filters__block">
-                  <p class="filters__item filters__item--adventure">Aventura</p>
-                  <div class="filters__list">
-                    <ul>
-                      <li>
-                        <label for="adventure-1">
-                          <input
-                            type="checkbox"
-                            id="adventure-1"
-                            name="adventure-1"
-                          />
-                          <span>Quads</span>
-                        </label>
-                        <i
-                          class="filters__info-icon filters__tooltip top"
-                          aria-label="Más información"
-                        >
-                          <span class="filters__tiptext">Loren ipsum</span>
-                        </i>
-                      </li>
-                      <li>
-                        <label for="adventure-2">
-                          <input
-                            type="checkbox"
-                            id="adventure-2"
-                            name="adventure-2"
-                          />
-                          <span>Parapente</span>
-                        </label>
-                        <i
-                          class="filters__info-icon filters__tooltip top"
-                          aria-label="Más información"
-                        >
-                          <span class="filters__tiptext">Loren ipsum</span>
-                        </i>
-                      </li>
+              <div class="filters__block">
+                <p class="filters__item filters__item--adventure">Aventura</p>
+                <div class="filters__list">
+                  <ul>
+                    <li>
+                      <label for="adventure-1">
+                        <input
+                          type="checkbox"
+                          id="adventure-1"
+                          name="adventure-1"
+                        />
+                        <span>Quads</span>
+                      </label>
+                      <i
+                        class="filters__info-icon filters__tooltip top"
+                        aria-label="Más información"
+                      >
+                        <span class="filters__tiptext">Loren ipsum</span>
+                      </i>
+                    </li>
+                    <li>
+                      <label for="adventure-2">
+                        <input
+                          type="checkbox"
+                          id="adventure-2"
+                          name="adventure-2"
+                        />
+                        <span>Parapente</span>
+                      </label>
+                      <i
+                        class="filters__info-icon filters__tooltip top"
+                        aria-label="Más información"
+                      >
+                        <span class="filters__tiptext">Loren ipsum</span>
+                      </i>
+                    </li>
 
-                      <li>
-                        <label for="adventure-3">
-                          <input
-                            type="checkbox"
-                            id="adventure-3"
-                            name="adventure-3"
-                          />
-                          <span>Rafting</span>
-                        </label>
-                        <i
-                          class="filters__info-icon filters__tooltip top"
-                          aria-label="Más información"
-                        >
-                          <span class="filters__tiptext">Loren ipsum</span>
-                        </i>
-                      </li>
-                      <li>
-                        <label for="adventure-4">
-                          <input
-                            type="checkbox"
-                            id="adventure-4"
-                            name="adventure-4"
-                          />
-                          <span>Explora</span>
-                        </label>
-                        <i
-                          class="filters__info-icon filters__tooltip top"
-                          aria-label="Más información"
-                        >
-                          <span class="filters__tiptext">Loren ipsum</span>
-                        </i>
-                      </li>
-                      <li>
-                        <label for="adventure-5">
-                          <input
-                            type="checkbox"
-                            id="adventure-5"
-                            name="adventure-5"
-                          />
-                          <span>Buceo</span>
-                        </label>
-                        <i
-                          class="filters__info-icon filters__tooltip top"
-                          aria-label="Más información"
-                        >
-                          <span class="filters__tiptext">Loren ipsum</span>
-                        </i>
-                      </li>
-                      <li>
-                        <label for="adventure-6">
-                          <input
-                            type="checkbox"
-                            id="adventure-6"
-                            name="adventure-6"
-                          />
-                          <span>Paracaídas</span>
-                        </label>
-                        <i
-                          class="filters__info-icon filters__tooltip top"
-                          aria-label="Más información"
-                        >
-                          <span class="filters__tiptext">Loren ipsum</span>
-                        </i>
-                      </li>
-                      <li>
-                        <label for="adventure-7">
-                          <input
-                            type="checkbox"
-                            id="adventure-7"
-                            name="adventure-7"
-                          />
-                          <span>Snowboard</span>
-                        </label>
-                        <i
-                          class="filters__info-icon filters__tooltip top"
-                          aria-label="Más información"
-                        >
-                          <span class="filters__tiptext">Loren ipsum</span>
-                        </i>
-                      </li>
-                      <li>
-                        <label for="adventure-8">
-                          <input
-                            type="checkbox"
-                            id="adventure-8"
-                            name="adventure-8"
-                          />
-                          <span>Surf</span>
-                        </label>
-                        <i
-                          class="filters__info-icon filters__tooltip top"
-                          aria-label="Más información"
-                        >
-                          <span class="filters__tiptext">Loren ipsum</span>
-                        </i>
-                      </li>
-                    </ul>
-                    <p class="filters__view-all hide">Ver <span></span> más</p>
-                    <p class="filters__view-less hide">Ver menos</p>
-                  </div>
+                    <li>
+                      <label for="adventure-3">
+                        <input
+                          type="checkbox"
+                          id="adventure-3"
+                          name="adventure-3"
+                        />
+                        <span>Rafting</span>
+                      </label>
+                      <i
+                        class="filters__info-icon filters__tooltip top"
+                        aria-label="Más información"
+                      >
+                        <span class="filters__tiptext">Loren ipsum</span>
+                      </i>
+                    </li>
+                    <li>
+                      <label for="adventure-4">
+                        <input
+                          type="checkbox"
+                          id="adventure-4"
+                          name="adventure-4"
+                        />
+                        <span>Explora</span>
+                      </label>
+                      <i
+                        class="filters__info-icon filters__tooltip top"
+                        aria-label="Más información"
+                      >
+                        <span class="filters__tiptext">Loren ipsum</span>
+                      </i>
+                    </li>
+                    <li>
+                      <label for="adventure-5">
+                        <input
+                          type="checkbox"
+                          id="adventure-5"
+                          name="adventure-5"
+                        />
+                        <span>Buceo</span>
+                      </label>
+                      <i
+                        class="filters__info-icon filters__tooltip top"
+                        aria-label="Más información"
+                      >
+                        <span class="filters__tiptext">Loren ipsum</span>
+                      </i>
+                    </li>
+                    <li>
+                      <label for="adventure-6">
+                        <input
+                          type="checkbox"
+                          id="adventure-6"
+                          name="adventure-6"
+                        />
+                        <span>Paracaídas</span>
+                      </label>
+                      <i
+                        class="filters__info-icon filters__tooltip top"
+                        aria-label="Más información"
+                      >
+                        <span class="filters__tiptext">Loren ipsum</span>
+                      </i>
+                    </li>
+                    <li>
+                      <label for="adventure-7">
+                        <input
+                          type="checkbox"
+                          id="adventure-7"
+                          name="adventure-7"
+                        />
+                        <span>Snowboard</span>
+                      </label>
+                      <i
+                        class="filters__info-icon filters__tooltip top"
+                        aria-label="Más información"
+                      >
+                        <span class="filters__tiptext">Loren ipsum</span>
+                      </i>
+                    </li>
+                    <li>
+                      <label for="adventure-8">
+                        <input
+                          type="checkbox"
+                          id="adventure-8"
+                          name="adventure-8"
+                        />
+                        <span>Surf</span>
+                      </label>
+                      <i
+                        class="filters__info-icon filters__tooltip top"
+                        aria-label="Más información"
+                      >
+                        <span class="filters__tiptext">Loren ipsum</span>
+                      </i>
+                    </li>
+                  </ul>
+                  <p class="filters__view-all hide">Ver <span></span> más</p>
+                  <p class="filters__view-less hide">Ver menos</p>
                 </div>
+              </div>
 
-                <div class="filters__block">
-                  <p class="filters__item filters__item--lodging">Alojamiento</p>
-                  <div class="filters__list">
-                    <ul>
-                      <li>
-                        <label>
-                          <input type="checkbox" name="destinations" />
-                          <span>Marruecos</span>
-                        </label>
-                        <i
-                          class="filters__info-icon filters__tooltip top"
-                          aria-label="Más información"
-                        >
-                          <span class="filters__tiptext">Loren ipsum</span>
-                        </i>
-                      </li>
-                      <li>
-                        <label>
-                          <input type="checkbox" name="destinations" />
-                          <span>Marruecos</span>
-                        </label>
-                        <i
-                          class="filters__info-icon filters__tooltip top"
-                          aria-label="Más información"
-                        >
-                          <span class="filters__tiptext">Loren ipsum</span>
-                        </i>
-                      </li>
-                      <li>
-                        <label>
-                          <input type="checkbox" name="destinations" />
-                          <span>Marruecos</span>
-                        </label>
-                        <i
-                          class="filters__info-icon filters__tooltip top"
-                          aria-label="Más información"
-                        >
-                          <span class="filters__tiptext">Loren ipsum</span>
-                        </i>
-                      </li>
-                    </ul>
-                    <p class="filters__view-all hide">Ver <span></span> más</p>
-                    <p class="filters__view-less hide">Ver menos</p>
-                  </div>
+              <div class="filters__block">
+                <p class="filters__item filters__item--lodging">Alojamiento</p>
+                <div class="filters__list">
+                  <ul>
+                    <li>
+                      <label>
+                        <input type="checkbox" name="destinations" />
+                        <span>Marruecos</span>
+                      </label>
+                      <i
+                        class="filters__info-icon filters__tooltip top"
+                        aria-label="Más información"
+                      >
+                        <span class="filters__tiptext">Loren ipsum</span>
+                      </i>
+                    </li>
+                    <li>
+                      <label>
+                        <input type="checkbox" name="destinations" />
+                        <span>Marruecos</span>
+                      </label>
+                      <i
+                        class="filters__info-icon filters__tooltip top"
+                        aria-label="Más información"
+                      >
+                        <span class="filters__tiptext">Loren ipsum</span>
+                      </i>
+                    </li>
+                    <li>
+                      <label>
+                        <input type="checkbox" name="destinations" />
+                        <span>Marruecos</span>
+                      </label>
+                      <i
+                        class="filters__info-icon filters__tooltip top"
+                        aria-label="Más información"
+                      >
+                        <span class="filters__tiptext">Loren ipsum</span>
+                      </i>
+                    </li>
+                  </ul>
+                  <p class="filters__view-all hide">Ver <span></span> más</p>
+                  <p class="filters__view-less hide">Ver menos</p>
                 </div>
+              </div>
 
-                <div class="filters__block">
-                  <p class="filters__item filters__item--price">Precio</p>
-                  <div class="filters__list">
-                    <ul>
-                      <li>
-                        <div class="filters__input-text">
-                          <input type="text" placeholder="Mínimo" />
-                        </div>
-                      </li>
-                      <li>
-                        <div class="filters__input-text">
-                          <input type="text" placeholder="Máximo" />
-                        </div>
-                      </li>
-                    </ul>
-                    <p class="filters__view-all hide">Ver <span></span> más</p>
-                    <p class="filters__view-less hide">Ver menos</p>
-                  </div>
+              <div class="filters__block">
+                <p class="filters__item filters__item--price">Precio</p>
+                <div class="filters__list">
+                  <ul>
+                    <li>
+                      <div class="filters__input-text">
+                        <input type="text" placeholder="Mínimo" />
+                      </div>
+                    </li>
+                    <li>
+                      <div class="filters__input-text">
+                        <input type="text" placeholder="Máximo" />
+                      </div>
+                    </li>
+                  </ul>
+                  <p class="filters__view-all hide">Ver <span></span> más</p>
+                  <p class="filters__view-less hide">Ver menos</p>
                 </div>
-
-              
-
-
-
+              </div>
             </aside>
             <main class="results">
               <button class="show-filters">Ver filtros</button>
@@ -801,6 +838,7 @@
       </footer>
     </div>
 
-    <script src="./behaviors.js"></script>
+    <script src="./js/carousel.js"></script>
+    <script src="./js/behaviors.js"></script>
   </body>
 </html>

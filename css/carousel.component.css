@@ -1,0 +1,77 @@
+/* carousel */
+.carousel .center {
+  position: relative;
+  overflow: hidden;
+}
+.carousel__frame {
+  display: flex;
+  transition: transform 0.5s ease;
+  border-radius: var(--card-radius);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.carousel__slide {
+  min-width: 100%;
+}
+.carousel__slide img {
+  width: 100%;
+  display: block;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+}
+.carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #cdbccc;
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel__btn:hover {
+  transition: var(--transition);
+  opacity: 1;
+}
+.carousel__btn--prev {
+  left: 0;
+}
+.carousel__btn--next {
+  right: 0;
+}
+.carousel__arrow {
+  background: url(../icons/all.svg) -60px 3px no-repeat;
+  height: 1.2rem;
+  width: 1rem;
+  display: block;
+}
+.carousel__arrow-left {
+  transform: rotateY(180deg);
+}
+.carousel__dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+.carousel__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--bg-color);
+  cursor: pointer;
+  transition: var(--transition);
+  opacity: 0.5;
+}
+.carousel__dot.active {
+  opacity: 0.8;
+  transform: scale(1.2);
+}
+/* /carousel */

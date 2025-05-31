@@ -35,7 +35,7 @@
   }
   li::before {
     content: "";
-    background: url(./icons/all.svg) 0px -36px no-repeat;
+    background: url(../icons/all.svg) 0px -36px no-repeat;
     height: 1.7rem;
     width: 1.7rem;
     position: absolute;
@@ -175,7 +175,7 @@
 }
 .filters__item::before {
   content: "";
-  background: url(./icons/all.svg) no-repeat;
+  background: url(../icons/all.svg) no-repeat;
   position: absolute;
   top: 1.5rem;
   left: 1.5rem;
@@ -184,7 +184,7 @@
 }
 .filters__item::after {
   content: "";
-  background: url(./icons/all.svg) no-repeat;
+  background: url(../icons/all.svg) no-repeat;
   position: absolute;
   top: 1.8rem;
   right: 1.7rem;
@@ -209,7 +209,7 @@
   width: 1.5rem;
   top: 9px;
   left: 14px;
-  background: url(./icons/all.svg) -4px -147px no-repeat;
+  background: url(../icons/all.svg) -4px -147px no-repeat;
   position: absolute;
 }
 
@@ -305,7 +305,7 @@
   align-items: center;
   cursor: pointer;
   color: #fff;
-  background: url(./icons/check.svg) 0 -2rem no-repeat;
+  background: url(../icons/check.svg) 0 -2rem no-repeat;
   background-size: 80%;
   width: 18px;
   height: 18px;
@@ -343,7 +343,7 @@
 }
 .filters__input-text::before {
   content: "";
-  background: url(./icons/all.svg) -60px -92px no-repeat;
+  background: url(../icons/all.svg) -60px -92px no-repeat;
   position: absolute;
   left: 14px;
   top: 12px;
@@ -354,7 +354,7 @@
 
 /* products: filters: info tooltip */
 .filters__info-icon {
-  background: url(./icons/info.svg) 0 0 no-repeat;
+  background: url(../icons/info.svg) 0 0 no-repeat;
   height: 1rem;
   width: 1rem;
   margin-top: 0.05rem;
@@ -534,7 +534,7 @@ li:nth-child(1) .filters__tooltip .filters__tiptext::after {
   position: absolute;
   right: 1rem;
   top: 1rem;
-  background: url(./icons/all.svg) -5px -121px no-repeat;
+  background: url(../icons/all.svg) -5px -121px no-repeat;
   height: 1.2rem;
   width: 1.3rem;
   cursor: pointer;

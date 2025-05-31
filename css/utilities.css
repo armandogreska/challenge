@@ -28,7 +28,7 @@
     width: 296px;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s;
+    transition: var(--transition);
   }
   .filters__title {
     margin-left: -3rem;
@@ -37,7 +37,7 @@
     position: absolute;
     right: 1rem;
     top: 2rem;
-    background: url(./icons/all.svg) -5px -121px no-repeat;
+    background: url(../icons/all.svg) -5px -121px no-repeat;
     height: 1.2rem;
     width: 1.3rem;
     cursor: pointer;
@@ -88,7 +88,7 @@
   }
   .header__nav-show,
   .header__nav-close {
-    background: url(./icons/all.svg) -1px -167px no-repeat;
+    background: url(../icons/all.svg) -1px -167px no-repeat;
     height: 1.7rem;
     width: 1.7rem;
     position: absolute;
@@ -111,7 +111,7 @@
   .header__user-actions {
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s;
+    transition: var(--transition);
   }
   /* /navigation */
 }
