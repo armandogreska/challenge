@@ -1,12 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // inicialize carousel:
-  const carouselElement = document.querySelector(".carousel__frame");
-  if (carouselElement) {
-    new Carousel(carouselElement);
-  }
-});
-
-class Carousel {
+export class Carousel {
   constructor(element) {
     this.carousel = element;
     this.slides = [...element.querySelectorAll(".carousel__slide")];

@@ -40,12 +40,12 @@
   }
 }
 .carousel__title {
-  font: 700 1.875rem / 1.4 "Syne", sans-serif;
+  font: 700 1.875rem/1.4 "Syne", sans-serif;
   margin-bottom: 0.5rem;
 }
 
 .carousel__copy {
-  font: 500 1.25rem / 1.4 "Nunito", sans-serif;
+  font: 500 1.25rem/1.4 "Nunito", sans-serif;
   margin-bottom: 2.5rem;
 }
 
@@ -54,8 +54,8 @@
   top: 50%;
   transform: translateY(-50%);
   background-color: #cdbccc;
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 2px;
   cursor: pointer;
   z-index: 10;
@@ -75,7 +75,7 @@
   right: 0;
 }
 .carousel__arrow {
-  background: url(../icons/sprite.svg) -60px 3px no-repeat;
+  background: url(../../icons/sprite.svg) -60px 3px no-repeat;
   height: 1.2rem;
   width: 1rem;
   display: block;
@@ -85,15 +85,15 @@
 }
 .carousel__dots {
   position: absolute;
-  bottom: 20px;
+  bottom: 1.25rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   gap: 8px;
 }
 .carousel__dot {
-  width: 12px;
-  height: 12px;
+  width: 0.75rem;
+  height: 0.75rem;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.2);
   cursor: pointer;
@@ -104,4 +104,13 @@
   background-color: var(--secondary-color);
   transform: scale(1.2);
 }
+
+/* media queries */
+@media (width < 1024px) {
+  .carousel__info {
+    transform: translate(-50%, -50%) scale(0.6);
+  }
+}
+/* /media queries */
+
 /* /carousel */

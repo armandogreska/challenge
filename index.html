@@ -22,20 +22,32 @@
       href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/settings.css" />
-    <link rel="stylesheet" href="./css/generic.css" />
+    <!-- generic -->
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/carousel.component.css" />
-    <link rel="stylesheet" href="./css/utilities.css" />
+    <link rel="stylesheet" href="./css/generic.css" />
+
+    <!-- components -->
+    <link rel="stylesheet" href="./css/components/header.component.css" />
+    <link rel="stylesheet" href="./css/components/navigation.component.css" />
+    <link rel="stylesheet" href="./css/components/user-actions.component.css" />
+    <link rel="stylesheet" href="./css/components/tagline.component.css" />
+    <link rel="stylesheet" href="./css/components/products.component.css" />
+    <link rel="stylesheet" href="./css/components/filters.component.css" />
+    <link rel="stylesheet" href="./css/components/results.component.css" />
+    <link rel="stylesheet" href="./css/components/result-card.component.css" />
+    <link
+      rel="stylesheet"
+      href="./css/components/breackdown-layer.component.css"
+    />
+    <link rel="stylesheet" href="./css/components/footer.component.css" />
+    <link rel="stylesheet" href="./css/components/carousel.component.css" />
     <link rel="canonical" href="https://www.waveless.com" />
   </head>
   <body>
     <div class="full-width">
       <header class="header">
         <div class="center">
-          <div class="header__logo">
-            <img src="./icons/logo.svg" alt="waveless" />
-          </div>
+          <h1 class="header__logo">Waveless</h1>
           <nav class="header__nav">
             <ul>
               <li>
@@ -56,7 +68,7 @@
         </div>
       </header>
 
-      <div class="carousel">
+      <section class="carousel">
         <div class="center">
           <div class="carousel__frame">
             <div class="carousel__slide active">
@@ -122,17 +134,18 @@
             <span class="carousel__dot" aria-label="Slide 3"></span>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="content">
+      <section class="content">
         <div class="tagline">
           <div class="center">
-            <p class="tagline__title">Vive tus propias aventuras</p>
+            <h2 class="tagline__title">Vive tus propias aventuras</h2>
             <p class="tagline__subtag">
               Para los que les gusta explorar y conocer mundo sin complejos
             </p>
           </div>
         </div>
+
         <div class="center">
           <div class="products">
             <aside class="filters">
@@ -386,14 +399,16 @@
               <button class="show-filters">Ver filtros</button>
               <div class="results__block">
                 <p class="results__title">Asia</p>
-                <ul class="results__list">
-                  <li class="result__card">
+                <div class="results__list">
+                  <article class="result__card">
                     <img src="./images/product-1.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
                       <span class="result__destination">Marruecos, África</span>
                       <span class="result__duration">9 días</span>
-                      <p class="result__title">Descubre Bangkok con Iberojet</p>
+                      <h3 class="result__title">
+                        Descubre Bangkok con Iberojet
+                      </h3>
                     </div>
                     <div class="result__price">
                       <div class="result__left">
@@ -436,15 +451,16 @@
                         <p class="break-layer__price">2.455,00</p>
                       </div>
                     </div>
-                  </li>
-
-                  <li class="result__card">
+                  </article>
+                  <article class="result__card">
                     <img src="./images/product-2.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
                       <span class="result__destination">Marruecos, África</span>
                       <span class="result__duration">9 días</span>
-                      <p class="result__title">Descubre Bangkok con Iberojet</p>
+                      <h3 class="result__title">
+                        Descubre Bangkok con Iberojet
+                      </h3>
                     </div>
                     <div class="result__price">
                       <div class="result__left">
@@ -487,14 +503,16 @@
                         <p class="break-layer__price">2.455,00</p>
                       </div>
                     </div>
-                  </li>
-                  <li class="result__card">
+                  </article>
+                  <article class="result__card">
                     <img src="./images/product-3.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
                       <span class="result__destination">Marruecos, África</span>
                       <span class="result__duration">9 días</span>
-                      <p class="result__title">Descubre Bangkok con Iberojet</p>
+                      <h3 class="result__title">
+                        Descubre Bangkok con Iberojet
+                      </h3>
                     </div>
                     <div class="result__price">
                       <div class="result__left">
@@ -537,19 +555,21 @@
                         <p class="break-layer__price">2.455,00</p>
                       </div>
                     </div>
-                  </li>
-                </ul>
+                  </article>
+                </div>
               </div>
               <div class="results__block">
                 <p class="results__title">Asia</p>
                 <ul class="results__list">
-                  <li class="result__card">
+                  <article class="result__card">
                     <img src="./images/product-1.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
                       <span class="result__destination">Marruecos, África</span>
                       <span class="result__duration">9 días</span>
-                      <p class="result__title">Descubre Bangkok con Iberojet</p>
+                      <h3 class="result__title">
+                        Descubre Bangkok con Iberojet
+                      </h3>
                     </div>
                     <div class="result__price">
                       <div class="result__left">
@@ -592,14 +612,16 @@
                         <p class="break-layer__price">2.455,00</p>
                       </div>
                     </div>
-                  </li>
-                  <li class="result__card">
+                  </article>
+                  <article class="result__card">
                     <img src="./images/product-2.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
                       <span class="result__destination">Marruecos, África</span>
                       <span class="result__duration">9 días</span>
-                      <p class="result__title">Descubre Bangkok con Iberojet</p>
+                      <h3 class="result__title">
+                        Descubre Bangkok con Iberojet
+                      </h3>
                     </div>
                     <div class="result__price">
                       <div class="result__left">
@@ -642,14 +664,16 @@
                         <p class="break-layer__price">2.455,00</p>
                       </div>
                     </div>
-                  </li>
-                  <li class="result__card">
+                  </article>
+                  <article class="result__card">
                     <img src="./images/product-3.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
                       <span class="result__destination">Marruecos, África</span>
                       <span class="result__duration">9 días</span>
-                      <p class="result__title">Descubre Bangkok con Iberojet</p>
+                      <h3 class="result__title">
+                        Descubre Bangkok con Iberojet
+                      </h3>
                     </div>
                     <div class="result__price">
                       <div class="result__left">
@@ -692,14 +716,16 @@
                         <p class="break-layer__price">2.455,00</p>
                       </div>
                     </div>
-                  </li>
-                  <li class="result__card">
+                  </article>
+                  <article class="result__card">
                     <img src="./images/product-1.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
                       <span class="result__destination">Marruecos, África</span>
                       <span class="result__duration">9 días</span>
-                      <p class="result__title">Descubre Bangkok con Iberojet</p>
+                      <h3 class="result__title">
+                        Descubre Bangkok con Iberojet
+                      </h3>
                     </div>
                     <div class="result__price">
                       <div class="result__left">
@@ -742,14 +768,16 @@
                         <p class="break-layer__price">2.455,00</p>
                       </div>
                     </div>
-                  </li>
-                  <li class="result__card">
+                  </article>
+                  <article class="result__card">
                     <img src="./images/product-2.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
                       <span class="result__destination">Marruecos, África</span>
                       <span class="result__duration">9 días</span>
-                      <p class="result__title">Descubre Bangkok con Iberojet</p>
+                      <h3 class="result__title">
+                        Descubre Bangkok con Iberojet
+                      </h3>
                     </div>
                     <div class="result__price">
                       <div class="result__left">
@@ -792,14 +820,16 @@
                         <p class="break-layer__price">2.455,00</p>
                       </div>
                     </div>
-                  </li>
-                  <li class="result__card">
+                  </article>
+                  <article class="result__card">
                     <img src="./images/product-3.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
                       <span class="result__destination">Marruecos, África</span>
                       <span class="result__duration">9 días</span>
-                      <p class="result__title">Descubre Bangkok con Iberojet</p>
+                      <h3 class="result__title">
+                        Descubre Bangkok con Iberojet
+                      </h3>
                     </div>
                     <div class="result__price">
                       <div class="result__left">
@@ -842,13 +872,13 @@
                         <p class="break-layer__price">2.455,00</p>
                       </div>
                     </div>
-                  </li>
+                  </article>
                 </ul>
               </div>
             </main>
           </div>
         </div>
-      </div>
+      </section>
 
       <footer class="footer">
         <div class="footer__corporate">
@@ -864,7 +894,6 @@
       </footer>
     </div>
 
-    <script src="./js/carousel.js"></script>
-    <script src="./js/behaviors.js"></script>
+    <script type="module" src="./js/app.js"></script>
   </body>
 </html>

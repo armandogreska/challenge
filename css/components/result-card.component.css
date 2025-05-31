@@ -1,0 +1,98 @@
+/* products: results: result__card */
+.result__card {
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  position: relative;
+  container: result__card / inline-size;
+
+  img {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    width: 100%;
+  }
+  .result__offer {
+    top: 1em;
+    right: 1em;
+    position: absolute;
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    font: 800 0.75em / 1.3 "Nunito", sans-serif;
+    padding: 0.3em 0.7em;
+    border-radius: 40px;
+  }
+  .result__info {
+    padding: 0.6em 1.2em 0.7em 1.2em;
+  }
+  .result__destination {
+    color: var(--primary-color);
+    font: 700 0.875em / 1.4 "Syne", sans-serif;
+  }
+  .result__duration {
+    font: 500 0.875em / 1.4 "Syne", sans-serif;
+  }
+  .result__title {
+    font: 700 1.125em / 1.5 "Nunito", sans-serif;
+  }
+  .result__price {
+    align-items: center;
+    background-color: var(--bg-color);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    display: flex;
+    gap: 1em;
+    padding: 0.8em 1.1em;
+  }
+  .result__left span {
+    display: block;
+  }
+  .result__since {
+    font: 400 0.75em / 1.3 "Nunito", sans-serif;
+  }
+  .result__value {
+    font: 700 1.375em / 1 "Nunito", sans-serif;
+  }
+  .price__breakdown:hover {
+    text-decoration: underline;
+  }
+  .price__breakdown {
+    color: var(--primary-color);
+    font: 500 0.875em / 1.3 "Nunito", sans-serif;
+    position: relative;
+    padding-right: 0.75em;
+  }
+  .price__breakdown::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 40%;
+    width: 8px;
+    height: 8px;
+    border-right: 1px solid currentColor;
+    border-bottom: 1px solid currentColor;
+    transform: translateY(-50%) rotate(45deg);
+    transition: transform 0.3s ease;
+  }
+  .result__reserve {
+    margin-top: 0.7em;
+  }
+  .result__reserve button {
+    font: 600 1em / 1.3 "Nunito", sans-serif;
+    border-radius: var(--border-radius);
+    background-color: var(--white-color);
+    border: solid 1px var(--primary-color);
+    color: var(--primary-color);
+    padding: 0.5em 1.4em;
+  }
+  .result__reserve button:hover {
+    transition: all 0.3s ease;
+    background-color: var(--secondary-color);
+  }
+}
+
+/* container queries */
+@container result__card (max-width: 260px) {
+  .result__value {
+    min-width: 105px;
+  }
+}
+/* /container queries */
+
+/* /products: results: result__card */
