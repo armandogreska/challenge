@@ -31,47 +31,48 @@ https://armandogreska.github.io/challenge/
 
 ## 🌳 Estructura del Proyecto
 
-📦 <root>
-├─ 📄 index.html
-└─ 📂 assets
-   ├─ 📂 css
-   │  ├─ 🎨 styles.css
-   │  └─ 📂 components
-   │     ├─ 🎨 break-layer.component.css
-   │     ├─ 🎨 carousel.component.css
-   │     ├─ 🎨 filters.component.css
-   │     ├─ 🎨 footer.component.css
-   │     ├─ 🎨 header.component.css
-   │     ├─ 🎨 navigation.component.css
-   │     ├─ 🎨 products.component.css
-   │     ├─ 🎨 result-card.component.css
-   │     ├─ 🎨 results.component.css
-   │     ├─ 🎨 tagline.component.css
-   │     └─ 🎨 user-actions.component.css
-   │
-   ├─ 📂 js
-   │  ├─ 📜 app.js
-   │  └─ 📂 components
-   │     ├─ 📜 carousel.component.js
-   │     ├─ 📜 filters.component.js
-   │     ├─ 📜 navigation.component.js
-   │     └─ 📜 result-card.component.js
-   │
-   ├─ 📂 images
-   │  ├─ 🖼️ carrousel-1.png
-   │  ├─ 🖼️ carrousel-2.png
-   │  ├─ 🖼️ carrousel-3.png
-   │  ├─ 🖼️ product-1.png
-   │  ├─ 🖼️ product-2.png
-   │  └─ 🖼️ product-3.png
-   │
-   └─ 📂 icons
-      ├─ ⚡ check.svg
-      ├─ ⚡ logo.svg
-      └─ ⚡ sprite.svg
+📦 <root>  
+├─ 📄 index.html  
+├─ 📂 assets  
+│   ├─ 📂 css  
+│   │  ├─ 🎨 styles.css  
+│   │  └─ 📂 components  
+│   │     ├─ 🎨 break-layer.component.css  
+│   │     ├─ 🎨 carousel.component.css  
+│   │     ├─ 🎨 filters.component.css  
+│   │     ├─ 🎨 footer.component.css  
+│   │     ├─ 🎨 header.component.css  
+│   │     ├─ 🎨 navigation.component.css  
+│   │     ├─ 🎨 products.component.css  
+│   │     ├─ 🎨 result-card.component.css  
+│   │     ├─ 🎨 results.component.css  
+│   │     ├─ 🎨 tagline.component.css  
+│   │     └─ 🎨 user-actions.component.css  
+│   │  
+│   ├─ 📂 js  
+│   │  ├─ 📜 app.js  
+│   │  └─ 📂 components  
+│   │     ├─ 📜 carousel.component.js  
+│   │     ├─ 📜 filters.component.js  
+│   │     ├─ 📜 navigation.component.js  
+│   │     └─ 📜 result-card.component.js  
+│   │  
+│   ├─ 📂 images  
+│   │  ├─ 🖼️ carrousel-1.png  
+│   │  ├─ 🖼️ carrousel-2.png  
+│   │  ├─ 🖼️ carrousel-3.png  
+│   │  ├─ 🖼️ product-1.png  
+│   │  ├─ 🖼️ product-2.png  
+│   │  └─ 🖼️ product-3.png  
+│   │  
+│   └─ 📂 icons  
+│      ├─ ⚡ check.svg  
+│      ├─ ⚡ logo.svg  
+│      └─ ⚡ sprite.svg  
+└─ README.md
 
 ## 📩 Autor
 
-Armando Pérez
-Email: armandoperezjimenez@gmail.com
-Fecha de entrega: 01/06/2025
+Armando Pérez  
+Email: armandoperezjimenez@gmail.com  
+Fecha de entrega: 01/06/2025  
