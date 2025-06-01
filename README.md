@@ -75,4 +75,4 @@ https://armandogreska.github.io/challenge/
 
 Armando Pérez  
 Email: armandoperezjimenez@gmail.com  
-Fecha de entrega: 01/06/2025  
+Fecha de entrega: 01/06/2025
