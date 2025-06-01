@@ -1,16 +1,16 @@
 export class Filters {
   constructor() {
-    this.filters = document.querySelector(".filters");
-    this.blocks = this.filters.querySelectorAll(".filters__block");
-    this.close = this.filters.querySelector(".filters__close");
-    this.showFilters = document.querySelector(".show-filters");
+    this.filters = document.querySelector('[data-id="filters"]');
+    this.blocks = this.filters.querySelectorAll('[data-id="filters__block"]');
+    this.close = this.filters.querySelector('[data-id="filters__close"]');
+    this.showFilters = document.querySelector('[data-id="show-filters"]');
     this.init();
   }
 
   init() {
     // Accordion:
     this.blocks.forEach((block) => {
-      const filter = block.querySelector(".filters__item");
+      const filter = block.querySelector('[data-id="filters__item"]');
       filter.addEventListener("click", () => {
         block.classList.toggle("active");
       });
@@ -18,8 +18,8 @@ export class Filters {
 
     // (tablet / movile only) View all / view less:
     this.blocks.forEach((block) => {
-      const viewAll = block.querySelector(".filters__view-all");
-      const viewLess = block.querySelector(".filters__view-less");
+      const viewAll = block.querySelector('[data-id="filters__view-all"]');
+      const viewLess = block.querySelector('[data-id="filters__view-less"]');
       const listItems = block.querySelectorAll(".filters__list li");
       const maxVisibleItems = 5;
       const hiddenItems = Array.from(listItems).slice(maxVisibleItems);
@@ -47,14 +47,14 @@ export class Filters {
 
     // Close filters:
     this.close.addEventListener("click", () => {
-      show(this.filters, false);
-      show(this.showFilters, true);
+      this.show(this.filters, false);
+      this.show(this.showFilters, true);
     });
 
     // Show filters:
     this.showFilters.addEventListener("click", (e) => {
-      show(this.filters, true);
-      show(this.showFilters, false);
+      this.show(this.filters, true);
+      this.show(this.showFilters, false);
     });
   }
 

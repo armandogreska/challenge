@@ -1,7 +1,7 @@
 export class Carousel {
   constructor(element) {
     this.carousel = element;
-    this.slides = [...element.querySelectorAll(".carousel__slide")];
+    this.slides = [...element.querySelectorAll('[data-id="carousel__slide"]')];
     this.currentIndex = 0;
     this.interval = null;
     this.init();
@@ -14,9 +14,9 @@ export class Carousel {
   }
 
   setupEventListeners() {
-    const prevBtn = document.getElementById("prevBtn");
-    const nextBtn = document.getElementById("nextBtn");
-    const dots = [...document.querySelectorAll(".carousel__dot")];
+    const prevBtn = document.querySelector('[data-id="prevBtn"]');
+    const nextBtn = document.querySelector('[data-id="nextBtn"]');
+    const dots = [...document.querySelectorAll('[data-id="carousel__dot"]')];
 
     prevBtn.addEventListener("click", () => this.prev());
     nextBtn.addEventListener("click", () => this.next());
@@ -25,7 +25,7 @@ export class Carousel {
       dot.addEventListener("click", () => this.goTo(index));
     });
 
-    // Touch events para móviles
+    // Touch events for movile
     this.carousel.addEventListener(
       "touchstart",
       (e) => {
@@ -43,7 +43,7 @@ export class Carousel {
       { passive: true }
     );
 
-    // Pausar autoplay al interactuar
+    // Pause autoplay when event
     this.carousel.addEventListener("mouseenter", () => this.pause());
     this.carousel.addEventListener("mouseleave", () => this.startAutoPlay());
   }
@@ -67,23 +67,17 @@ export class Carousel {
   update() {
     this.carousel.style.transform = `translateX(-${this.currentIndex * 100}%)`;
 
-    // Actualizar dots
-    document.querySelectorAll(".carousel__dot").forEach((dot, index) => {
-      dot.classList.toggle("active", index === this.currentIndex);
-      dot.setAttribute(
-        "aria-current",
-        index === this.currentIndex ? "true" : "false"
+    // Update dots
+    document
+      .querySelectorAll('[data-id="carousel__dot"]')
+      .forEach((dot, index) =>
+        dot.classList.toggle("active", index === this.currentIndex)
       );
-    });
 
-    // Actualizar slides
-    this.slides.forEach((slide, index) => {
-      slide.classList.toggle("active", index === this.currentIndex);
-      slide.setAttribute(
-        "aria-hidden",
-        index !== this.currentIndex ? "true" : "false"
-      );
-    });
+    // Update slides
+    this.slides.forEach((slide, index) =>
+      slide.classList.toggle("active", index === this.currentIndex)
+    );
   }
 
   handleSwipe() {

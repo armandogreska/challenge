@@ -5,7 +5,7 @@ import { Breakdown } from "./components/result-card.component.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   // inicialize carousel:
-  const carouselElement = document.querySelector(".carousel__frame");
+  const carouselElement = document.querySelector('[data-id="carousel__frame"]');
   if (carouselElement) {
     new Carousel(carouselElement);
   }

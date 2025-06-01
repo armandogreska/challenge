@@ -1,10 +1,10 @@
 export class Navigation {
   constructor() {
-    this.nav = document.querySelector(".header__nav ul");
-    this.navItems = document.querySelectorAll(".header__nav-item");
-    this.navShow = document.querySelector(".header__nav-show");
-    this.navClose = document.querySelector(".header__nav-close");
-    this.userActions = document.querySelector(".header__user-actions");
+    this.nav = document.querySelector('[data-id="header__nav--ul"]');
+    this.navItems = document.querySelectorAll('[data-id="header__nav-item"]');
+    this.navShow = document.querySelector('[data-id="header__nav-show"]');
+    this.navClose = document.querySelector('[data-id="header__nav-close"]');
+    this.userActions = document.querySelector('[data-id="header__user-actions"]');
     this.init();
   }
   init() {
