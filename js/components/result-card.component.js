@@ -1,14 +1,14 @@
 export class Breakdown {
   constructor() {
-    this.cards = document.querySelectorAll(".result__card");
+    this.cards = document.querySelectorAll('[data-id="result-card"]');
     this.init();
   }
 
   init() {
     this.cards.forEach((card) => {
-      const breakdownBtn = card.querySelector(".price__breakdown");
-      const breakdownLayer = card.querySelector(".break-layer");
-      const close = breakdownLayer.querySelector(".break-layer__close");
+      const breakdownBtn = card.querySelector('[data-id="price__breakdown"]');
+      const breakdownLayer = card.querySelector('[data-id="break-layer"]');
+      const close = breakdownLayer.querySelector('[data-id="break-layer__close"]');
 
       breakdownBtn.addEventListener("click", (e) => {
         e.preventDefault();
@@ -23,7 +23,7 @@ export class Breakdown {
   }
 
   hideAllBreakdownLayers() {
-    document.querySelectorAll(".break-layer").forEach((layer) => {
+    document.querySelectorAll('[data-id="break-layer"]').forEach((layer) => {
       layer.classList.add("hide");
     });
   }

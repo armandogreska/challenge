@@ -35,43 +35,40 @@
     <link rel="stylesheet" href="./css/components/filters.component.css" />
     <link rel="stylesheet" href="./css/components/results.component.css" />
     <link rel="stylesheet" href="./css/components/result-card.component.css" />
-    <link
-      rel="stylesheet"
-      href="./css/components/breackdown-layer.component.css"
-    />
+    <link rel="stylesheet" href="./css/components/break-layer.component.css" />
     <link rel="stylesheet" href="./css/components/footer.component.css" />
     <link rel="stylesheet" href="./css/components/carousel.component.css" />
     <link rel="canonical" href="https://www.waveless.com" />
   </head>
   <body>
     <div class="full-width">
-      <header class="header">
+      <header class="header" data-component="header">
         <div class="center">
           <h1 class="header__logo">Waveless</h1>
-          <nav class="header__nav">
-            <ul>
+          <nav class="header__nav" data-component="navigation">
+            <ul data-id="header__nav--ul">
               <li>
-                <a class="header__nav-item header__nav-item--active" href="#"
+                <a class="header__nav-item header__nav-item--active" data-id="header__nav-item" href="#"
                   >Aventura</a
                 >
               </li>
-              <li><a class="header__nav-item" href="#">destinos</a></li>
-              <li><a class="header__nav-item" href="#">Alojamiento</a></li>
-              <li><a class="header__nav-item" href="#">Sobre nosotros</a></li>
+              <li><a class="header__nav-item" data-id="header__nav-item" href="#">destinos</a></li>
+              <li><a class="header__nav-item" data-id="header__nav-item" href="#">Alojamiento</a></li>
+              <li><a class="header__nav-item" data-id="header__nav-item" href="#">Sobre nosotros</a></li>
             </ul>
-            <i class="header__nav-show"></i>
-            <i class="header__nav-close"></i>
+            <i class="header__nav-show" data-id="header__nav-show"></i>
+            <i class="header__nav-close" data-id="header__nav-close"></i>
           </nav>
-          <div class="header__user-actions">
+          <div class="header__user-actions" data-component="user-actions" data-id="header__user-actions">
             <a href="#">Reserva</a>
           </div>
         </div>
       </header>
 
-      <section class="carousel">
+      <section class="carousel" data-component="carousel">
         <div class="center">
-          <div class="carousel__frame">
-            <div class="carousel__slide active">
+          <div class="carousel__frame" data-id="carousel__frame">
+            <div class="carousel__slide active" data-id="carousel__slide">
               <div class="carousel__info">
                 <p class="carousel__title">Ruta por Australia</p>
                 <p class="carousel__copy">
@@ -85,7 +82,7 @@
                 loading="lazy"
               />
             </div>
-            <div class="carousel__slide">
+            <div class="carousel__slide" data-id="carousel__slide">
               <div class="carousel__info">
                 <p class="carousel__title">Ruta por África</p>
                 <p class="carousel__copy">
@@ -99,7 +96,7 @@
                 loading="lazy"
               />
             </div>
-            <div class="carousel__slide">
+            <div class="carousel__slide" data-id="carousel__slide">
               <div class="carousel__info">
                 <p class="carousel__title">Ruta por América</p>
                 <p class="carousel__copy">
@@ -116,28 +113,28 @@
           </div>
           <button
             class="carousel__btn carousel__btn--prev"
-            id="prevBtn"
+            data-id="prevBtn"
             aria-label="Slide anterior"
           >
             <i class="carousel__arrow carousel__arrow-left"></i>
           </button>
           <button
             class="carousel__btn carousel__btn--next"
-            id="nextBtn"
+            data-id="nextBtn"
             aria-label="Slide siguiente"
           >
             <i class="carousel__arrow carousel__arrow-right"></i>
           </button>
           <div class="carousel__dots" id="carouselDots">
-            <span class="carousel__dot active" aria-label="Slide 1"></span>
-            <span class="carousel__dot" aria-label="Slide 2"></span>
-            <span class="carousel__dot" aria-label="Slide 3"></span>
+            <span class="carousel__dot active" data-id="carousel__dot"></span>
+            <span class="carousel__dot" data-id="carousel__dot"></span>
+            <span class="carousel__dot" data-id="carousel__dot"></span>
           </div>
         </div>
       </section>
 
       <section class="content">
-        <div class="tagline">
+        <div class="tagline" data-component="tagline">
           <div class="center">
             <h2 class="tagline__title">Vive tus propias aventuras</h2>
             <p class="tagline__subtag">
@@ -147,13 +144,16 @@
         </div>
 
         <div class="center">
-          <div class="products">
-            <aside class="filters">
+          <div class="products" data-component="products">
+            <aside class="filters" data-component="filters" data-id="filters">
               <p class="filters__title">Filtrar mi búsqueda</p>
-              <i class="filters__close"></i>
+              <i class="filters__close" data-id="filters__close"></i>
 
-              <div class="filters__block">
-                <p class="filters__item filters__item--destinations">
+              <div class="filters__block" data-id="filters__block">
+                <p
+                  class="filters__item filters__item--destinations"
+                  data-id="filters__item"
+                >
                   Destinos
                 </p>
                 <div class="filters__list">
@@ -185,13 +185,18 @@
                       </i>
                     </li>
                   </ul>
-                  <p class="filters__view-all hide">Ver <span></span> más</p>
-                  <p class="filters__view-less hide">Ver menos</p>
+                  <p class="filters__view-all hide" data-id="filters__view-all">Ver <span></span> más</p>
+                  <p class="filters__view-less hide" data-id="filters__view-less">Ver menos</p>
                 </div>
               </div>
 
-              <div class="filters__block">
-                <p class="filters__item filters__item--adventure">Aventura</p>
+              <div class="filters__block" data-id="filters__block">
+                <p
+                  class="filters__item filters__item--adventure"
+                  data-id="filters__item"
+                >
+                  Aventura
+                </p>
                 <div class="filters__list">
                   <ul>
                     <li>
@@ -324,13 +329,18 @@
                       </i>
                     </li>
                   </ul>
-                  <p class="filters__view-all hide">Ver <span></span> más</p>
-                  <p class="filters__view-less hide">Ver menos</p>
+                  <p class="filters__view-all hide" data-id="filters__view-all">Ver <span></span> más</p>
+                  <p class="filters__view-less hide" data-id="filters__view-less">Ver menos</p>
                 </div>
               </div>
 
-              <div class="filters__block">
-                <p class="filters__item filters__item--lodging">Alojamiento</p>
+              <div class="filters__block" data-id="filters__block">
+                <p
+                  class="filters__item filters__item--lodging"
+                  data-id="filters__item"
+                >
+                  Alojamiento
+                </p>
                 <div class="filters__list">
                   <ul>
                     <li>
@@ -370,13 +380,18 @@
                       </i>
                     </li>
                   </ul>
-                  <p class="filters__view-all hide">Ver <span></span> más</p>
-                  <p class="filters__view-less hide">Ver menos</p>
+                  <p class="filters__view-all hide" data-id="filters__view-all">Ver <span></span> más</p>
+                  <p class="filters__view-less hide" data-id="filters__view-less">Ver menos</p>
                 </div>
               </div>
 
-              <div class="filters__block">
-                <p class="filters__item filters__item--price">Precio</p>
+              <div class="filters__block" data-id="filters__block">
+                <p
+                  class="filters__item filters__item--price"
+                  data-id="filters__item"
+                >
+                  Precio
+                </p>
                 <div class="filters__list">
                   <ul>
                     <li>
@@ -390,17 +405,19 @@
                       </div>
                     </li>
                   </ul>
-                  <p class="filters__view-all hide">Ver <span></span> más</p>
-                  <p class="filters__view-less hide">Ver menos</p>
+                  <p class="filters__view-all hide" data-id="filters__view-all">Ver <span></span> más</p>
+                  <p class="filters__view-less hide" data-id="filters__view-less">Ver menos</p>
                 </div>
               </div>
             </aside>
-            <main class="results">
-              <button class="show-filters">Ver filtros</button>
+            <main class="results" data-component="results">
+              <button class="show-filters" data-id="show-filters">
+                Ver filtros
+              </button>
               <div class="results__block">
                 <p class="results__title">Asia</p>
                 <div class="results__list">
-                  <article class="result__card">
+                  <article class="result__card" data-component="result-card" data-id="result-card">
                     <img src="./images/product-1.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
@@ -414,16 +431,16 @@
                       <div class="result__left">
                         <span class="result__since">Desde</span>
                         <span class="result__value">248.000 €</span>
-                        <a href="#" class="price__breakdown">Ver desglose</a>
+                        <a href="#" class="price__breakdown" data-id="price__breakdown">Ver desglose</a>
                       </div>
                       <div class="result__reserve">
                         <button>Reservar</button>
                       </div>
                     </div>
-                    <div class="break-layer hide">
+                    <div class="break-layer hide" data-component="break-layer" data-id="break-layer">
                       <div class="break-layer__header">
                         <p class="break-layer__title">Desglose de precios</p>
-                        <i class="break-layer__close"></i>
+                        <i class="break-layer__close" data-id="break-layer__close"></i>
                       </div>
                       <div class="break-layer__content">
                         <p class="break-layer__product">
@@ -452,7 +469,7 @@
                       </div>
                     </div>
                   </article>
-                  <article class="result__card">
+                  <article class="result__card" data-component="result-card" data-id="result-card">
                     <img src="./images/product-2.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
@@ -466,16 +483,16 @@
                       <div class="result__left">
                         <span class="result__since">Desde</span>
                         <span class="result__value">248.000 €</span>
-                        <a href="#" class="price__breakdown">Ver desglose</a>
+                        <a href="#" class="price__breakdown" data-id="price__breakdown">Ver desglose</a>
                       </div>
                       <div class="result__reserve">
                         <button>Reservar</button>
                       </div>
                     </div>
-                    <div class="break-layer hide">
+                    <div class="break-layer hide" data-component="break-layer" data-id="break-layer">
                       <div class="break-layer__header">
                         <p class="break-layer__title">Desglose de precios</p>
-                        <i class="break-layer__close"></i>
+                        <i class="break-layer__close" data-id="break-layer__close"></i>
                       </div>
                       <div class="break-layer__content">
                         <p class="break-layer__product">
@@ -504,7 +521,7 @@
                       </div>
                     </div>
                   </article>
-                  <article class="result__card">
+                  <article class="result__card" data-component="result-card" data-id="result-card">
                     <img src="./images/product-3.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
@@ -518,16 +535,16 @@
                       <div class="result__left">
                         <span class="result__since">Desde</span>
                         <span class="result__value">248.000 €</span>
-                        <a href="#" class="price__breakdown">Ver desglose</a>
+                        <a href="#" class="price__breakdown" data-id="price__breakdown">Ver desglose</a>
                       </div>
                       <div class="result__reserve">
                         <button>Reservar</button>
                       </div>
                     </div>
-                    <div class="break-layer hide">
+                    <div class="break-layer hide" data-component="break-layer" data-id="break-layer">
                       <div class="break-layer__header">
                         <p class="break-layer__title">Desglose de precios</p>
-                        <i class="break-layer__close"></i>
+                        <i class="break-layer__close" data-id="break-layer__close"></i>
                       </div>
                       <div class="break-layer__content">
                         <p class="break-layer__product">
@@ -561,7 +578,7 @@
               <div class="results__block">
                 <p class="results__title">Asia</p>
                 <ul class="results__list">
-                  <article class="result__card">
+                  <article class="result__card" data-component="result-card" data-id="result-card">
                     <img src="./images/product-1.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
@@ -575,16 +592,16 @@
                       <div class="result__left">
                         <span class="result__since">Desde</span>
                         <span class="result__value">248.000 €</span>
-                        <a href="#" class="price__breakdown">Ver desglose</a>
+                        <a href="#" class="price__breakdown" data-id="price__breakdown">Ver desglose</a>
                       </div>
                       <div class="result__reserve">
                         <button>Reservar</button>
                       </div>
                     </div>
-                    <div class="break-layer hide">
+                    <div class="break-layer hide" data-component="break-layer" data-id="break-layer">
                       <div class="break-layer__header">
                         <p class="break-layer__title">Desglose de precios</p>
-                        <i class="break-layer__close"></i>
+                        <i class="break-layer__close" data-id="break-layer__close"></i>
                       </div>
                       <div class="break-layer__content">
                         <p class="break-layer__product">
@@ -613,7 +630,7 @@
                       </div>
                     </div>
                   </article>
-                  <article class="result__card">
+                  <article class="result__card" data-component="result-card" data-id="result-card">
                     <img src="./images/product-2.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
@@ -627,16 +644,16 @@
                       <div class="result__left">
                         <span class="result__since">Desde</span>
                         <span class="result__value">248.000 €</span>
-                        <a href="#" class="price__breakdown">Ver desglose</a>
+                        <a href="#" class="price__breakdown" data-id="price__breakdown">Ver desglose</a>
                       </div>
                       <div class="result__reserve">
                         <button>Reservar</button>
                       </div>
                     </div>
-                    <div class="break-layer hide">
+                    <div class="break-layer hide" data-component="break-layer" data-id="break-layer">
                       <div class="break-layer__header">
                         <p class="break-layer__title">Desglose de precios</p>
-                        <i class="break-layer__close"></i>
+                        <i class="break-layer__close" data-id="break-layer__close"></i>
                       </div>
                       <div class="break-layer__content">
                         <p class="break-layer__product">
@@ -665,7 +682,7 @@
                       </div>
                     </div>
                   </article>
-                  <article class="result__card">
+                  <article class="result__card" data-component="result-card" data-id="result-card">
                     <img src="./images/product-3.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
@@ -679,16 +696,16 @@
                       <div class="result__left">
                         <span class="result__since">Desde</span>
                         <span class="result__value">248.000 €</span>
-                        <a href="#" class="price__breakdown">Ver desglose</a>
+                        <a href="#" class="price__breakdown" data-id="price__breakdown">Ver desglose</a>
                       </div>
                       <div class="result__reserve">
                         <button>Reservar</button>
                       </div>
                     </div>
-                    <div class="break-layer hide">
+                    <div class="break-layer hide" data-component="break-layer" data-id="break-layer">
                       <div class="break-layer__header">
                         <p class="break-layer__title">Desglose de precios</p>
-                        <i class="break-layer__close"></i>
+                        <i class="break-layer__close" data-id="break-layer__close"></i>
                       </div>
                       <div class="break-layer__content">
                         <p class="break-layer__product">
@@ -717,7 +734,7 @@
                       </div>
                     </div>
                   </article>
-                  <article class="result__card">
+                  <article class="result__card" data-component="result-card" data-id="result-card">
                     <img src="./images/product-1.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
@@ -731,16 +748,16 @@
                       <div class="result__left">
                         <span class="result__since">Desde</span>
                         <span class="result__value">248.000 €</span>
-                        <a href="#" class="price__breakdown">Ver desglose</a>
+                        <a href="#" class="price__breakdown" data-id="price__breakdown">Ver desglose</a>
                       </div>
                       <div class="result__reserve">
                         <button>Reservar</button>
                       </div>
                     </div>
-                    <div class="break-layer hide">
+                    <div class="break-layer hide" data-component="break-layer" data-id="break-layer">
                       <div class="break-layer__header">
                         <p class="break-layer__title">Desglose de precios</p>
-                        <i class="break-layer__close"></i>
+                        <i class="break-layer__close" data-id="break-layer__close"></i>
                       </div>
                       <div class="break-layer__content">
                         <p class="break-layer__product">
@@ -769,7 +786,7 @@
                       </div>
                     </div>
                   </article>
-                  <article class="result__card">
+                  <article class="result__card" data-component="result-card" data-id="result-card">
                     <img src="./images/product-2.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
@@ -783,16 +800,16 @@
                       <div class="result__left">
                         <span class="result__since">Desde</span>
                         <span class="result__value">248.000 €</span>
-                        <a href="#" class="price__breakdown">Ver desglose</a>
+                        <a href="#" class="price__breakdown" data-id="price__breakdown">Ver desglose</a>
                       </div>
                       <div class="result__reserve">
                         <button>Reservar</button>
                       </div>
                     </div>
-                    <div class="break-layer hide">
+                    <div class="break-layer hide" data-component="break-layer" data-id="break-layer">
                       <div class="break-layer__header">
                         <p class="break-layer__title">Desglose de precios</p>
-                        <i class="break-layer__close"></i>
+                        <i class="break-layer__close" data-id="break-layer__close"></i>
                       </div>
                       <div class="break-layer__content">
                         <p class="break-layer__product">
@@ -821,7 +838,7 @@
                       </div>
                     </div>
                   </article>
-                  <article class="result__card">
+                  <article class="result__card" data-component="result-card" data-id="result-card">
                     <img src="./images/product-3.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
@@ -835,16 +852,16 @@
                       <div class="result__left">
                         <span class="result__since">Desde</span>
                         <span class="result__value">248.000 €</span>
-                        <a href="#" class="price__breakdown">Ver desglose</a>
+                        <a href="#" class="price__breakdown" data-id="price__breakdown">Ver desglose</a>
                       </div>
                       <div class="result__reserve">
                         <button>Reservar</button>
                       </div>
                     </div>
-                    <div class="break-layer hide">
+                    <div class="break-layer hide" data-component="break-layer" data-id="break-layer">
                       <div class="break-layer__header">
                         <p class="break-layer__title">Desglose de precios</p>
-                        <i class="break-layer__close"></i>
+                        <i class="break-layer__close" data-id="break-layer__close"></i>
                       </div>
                       <div class="break-layer__content">
                         <p class="break-layer__product">
@@ -880,7 +897,7 @@
         </div>
       </section>
 
-      <footer class="footer">
+      <footer class="footer" data-component="footer">
         <div class="footer__corporate">
           <div class="center">
             <img src="./icons/logo.svg" alt="waveless" />
