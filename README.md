@@ -23,6 +23,8 @@ https://armandogreska.github.io/challenge/
   - Bloques html delimitados con 'data-component' tags.
   - Renombrado en archivos css/js con el nombre del componente.
   - Versatilidad para modificar, añadir o quitar componentes.
+  - Añadidos comportamientos en carousel, capas, menú de navegación o desplegables de filtros.
+  - Ejemplo de funcionalidad básica en filtro Destinos.
 - [x] Optimización para escritorio, tablet y movil. Puntos de corte:
   - <= 1440px
   - < 1024px
