@@ -28,11 +28,6 @@
 @media (width <= 1440px) {
   .header .center {
     width: 100vw;
-  }
-  @media (width < 745px) {
-  .header .header__user-actions {
-    display: none;
-  }
 }
 /* /media queries */
 /* /header */
