@@ -1,4 +1,4 @@
-export class Filters {
+export class FiltersBehaviors {
   constructor() {
     this.filters = document.querySelector('[data-id="filters"]');
     this.blocks = this.filters.querySelectorAll('[data-id="filters__block"]');
@@ -68,5 +68,51 @@ export class Filters {
       target.style.visibility = "hidden";
       setTimeout(() => target.classList.add("hide"), 0.5);
     }
+  }
+}
+
+export class FiltersActions {
+  constructor() {
+    this.filters = document.querySelectorAll("[data-action]");
+    this.listItems = document.querySelectorAll("[data-destination]");
+    this.blocks = document.querySelectorAll('[data-id="results__block"]');
+
+    this.activeFilters = [];
+    this.init();
+  }
+  init() {
+    this.filters.forEach((item) => {
+      item.addEventListener("click", (e) => {
+        const action = e.target.dataset.action;
+        if (e.target.checked) {
+          //check filter item
+          this.activeFilters.push(action);
+        } else {
+          this.activeFilters = this.activeFilters.filter((f) => f !== action);
+          //uncheck filter item
+        }
+        this.applyFilterDestinationOnResults();
+      });
+    });
+  }
+
+  applyFilterDestinationOnResults() {
+    this.listItems.forEach((e) => {
+      e.classList.remove("hide");
+      if (this.activeFilters.length === 0) return;
+      if (!this.activeFilters.includes(e.dataset.destination)) {
+        e.classList.add("hide");
+      }
+    });
+    this.hideEmptyBlocks();
+  }
+
+  hideEmptyBlocks() {
+    this.blocks.forEach((e) => {
+      e.classList.remove('hide')
+      if(e.querySelectorAll("[data-destination]:not(.hide)").length === 0){
+        e.classList.add('hide')
+      }
+    });
   }
 }

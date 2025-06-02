@@ -1,5 +1,8 @@
 import { Carousel } from "./components/carousel.component.js";
-import { Filters } from "./components/filters.component.js";
+import {
+  FiltersActions,
+  FiltersBehaviors,
+} from "./components/filters.component.js";
 import { Navigation } from "./components/navigation.component.js";
 import { Breakdown } from "./components/result-card.component.js";
 
@@ -14,7 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
   new Navigation();
 
   // initialize filters:
-  new Filters();
+  new FiltersBehaviors();
+  new FiltersActions();
 
   // inicialize carousel:
   new Breakdown();
