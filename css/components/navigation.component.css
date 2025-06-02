@@ -1,32 +1,27 @@
 /* header: header__navigation */
-.header__nav {
-  ul {
-    display: flex;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
-  }
-  li {
-    position: relative;
-  }
-  li::before {
-    content: "";
-    background: url(../../icons/sprite.svg) 0px -36px no-repeat;
-    height: 1.7rem;
-    width: 1.7rem;
-    position: absolute;
-    top: 1.5rem;
-    left: 0;
-  }
-  li:nth-child(2)::before {
-    background-position: 0px -13px;
-  }
-  li:nth-child(3)::before {
-    background-position: 0px -60px;
-  }
-  li:nth-child(4)::before {
-    display: none;
-  }
+.header__nav ul {
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+li {
+  position: relative;
+}
+.header__nav-icon {
+  content: "";
+  background: url(../../icons/sprite.svg) 0px -36px no-repeat;
+  height: 1.7rem;
+  width: 1.7rem;
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+}
+.header__nav-icon--destination {
+  background-position: 0px -13px;
+}
+.header__nav-icon--lodging {
+  background-position: 0px -60px;
 }
 .header__nav-item {
   text-decoration: none;
@@ -78,28 +73,33 @@
 @media (width < 1024px) {
   .header__nav ul {
     position: absolute;
-    top: 0;
     right: 0;
     background-color: var(--bg-color);
-    padding: 0.5rem 0 5rem 0;
     z-index: 900;
     box-shadow: var(--box-shadow);
     display: block;
-    border-bottom: 1px solid var(--third-color);
+    width: 100%;
+    top: 5rem;
+
     li::before {
       left: 1rem;
       top: 1.2rem;
     }
-    li:last-child {
-      border-bottom: solid 1px var(--third-color);
-    }
   }
   .header__nav-item {
-    width: 20rem;
-    padding: 1.4rem 1rem 1.4rem 3rem;
+    padding: 1.4rem 1rem 2rem 1rem;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
   }
   .header__nav-item::before {
-    left: 20%;
+    left: 50%;
+  }
+  .header__nav-item::after {
+    height: 1px;
+    bottom: 2px;
   }
   .header__nav-show,
   .header__nav-close {
@@ -115,18 +115,14 @@
   .header__nav-close {
     background-position: -1px -116px;
   }
-  .header__user-actions {
-    position: absolute;
-    z-index: 900;
-    top: 18.8rem;
-    right: 9rem;
-  }
   .header__nav ul,
-  .header__nav-close,
-  .header__user-actions {
+  .header__nav-close {
     opacity: 0;
     visibility: hidden;
     transition: var(--transition);
+  }
+  .header__nav-icon {
+    position: inherit;
   }
 }
 /* media queries */

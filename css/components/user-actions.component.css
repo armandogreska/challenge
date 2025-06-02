@@ -17,4 +17,10 @@
     background-color: var(--secondary-color);
   }
 }
+
+@media (width < 1024px) {
+  .header__user-actions {
+    display: none;
+  }
+}
 /* /header: header__user-actions */

@@ -1,6 +1,6 @@
 export class Navigation {
   constructor() {
-    this.nav = document.querySelector('[data-id="header__nav--ul"]');
+    this.nav = document.querySelector('[data-id="header__nav-ul"]');
     this.navItems = document.querySelectorAll('[data-id="header__nav-item"]');
     this.navShow = document.querySelector('[data-id="header__nav-show"]');
     this.navClose = document.querySelector('[data-id="header__nav-close"]');
