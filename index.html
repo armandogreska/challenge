@@ -48,18 +48,37 @@
           <nav class="header__nav" data-component="navigation">
             <ul data-id="header__nav--ul">
               <li>
-                <a class="header__nav-item header__nav-item--active" data-id="header__nav-item" href="#"
+                <a
+                  class="header__nav-item header__nav-item--active"
+                  data-id="header__nav-item"
+                  href="#"
                   >Aventura</a
                 >
               </li>
-              <li><a class="header__nav-item" data-id="header__nav-item" href="#">destinos</a></li>
-              <li><a class="header__nav-item" data-id="header__nav-item" href="#">Alojamiento</a></li>
-              <li><a class="header__nav-item" data-id="header__nav-item" href="#">Sobre nosotros</a></li>
+              <li>
+                <a class="header__nav-item" data-id="header__nav-item" href="#"
+                  >destinos</a
+                >
+              </li>
+              <li>
+                <a class="header__nav-item" data-id="header__nav-item" href="#"
+                  >Alojamiento</a
+                >
+              </li>
+              <li>
+                <a class="header__nav-item" data-id="header__nav-item" href="#"
+                  >Sobre nosotros</a
+                >
+              </li>
             </ul>
             <i class="header__nav-show" data-id="header__nav-show"></i>
             <i class="header__nav-close" data-id="header__nav-close"></i>
           </nav>
-          <div class="header__user-actions" data-component="user-actions" data-id="header__user-actions">
+          <div
+            class="header__user-actions"
+            data-component="user-actions"
+            data-id="header__user-actions"
+          >
             <a href="#">Reserva</a>
           </div>
         </div>
@@ -164,19 +183,22 @@
                           type="checkbox"
                           id="destination-1"
                           name="destination-1"
+                          data-action="china"
                         />
-                        <span>Marruecos</span>
+                        <span>China</span>
                       </label>
                       <i class="filters__info-icon filters__tooltip">
                         <span class="filters__tiptext">Loren ipsum</span>
                       </i>
                     </li>
+
                     <li>
                       <label for="destination-2">
                         <input
                           type="checkbox"
                           id="destination-2"
                           name="destination-2"
+                          data-action="marruecos"
                         />
                         <span>Marruecos</span>
                       </label>
@@ -184,9 +206,46 @@
                         <span class="filters__tiptext">Loren ipsum</span>
                       </i>
                     </li>
+
+                    <li>
+                      <label for="destination-3">
+                        <input
+                          type="checkbox"
+                          id="destination-3"
+                          name="destination-3"
+                          data-action="egipto"
+                        />
+                        <span>Egipto</span>
+                      </label>
+                      <i class="filters__info-icon filters__tooltip">
+                        <span class="filters__tiptext">Loren ipsum</span>
+                      </i>
+                    </li>
+
+                    <li>
+                      <label for="destination-4">
+                        <input
+                          type="checkbox"
+                          id="destination-4"
+                          name="destination-4"
+                          data-action="kenia"
+                        />
+                        <span>Kenia</span>
+                      </label>
+                      <i class="filters__info-icon filters__tooltip">
+                        <span class="filters__tiptext">Loren ipsum</span>
+                      </i>
+                    </li>
                   </ul>
-                  <p class="filters__view-all hide" data-id="filters__view-all">Ver <span></span> más</p>
-                  <p class="filters__view-less hide" data-id="filters__view-less">Ver menos</p>
+                  <p class="filters__view-all hide" data-id="filters__view-all">
+                    Ver <span></span> más
+                  </p>
+                  <p
+                    class="filters__view-less hide"
+                    data-id="filters__view-less"
+                  >
+                    Ver menos
+                  </p>
                 </div>
               </div>
 
@@ -329,8 +388,15 @@
                       </i>
                     </li>
                   </ul>
-                  <p class="filters__view-all hide" data-id="filters__view-all">Ver <span></span> más</p>
-                  <p class="filters__view-less hide" data-id="filters__view-less">Ver menos</p>
+                  <p class="filters__view-all hide" data-id="filters__view-all">
+                    Ver <span></span> más
+                  </p>
+                  <p
+                    class="filters__view-less hide"
+                    data-id="filters__view-less"
+                  >
+                    Ver menos
+                  </p>
                 </div>
               </div>
 
@@ -380,8 +446,15 @@
                       </i>
                     </li>
                   </ul>
-                  <p class="filters__view-all hide" data-id="filters__view-all">Ver <span></span> más</p>
-                  <p class="filters__view-less hide" data-id="filters__view-less">Ver menos</p>
+                  <p class="filters__view-all hide" data-id="filters__view-all">
+                    Ver <span></span> más
+                  </p>
+                  <p
+                    class="filters__view-less hide"
+                    data-id="filters__view-less"
+                  >
+                    Ver menos
+                  </p>
                 </div>
               </div>
 
@@ -405,8 +478,15 @@
                       </div>
                     </li>
                   </ul>
-                  <p class="filters__view-all hide" data-id="filters__view-all">Ver <span></span> más</p>
-                  <p class="filters__view-less hide" data-id="filters__view-less">Ver menos</p>
+                  <p class="filters__view-all hide" data-id="filters__view-all">
+                    Ver <span></span> más
+                  </p>
+                  <p
+                    class="filters__view-less hide"
+                    data-id="filters__view-less"
+                  >
+                    Ver menos
+                  </p>
                 </div>
               </div>
             </aside>
@@ -414,37 +494,52 @@
               <button class="show-filters" data-id="show-filters">
                 Ver filtros
               </button>
-              <div class="results__block">
+              <div class="results__block" data-id="results__block">
                 <p class="results__title">Asia</p>
                 <div class="results__list">
-                  <article class="result__card" data-component="result-card" data-id="result-card">
+                  <article
+                    class="result__card"
+                    data-component="result-card"
+                    data-id="result-card"
+                    data-destination="china"
+                  >
                     <img src="./images/product-1.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
-                      <span class="result__destination">Marruecos, África</span>
+                      <span class="result__destination">Pekín, China</span>
                       <span class="result__duration">9 días</span>
-                      <h3 class="result__title">
-                        Descubre Bangkok con Iberojet
-                      </h3>
+                      <h3 class="result__title">Descubre Pekín con Iberojet</h3>
                     </div>
                     <div class="result__price">
                       <div class="result__left">
                         <span class="result__since">Desde</span>
                         <span class="result__value">248.000 €</span>
-                        <a href="#" class="price__breakdown" data-id="price__breakdown">Ver desglose</a>
+                        <a
+                          href="#"
+                          class="price__breakdown"
+                          data-id="price__breakdown"
+                          >Ver desglose</a
+                        >
                       </div>
                       <div class="result__reserve">
                         <button>Reservar</button>
                       </div>
                     </div>
-                    <div class="break-layer hide" data-component="break-layer" data-id="break-layer">
+                    <div
+                      class="break-layer hide"
+                      data-component="break-layer"
+                      data-id="break-layer"
+                    >
                       <div class="break-layer__header">
                         <p class="break-layer__title">Desglose de precios</p>
-                        <i class="break-layer__close" data-id="break-layer__close"></i>
+                        <i
+                          class="break-layer__close"
+                          data-id="break-layer__close"
+                        ></i>
                       </div>
                       <div class="break-layer__content">
                         <p class="break-layer__product">
-                          Marruecos, África<span>9 días</span>
+                          Pekín, China<span>9 días</span>
                         </p>
                         <ul class="break-layer__data">
                           <li>
@@ -469,34 +564,51 @@
                       </div>
                     </div>
                   </article>
-                  <article class="result__card" data-component="result-card" data-id="result-card">
+                  <article
+                    class="result__card"
+                    data-component="result-card"
+                    data-id="result-card"
+                    data-destination="china"
+                  >
                     <img src="./images/product-2.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
-                      <span class="result__destination">Marruecos, África</span>
+                      <span class="result__destination">Hong Kong, China</span>
                       <span class="result__duration">9 días</span>
                       <h3 class="result__title">
-                        Descubre Bangkok con Iberojet
+                        Descubre Hong Kong con Iberojet
                       </h3>
                     </div>
                     <div class="result__price">
                       <div class="result__left">
                         <span class="result__since">Desde</span>
                         <span class="result__value">248.000 €</span>
-                        <a href="#" class="price__breakdown" data-id="price__breakdown">Ver desglose</a>
+                        <a
+                          href="#"
+                          class="price__breakdown"
+                          data-id="price__breakdown"
+                          >Ver desglose</a
+                        >
                       </div>
                       <div class="result__reserve">
                         <button>Reservar</button>
                       </div>
                     </div>
-                    <div class="break-layer hide" data-component="break-layer" data-id="break-layer">
+                    <div
+                      class="break-layer hide"
+                      data-component="break-layer"
+                      data-id="break-layer"
+                    >
                       <div class="break-layer__header">
                         <p class="break-layer__title">Desglose de precios</p>
-                        <i class="break-layer__close" data-id="break-layer__close"></i>
+                        <i
+                          class="break-layer__close"
+                          data-id="break-layer__close"
+                        ></i>
                       </div>
                       <div class="break-layer__content">
                         <p class="break-layer__product">
-                          Marruecos, África<span>9 días</span>
+                          Hong Kong, China<span>9 días</span>
                         </p>
                         <ul class="break-layer__data">
                           <li>
@@ -521,34 +633,51 @@
                       </div>
                     </div>
                   </article>
-                  <article class="result__card" data-component="result-card" data-id="result-card">
+                  <article
+                    class="result__card"
+                    data-component="result-card"
+                    data-id="result-card"
+                    data-destination="china"
+                  >
                     <img src="./images/product-3.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
-                      <span class="result__destination">Marruecos, África</span>
+                      <span class="result__destination">Shanghai, China</span>
                       <span class="result__duration">9 días</span>
                       <h3 class="result__title">
-                        Descubre Bangkok con Iberojet
+                        Descubre Shanghai con Iberojet
                       </h3>
                     </div>
                     <div class="result__price">
                       <div class="result__left">
                         <span class="result__since">Desde</span>
                         <span class="result__value">248.000 €</span>
-                        <a href="#" class="price__breakdown" data-id="price__breakdown">Ver desglose</a>
+                        <a
+                          href="#"
+                          class="price__breakdown"
+                          data-id="price__breakdown"
+                          >Ver desglose</a
+                        >
                       </div>
                       <div class="result__reserve">
                         <button>Reservar</button>
                       </div>
                     </div>
-                    <div class="break-layer hide" data-component="break-layer" data-id="break-layer">
+                    <div
+                      class="break-layer hide"
+                      data-component="break-layer"
+                      data-id="break-layer"
+                    >
                       <div class="break-layer__header">
                         <p class="break-layer__title">Desglose de precios</p>
-                        <i class="break-layer__close" data-id="break-layer__close"></i>
+                        <i
+                          class="break-layer__close"
+                          data-id="break-layer__close"
+                        ></i>
                       </div>
                       <div class="break-layer__content">
                         <p class="break-layer__product">
-                          Marruecos, África<span>9 días</span>
+                          Shanghai, China<span>9 días</span>
                         </p>
                         <ul class="break-layer__data">
                           <li>
@@ -575,37 +704,56 @@
                   </article>
                 </div>
               </div>
-              <div class="results__block">
-                <p class="results__title">Asia</p>
+              <div class="results__block" data-id="results__block">
+                <p class="results__title">África</p>
                 <ul class="results__list">
-                  <article class="result__card" data-component="result-card" data-id="result-card">
+                  <article
+                    class="result__card"
+                    data-component="result-card"
+                    data-id="result-card"
+                    data-destination="marruecos"
+                  >
                     <img src="./images/product-1.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
-                      <span class="result__destination">Marruecos, África</span>
+                      <span class="result__destination"
+                        >Marrakech, Marruecos</span
+                      >
                       <span class="result__duration">9 días</span>
                       <h3 class="result__title">
-                        Descubre Bangkok con Iberojet
+                        Descubre Marrakech con Iberojet
                       </h3>
                     </div>
                     <div class="result__price">
                       <div class="result__left">
                         <span class="result__since">Desde</span>
                         <span class="result__value">248.000 €</span>
-                        <a href="#" class="price__breakdown" data-id="price__breakdown">Ver desglose</a>
+                        <a
+                          href="#"
+                          class="price__breakdown"
+                          data-id="price__breakdown"
+                          >Ver desglose</a
+                        >
                       </div>
                       <div class="result__reserve">
                         <button>Reservar</button>
                       </div>
                     </div>
-                    <div class="break-layer hide" data-component="break-layer" data-id="break-layer">
+                    <div
+                      class="break-layer hide"
+                      data-component="break-layer"
+                      data-id="break-layer"
+                    >
                       <div class="break-layer__header">
                         <p class="break-layer__title">Desglose de precios</p>
-                        <i class="break-layer__close" data-id="break-layer__close"></i>
+                        <i
+                          class="break-layer__close"
+                          data-id="break-layer__close"
+                        ></i>
                       </div>
                       <div class="break-layer__content">
                         <p class="break-layer__product">
-                          Marruecos, África<span>9 días</span>
+                          Marrakech, Marruecos<span>9 días</span>
                         </p>
                         <ul class="break-layer__data">
                           <li>
@@ -630,34 +778,53 @@
                       </div>
                     </div>
                   </article>
-                  <article class="result__card" data-component="result-card" data-id="result-card">
+                  <article
+                    class="result__card"
+                    data-component="result-card"
+                    data-id="result-card"
+                    data-destination="marruecos"
+                  >
                     <img src="./images/product-2.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
-                      <span class="result__destination">Marruecos, África</span>
+                      <span class="result__destination"
+                        >Casablanca, Marruecos</span
+                      >
                       <span class="result__duration">9 días</span>
                       <h3 class="result__title">
-                        Descubre Bangkok con Iberojet
+                        Descubre Casablanca con Iberojet
                       </h3>
                     </div>
                     <div class="result__price">
                       <div class="result__left">
                         <span class="result__since">Desde</span>
                         <span class="result__value">248.000 €</span>
-                        <a href="#" class="price__breakdown" data-id="price__breakdown">Ver desglose</a>
+                        <a
+                          href="#"
+                          class="price__breakdown"
+                          data-id="price__breakdown"
+                          >Ver desglose</a
+                        >
                       </div>
                       <div class="result__reserve">
                         <button>Reservar</button>
                       </div>
                     </div>
-                    <div class="break-layer hide" data-component="break-layer" data-id="break-layer">
+                    <div
+                      class="break-layer hide"
+                      data-component="break-layer"
+                      data-id="break-layer"
+                    >
                       <div class="break-layer__header">
                         <p class="break-layer__title">Desglose de precios</p>
-                        <i class="break-layer__close" data-id="break-layer__close"></i>
+                        <i
+                          class="break-layer__close"
+                          data-id="break-layer__close"
+                        ></i>
                       </div>
                       <div class="break-layer__content">
                         <p class="break-layer__product">
-                          Marruecos, África<span>9 días</span>
+                          Casablanca, Marruecos<span>9 días</span>
                         </p>
                         <ul class="break-layer__data">
                           <li>
@@ -682,34 +849,49 @@
                       </div>
                     </div>
                   </article>
-                  <article class="result__card" data-component="result-card" data-id="result-card">
+                  <article
+                    class="result__card"
+                    data-component="result-card"
+                    data-id="result-card"
+                    data-destination="marruecos"
+                  >
                     <img src="./images/product-3.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
-                      <span class="result__destination">Marruecos, África</span>
+                      <span class="result__destination">Rabat, Marruecos</span>
                       <span class="result__duration">9 días</span>
-                      <h3 class="result__title">
-                        Descubre Bangkok con Iberojet
-                      </h3>
+                      <h3 class="result__title">Descubre Rabat con Iberojet</h3>
                     </div>
                     <div class="result__price">
                       <div class="result__left">
                         <span class="result__since">Desde</span>
                         <span class="result__value">248.000 €</span>
-                        <a href="#" class="price__breakdown" data-id="price__breakdown">Ver desglose</a>
+                        <a
+                          href="#"
+                          class="price__breakdown"
+                          data-id="price__breakdown"
+                          >Ver desglose</a
+                        >
                       </div>
                       <div class="result__reserve">
                         <button>Reservar</button>
                       </div>
                     </div>
-                    <div class="break-layer hide" data-component="break-layer" data-id="break-layer">
+                    <div
+                      class="break-layer hide"
+                      data-component="break-layer"
+                      data-id="break-layer"
+                    >
                       <div class="break-layer__header">
                         <p class="break-layer__title">Desglose de precios</p>
-                        <i class="break-layer__close" data-id="break-layer__close"></i>
+                        <i
+                          class="break-layer__close"
+                          data-id="break-layer__close"
+                        ></i>
                       </div>
                       <div class="break-layer__content">
                         <p class="break-layer__product">
-                          Marruecos, África<span>9 días</span>
+                          Rabat, Marruecos<span>9 días</span>
                         </p>
                         <ul class="break-layer__data">
                           <li>
@@ -734,34 +916,51 @@
                       </div>
                     </div>
                   </article>
-                  <article class="result__card" data-component="result-card" data-id="result-card">
+                  <article
+                    class="result__card"
+                    data-component="result-card"
+                    data-id="result-card"
+                    data-destination="egipto"
+                  >
                     <img src="./images/product-1.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
-                      <span class="result__destination">Marruecos, África</span>
+                      <span class="result__destination">El Cairo, Egipto</span>
                       <span class="result__duration">9 días</span>
                       <h3 class="result__title">
-                        Descubre Bangkok con Iberojet
+                        Descubre El Cairo con Iberojet
                       </h3>
                     </div>
                     <div class="result__price">
                       <div class="result__left">
                         <span class="result__since">Desde</span>
                         <span class="result__value">248.000 €</span>
-                        <a href="#" class="price__breakdown" data-id="price__breakdown">Ver desglose</a>
+                        <a
+                          href="#"
+                          class="price__breakdown"
+                          data-id="price__breakdown"
+                          >Ver desglose</a
+                        >
                       </div>
                       <div class="result__reserve">
                         <button>Reservar</button>
                       </div>
                     </div>
-                    <div class="break-layer hide" data-component="break-layer" data-id="break-layer">
+                    <div
+                      class="break-layer hide"
+                      data-component="break-layer"
+                      data-id="break-layer"
+                    >
                       <div class="break-layer__header">
                         <p class="break-layer__title">Desglose de precios</p>
-                        <i class="break-layer__close" data-id="break-layer__close"></i>
+                        <i
+                          class="break-layer__close"
+                          data-id="break-layer__close"
+                        ></i>
                       </div>
                       <div class="break-layer__content">
                         <p class="break-layer__product">
-                          Marruecos, África<span>9 días</span>
+                          El Cairo, Egipto<span>9 días</span>
                         </p>
                         <ul class="break-layer__data">
                           <li>
@@ -786,34 +985,49 @@
                       </div>
                     </div>
                   </article>
-                  <article class="result__card" data-component="result-card" data-id="result-card">
+                  <article
+                    class="result__card"
+                    data-component="result-card"
+                    data-id="result-card"
+                    data-destination="egipto"
+                  >
                     <img src="./images/product-2.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
-                      <span class="result__destination">Marruecos, África</span>
+                      <span class="result__destination">Giza, Egipto</span>
                       <span class="result__duration">9 días</span>
-                      <h3 class="result__title">
-                        Descubre Bangkok con Iberojet
-                      </h3>
+                      <h3 class="result__title">Descubre Giza con Iberojet</h3>
                     </div>
                     <div class="result__price">
                       <div class="result__left">
                         <span class="result__since">Desde</span>
                         <span class="result__value">248.000 €</span>
-                        <a href="#" class="price__breakdown" data-id="price__breakdown">Ver desglose</a>
+                        <a
+                          href="#"
+                          class="price__breakdown"
+                          data-id="price__breakdown"
+                          >Ver desglose</a
+                        >
                       </div>
                       <div class="result__reserve">
                         <button>Reservar</button>
                       </div>
                     </div>
-                    <div class="break-layer hide" data-component="break-layer" data-id="break-layer">
+                    <div
+                      class="break-layer hide"
+                      data-component="break-layer"
+                      data-id="break-layer"
+                    >
                       <div class="break-layer__header">
                         <p class="break-layer__title">Desglose de precios</p>
-                        <i class="break-layer__close" data-id="break-layer__close"></i>
+                        <i
+                          class="break-layer__close"
+                          data-id="break-layer__close"
+                        ></i>
                       </div>
                       <div class="break-layer__content">
                         <p class="break-layer__product">
-                          Marruecos, África<span>9 días</span>
+                          Giza, Egipto<span>9 días</span>
                         </p>
                         <ul class="break-layer__data">
                           <li>
@@ -838,34 +1052,51 @@
                       </div>
                     </div>
                   </article>
-                  <article class="result__card" data-component="result-card" data-id="result-card">
+                  <article
+                    class="result__card"
+                    data-component="result-card"
+                    data-id="result-card"
+                    data-destination="kenia"
+                  >
                     <img src="./images/product-3.png" alt="product-1" />
                     <span class="result__offer">Quads</span>
                     <div class="result__info">
-                      <span class="result__destination">Marruecos, África</span>
+                      <span class="result__destination">Masai Mara, Kenia</span>
                       <span class="result__duration">9 días</span>
                       <h3 class="result__title">
-                        Descubre Bangkok con Iberojet
+                        Descubre Masai Mara con Iberojet
                       </h3>
                     </div>
                     <div class="result__price">
                       <div class="result__left">
                         <span class="result__since">Desde</span>
                         <span class="result__value">248.000 €</span>
-                        <a href="#" class="price__breakdown" data-id="price__breakdown">Ver desglose</a>
+                        <a
+                          href="#"
+                          class="price__breakdown"
+                          data-id="price__breakdown"
+                          >Ver desglose</a
+                        >
                       </div>
                       <div class="result__reserve">
                         <button>Reservar</button>
                       </div>
                     </div>
-                    <div class="break-layer hide" data-component="break-layer" data-id="break-layer">
+                    <div
+                      class="break-layer hide"
+                      data-component="break-layer"
+                      data-id="break-layer"
+                    >
                       <div class="break-layer__header">
                         <p class="break-layer__title">Desglose de precios</p>
-                        <i class="break-layer__close" data-id="break-layer__close"></i>
+                        <i
+                          class="break-layer__close"
+                          data-id="break-layer__close"
+                        ></i>
                       </div>
                       <div class="break-layer__content">
                         <p class="break-layer__product">
-                          Marruecos, África<span>9 días</span>
+                          Masai Mara, Kenia<span>9 días</span>
                         </p>
                         <ul class="break-layer__data">
                           <li>

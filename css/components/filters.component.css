@@ -138,6 +138,7 @@
   align-items: center;
   gap: 0.4rem;
   padding: 0.4rem 1rem 0.4rem 2.6rem;
+  cursor: pointer;
 }
 .filters__list li.hide {
   display: none;
