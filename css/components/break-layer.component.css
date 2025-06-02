@@ -87,4 +87,12 @@
 }
 /* /media queries */
 
+/* container queries */
+@container result__card (max-width: 260px) {
+  .break-layer {
+    top: 337px;
+  }
+}
+/* /container queries */
+
 /* /products: results: result__card: break-layer */
