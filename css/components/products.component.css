@@ -2,15 +2,8 @@
 .products {
   display: grid;
   grid-template-columns: var(--products-columns);
-  margin: 0 9.5rem 2rem 10rem;
+  margin: var(--products-m);
+  width: var(--products-w);
 }
-
-/* media queries */
-@media (width < 745px) {
-  .products {
-    margin: 0 1rem 2rem 1rem;
-  }
-}
-/* /media queries */
 
 /* /products */
