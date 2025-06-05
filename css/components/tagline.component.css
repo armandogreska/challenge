@@ -22,6 +22,33 @@
   }
   .tagline__title {
     margin-top: 3rem;
+    font: 700 2.125rem/1.2 "Syne", sans-serif;
+  }
+  .tagline__subtag {
+    font: 700 1.375rem/1.4 "Nunito", sans-serif;
+  }
+}
+
+@media (width < 1024px) {
+  .tagline {
+    margin-bottom: 6rem;
+  }
+  .tagline__title {
+    margin-top: 3rem;
+    font: 700 2rem/1.2 "Syne", sans-serif;
+  }
+  .tagline__subtag {
+    font: 700 1.25rem/1.4 "Nunito", sans-serif;
+  }
+}
+
+@media (width < 745px) {
+  .tagline {
+    margin-bottom: 5rem;
+  }
+  .tagline__title {
+    margin-top: 2rem;
+    font: 700 1.875rem/1.2 "Syne", sans-serif;
   }
 }
 /* /media queries */
